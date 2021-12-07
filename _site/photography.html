@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/style.css?v=b6b9ca45bc0e0a8d62cbba5fbb3a99b509c147db">
+  <style>
+    .wrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0px;
+      padding: 0px;
+      padding-bottom: 10px;
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .download-bar.menu {
+      border-bottom: 0;
+      margin-bottom: 0;
+      margin-top: 10px !important;
+    }
+
+    .download-bar.options {
+      margin-bottom: 10px !important;
+    }
+
+    h1.splitter {
+      color: whitesmoke;
+    }
+
+    div#master img,
+    div#master video {
+      width: 100% !important;
+      height: auto !important;
+      display: none;
+    }
+
+    div#master.oneCol.filtered {
+      column-count: 1;
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+    }
+
+    div#master.twoCol.filtered {
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+    }
+
+    div#master.threeCol.filtered {
+      column-count: 3;
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+    }
+
+    #master {
+      /* Prevent vertical gaps */
+      line-height: 0;
+
+      -webkit-column-gap: 0px;
+      -moz-column-gap: 0px;
+      column-gap: 0px;
+    }
+
+    .btn {
+      font-weight: bold;
+      height: 100%;
+      position: float;
+      background-color: #2222;
+      border-color: whitesmoke;
+      border-width: 4px;
+      color: #9370db;
+      text-decoration: none;
+      transition: opacity ease-in-out 0.3s;
+      -webkit-transition: opacity ease-in-out 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:active,
+    .btn.active,
+    .btn:hover {
+      outline: 0;
+      filter: brightness(130%);
+      text-decoration: underline;
+    }
+
+    /* ALL MOBILE */
+    @media (max-width: 800px) and (min-width: 0px) {
+      .download-bar {
+        margin: 0 -2% 0;
+      }
+
+      .btn {
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
+    }
+
+    @media (min-width: 1200px) or (max-width: 1200px) {
+      #master {
+        column-count: 4;
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+      }
+
+      #master.filtered {
+        column-count: 3;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      #master {
+        column-count: 3;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+      }
+
+      #master.filtered {
+        column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+      }
+    }
+
+    @media (max-width: 800px) {
+      #master {
+        column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+      }
+
+      #master.filtered {
+        column-count: 1 !important;
+        -webkit-column-count: 1 !important;
+        -moz-column-count: 1 !important;
+      }
+    }
+
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+
+      #master,
+      #master.filtered {
+        column-count: 1 !important;
+        -webkit-column-count: 1 !important;
+        -moz-column-count: 1 !important;
+      }
+    }
+
+    .show {
+      display: flex !important;
+    }
+  </style>
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Photography Exploration" />
+<meta name="author" content="Ian Boraks" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/photography.html" />
+<meta property="og:url" content="http://localhost:4000/photography.html" />
+<meta property="og:site_name" content="Ian Boraks" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Photography Exploration" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/photography.html","headline":"Photography Exploration","@type":"WebPage","author":{"@type":"Person","name":"Ian Boraks"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Photography Exploration</h1>
+    </header>
+    <div id="container">
+      <div class="download-bar menu">
+        <div class="inner">
+          <div class="menu-bar">
+            <input id="home-button" type="button" value="Home" onclick="location.href='/index.html';">
+            <input id="back-button" type="button" value="Back" onclick="history.back()">
+            <input id="solidworks-button" type="button" value="Solidworks" onclick="location.href='/solidworks.html';">
+            <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';">
+          </div>
+        </div>
+      </div>
+      <h1 class="title splitter">Below are some of my favorite photos that I have taken.</h1>
+      <div class="download-bar options">
+        <div class="inner">
+          <div class="menu-bar" id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all </button>
+            <button class="btn" onclick="filterSelection('astro')"> Astrophotogprahy </button>
+            <button class="btn" onclick="filterSelection('city')"> City </button>
+            <button class="btn" onclick="filterSelection('nature')"> Nature </button>
+            <button class="btn" onclick="filterSelection('sky_landscape')"> Landscape </button>
+            <button class="btn" onclick="filterSelection('wildlife')"> Animals </button>
+            <button class="btn" onclick="filterSelection('msc')"> Msc </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+      <div id="masterCont">
+        <div id="master"><img src="\photography\msc\ianb.arw-30112021-0017.jpg" class="msc media">
+    <img src="\photography\wildlife\ianb.arw-30112021-0004.jpg" class="wildlife media">
+    <img src="\photography\astro\ianb.arw-30112021-0013.jpg" class="astro media">
+    <img src="\photography\wildlife\ianb.arw-30112021-0005.jpg" class="wildlife media">
+    <img src="\photography\sky_landscape\ianb.arw-30112021-0021.jpg" class="sky_landscape media">
+    <img src="\photography\wildlife\ianb.arw-30112021-0020.jpg" class="wildlife media">
+    <img src="\photography\astro\Stack2.jpg" class="astro media">
+    <video class="astro media" autoplay loop>
+        <source src="\photography\astro\ianb.arw-30112021-0001.mp4" type="video/mp4">
+    </video>
+    <img src="\photography\wildlife\ianb.arw-30112021-0019.jpg" class="wildlife media">
+    <img src="\photography\sky_landscape\ianb.arw-30112021-0002.jpg" class="sky_landscape media">
+    <img src="\photography\wildlife\ianb.arw-30112021-0010.jpg" class="wildlife media">
+    <img src="\photography\sky_landscape\ianb.arw-30112021-0012.jpg" class="sky_landscape media">
+    <img src="\photography\city\ianb.arw-30112021-0007.jpg" class="city media">
+    <img src="\photography\nature\ianb.arw-30112021-0016.jpg" class="nature media">
+    <video class="astro media" autoplay loop>
+        <source src="\photography\astro\ianb.arw-30112021-0003.mp4" type="video/mp4">
+    </video>
+    <video class="astro media" autoplay loop>
+        <source src="\photography\astro\ianb.arw-30112021-0002.mp4" type="video/mp4">
+    </video>
+    <img src="\photography\nature\DSC00020.jpg" class="nature media">
+    <img src="\photography\sky_landscape\ianb.arw-30112021-0001.jpg" class="sky_landscape media">
+    <img src="\photography\msc\DSC02524.ARW" class="msc media">
+    <img src="\photography\city\ianb.arw-30112021-0008.jpg" class="city media">
+    <img src="\photography\wildlife\ianb.arw-30112021-0003.jpg" class="wildlife media">
+    <img src="\photography\wildlife\ianb.arw-30112021-0018.jpg" class="wildlife media">
+    <img src="\photography\city\ianb.arw-30112021-0009.jpg" class="city media">
+    <img src="\photography\astro\ianb.arw-30112021-0014.jpg" class="astro media">
+    <img src="\photography\city\ianb.arw-30112021-0006.jpg" class="city media">
+</div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i, master;
+      x = document.getElementsByClassName("media");
+      master = document.getElementById("master");
+
+      if (c == "all") {
+        c = "";
+        w3RemoveClass(master, "filtered");
+      } else {
+        w3AddClass(master, "filtered");
+      }
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+      expandCol();
+    }
+
+    function expandCol() {
+      var x, i, content;
+      x = document.getElementById("master");
+
+      w3RemoveClass(x, "oneCol");
+      w3RemoveClass(x, "twoCol");
+      w3RemoveClass(x, "threeCol");
+
+      var showing;
+      showing = x.getElementsByClassName("show");
+      switch (showing.length) {
+        case 1:
+          w3AddClass(x, "oneCol");
+          break;
+        case 2:
+          w3AddClass(x, "twoCol");
+          break;
+        case 3:
+          w3AddClass(x, "threeCol");
+          break;
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+</body>
+
+</html>

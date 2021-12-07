@@ -1,0 +1,13 @@
+remote_theme: pages-themes/time-machine
+plugins:
+   - jekyll-remote-theme # add this line to the plugins list if you already have one
+show_downloads: false
+title: "Ian Boraks"
+name: "Ian Boraks"
+tagline: "Ian Boraks"
+author: Ian Boraks
+# defaults:
+#    - scope:
+#         path: "/photogrpahy/*"
+#      values:
+#         image: true

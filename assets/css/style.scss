@@ -1,0 +1,99 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.creds,
+.current-section {
+	display: none;
+}
+
+// // This is for the footer so I can have my buttons on the right while text on the left
+// .split-para      { display:block;}
+// .split-para span { display:block;float:right;}
+
+.menu-bar {
+	text-align: center;
+}
+.menu-bar input {
+	cursor: pointer;
+	font-weight: bold;
+	height: 100%;
+	position: float;
+	background-color: #2222;
+	border-color: whitesmoke;
+	border-width: 4px;
+	color: #9370db;
+	text-decoration: none;
+	transition: opacity ease-in-out 0.3s;
+	-webkit-transition: opacity ease-in-out 0.3s;
+}
+.menu-bar input:active,
+.menu-bar input:hover {
+	outline: 0;
+	filter: brightness(130%);
+	text-decoration: underline;
+}
+
+.inner .menu-bar {
+	text-align: center;
+}
+
+h1 {
+	word-wrap: break-word;
+}
+h1.title {
+	margin: 1px 0px 1px;
+	font-size: 50px;
+}
+
+#solidworks50 img {
+	width: 50%;
+}
+#solidworks75 img {
+	width: 75%;
+}
+#solidworks100 img {
+	width: 100%;
+}
+
+#solidworks50 img,
+#solidworks75 img,
+#solidworks100 img {
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Thin scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+	display: thin;
+}
+
+/* Thin scrollbar for IE, Edge and Firefox */
+html {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: thin;
+	/* Firefox */
+}
+
+// RESPONSIVENESS FOR DISPLAYS LESS THEN 800px
+@media (max-width: 800px) {
+	.wrapper {
+		width: 90%;
+	}
+
+	#solidworks50 img,
+	#solidworks75 img,
+	#solidworks100 img {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	h1.title {
+		margin: 1px 0px 1px;
+		font-size: 30px;
+	}
+}
