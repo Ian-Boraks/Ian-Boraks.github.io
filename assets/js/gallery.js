@@ -1,3 +1,5 @@
+// Modified from: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp
+
 filterSelection("all");
 function filterSelection(c) {
 	var x, i, master;
