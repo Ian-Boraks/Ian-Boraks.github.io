@@ -174,11 +174,11 @@ def flatten(t):
 def vidOrPhoto(mediaItem):
     global mediaListSep
     if mediaItem in mediaListSep[1]:
-        return "<video class=\"" + identifier(mediaItem) + " media\" autoplay loop> <source src=\"\\photography\\" + mediaItem +  "\" type=\"video/mp4\"> </video>\n"
+        return "<video alt=\"" + mediaItem + "\"class=\"" + identifier(mediaItem) + " media\" autoplay loop> <source src=\"\\photography\\" + mediaItem +  "\" type=\"video/mp4\"> </video>\n"
     else:
-        return "<img src=\"\\photography\\" + mediaItem + "\" class=\"" + identifier(mediaItem) + " media\">\n"
+        return "<img src=\"\\photography\\" + mediaItem + "\" alt=\"" + mediaItem + "\"class=\"" + identifier(mediaItem) + " media\">\n"
 
-def ResponsiveGallery(doVideo = False, doRandom = False):
+def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
     global mediaListSep 
     mediaListSep = [astro[0][1:] + city[0][1:] + msc[0][1:] + nature[0][1:] + sky_landscape[0][1:] + wildlife[0][1:], astro[1][1:] + city[1][1:] + msc[1][1:] + nature[1][1:] + sky_landscape[1][1:] + wildlife[1][1:]]
 
@@ -199,7 +199,16 @@ def ResponsiveGallery(doVideo = False, doRandom = False):
 
     while True:
         try:
-            f.write(vidOrPhoto(mediaList[pos]))
+            if not doCaption:
+                f.write(vidOrPhoto(mediaList[pos]))
+            else:
+                f.write("""
+                <div class="colElement">
+                    <p class="caption">""" + mediaList[pos] + """</p>
+                """)
+                f.write(vidOrPhoto(mediaList[pos]))
+                f.write("</div>")
+            
             pos += 1
         except IndexError:
             break
@@ -208,4 +217,5 @@ def ResponsiveGallery(doVideo = False, doRandom = False):
     f.close()
 
 # explorationGallery()
-ResponsiveGallery(True, True)
+# ResponsiveGallery(doVideo, doRandom, doCaption)
+ResponsiveGallery(True, True, False)

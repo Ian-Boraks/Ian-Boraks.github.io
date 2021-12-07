@@ -3,14 +3,21 @@
 
 @import "{{ site.theme }}";
 
-.creds,
-.current-section {
-	display: none;
-}
-
 // // This is for the footer so I can have my buttons on the right while text on the left
 // .split-para      { display:block;}
 // .split-para span { display:block;float:right;}
+/* Thin scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+	display: thin;
+}
+
+html {
+	width: 100vw;
+	overflow-x: clip;
+
+	-ms-overflow-style: none;
+	scrollbar-width: thin;
+}
 
 .menu-bar {
 	text-align: center;
@@ -34,7 +41,6 @@
 	filter: brightness(130%);
 	text-decoration: underline;
 }
-
 .inner .menu-bar {
 	text-align: center;
 }
@@ -56,7 +62,6 @@ h1.title {
 #solidworks100 img {
 	width: 100%;
 }
-
 #solidworks50 img,
 #solidworks75 img,
 #solidworks100 img {
@@ -64,19 +69,6 @@ h1.title {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-/* Thin scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
-	display: thin;
-}
-
-/* Thin scrollbar for IE, Edge and Firefox */
-html {
-	-ms-overflow-style: none;
-	/* IE and Edge */
-	scrollbar-width: thin;
-	/* Firefox */
 }
 
 // RESPONSIVENESS FOR DISPLAYS LESS THEN 800px

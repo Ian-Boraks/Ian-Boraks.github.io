@@ -1,6 +1,7 @@
 ---
-title: Photography Exploration
-tagline: Below are some of my favorite photos that I have taken
+title: Solid&#8203;Works Exploration
+tagline: "This is a compilation of my favorite SolidWorks projects, it shows off my skills in SolidWorks and how I use
+this amazing software."
 ---
 
 <!DOCTYPE html>
@@ -10,12 +11,19 @@ tagline: Below are some of my favorite photos that I have taken
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/gallery.css?v=' | append: site.github.build_revision | relative_url }}">
+  <style>
+    #master {
+      column-count: 5;
+      -webkit-column-count: 5;
+      -moz-column-count: 5;
+    }
+  </style>
 
   {% seo title=false %}
 
   {% include head-custom.html %}
-</head>
 
+</head>
 
 <body>
   <div class="wrapper">
@@ -36,26 +44,33 @@ tagline: Below are some of my favorite photos that I have taken
       <h1 class="title splitter">{{ page.tagline }}</h1>
       <div class="download-bar options">
         <div class="inner">
-          <div class="menu-bar" id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')"> Show all </button>
-            <button class="btn" onclick="filterSelection('astro')"> Astrophotogprahy </button>
-            <button class="btn" onclick="filterSelection('city')"> City </button>
-            <button class="btn" onclick="filterSelection('nature')"> Nature </button>
-            <button class="btn" onclick="filterSelection('sky_landscape')"> Landscape </button>
-            <button class="btn" onclick="filterSelection('wildlife')"> Animals </button>
-            <button class="btn" onclick="filterSelection('msc')"> Msc </button>
-          </div>
         </div>
       </div>
 
       <!-- Exploration Gallery Grid -->
       <div id="masterCont">
-        {% include_relative /photography/gallery_items.html %}
+        {% include_relative /solidworks/project_items.html %}
       </div>
     </div>
 
   </div>
   <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
+  <script>
+    const colElements = document.querySelectorAll(".colElement")
+    const mainLinks = document.querySelectorAll('.main-link')
+
+    for (let i = 0; i < colElements.length; i++) {
+      colElements[i].addEventListener("click", handleClick)
+
+      function handleClick(event) {
+        const isTextSelected = window.getSelection().toString();
+        if (!isTextSelected) {
+          mainLinks[i].click();
+        }
+      }
+    }
+
+  </script>
 </body>
 
 </html>
