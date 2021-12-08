@@ -21,6 +21,47 @@ this amazing software."
       -webkit-column-count: 5;
       -moz-column-count: 5;
     }
+
+    .download-bar.menu {
+      border-bottom: 5px solid #444 !important;
+      margin-bottom: 0;
+    }
+
+    .download-bar.certs {
+      margin-bottom: 10px !important;
+      margin-top: 10px !important;
+    }
+
+    .download-bar.certs .inner {
+      line-height: 0;
+      column-count: 8;
+      -webkit-column-count: 8;
+      -moz-column-count: 8;
+
+      -webkit-column-gap: 0px;
+      -moz-column-gap: 0px;
+      column-gap: 0px;
+
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .certLogo {
+      line-height: 0;
+      flex: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 800px) and (min-width: 0px) {
+      .download-bar.certs .inner {
+        column-count: 4;
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+      }
+    }
   </style>
 
   {% seo title=false %}
@@ -46,14 +87,23 @@ this amazing software."
         </div>
       </div>
       <h1 class="title splitter">{{ page.tagline }}</h1>
-      <div class="download-bar options">
-        <div class="inner">
-        </div>
-      </div>
-
+      <div class="download-bar options"></div>
       <!-- Exploration Gallery Grid -->
       <div id="masterCont">
         {% include_relative /solidworks/project_items.html %}
+      </div>
+      <div class="download-bar certs">
+        <div class="inner" style="width: 100%">
+          <!-- <img width="auto" src="solidworks\certs\Certificate_C-5UGRHJLZCV.jpg" alt="Certificate_C-5UGRHJLZCV"> -->
+          <a href="solidworks\certs\Certificate_C-5UGRHJLZCV.jpg"><img class="certLogo" src="solidworks\certs\Expert - Mechanical Design.jpg" alt="Expert - Mechanical Design"></a>
+          <img class="certLogo" src="solidworks\certs\Associate - Additive Manufacturing.jpg" alt="Additive Manufacturing">
+          <img class="certLogo" src="solidworks\certs\Associate - Mechanical Design.jpg" alt="Associate - Mechanical Design">
+          <img class="certLogo" src="solidworks\certs\Professional - Drawing Tools.jpg" alt="Professional - Drawing Tools">
+          <img class="certLogo" src="solidworks\certs\Professional - Mechanical Design.jpg" alt="Professional - Mechanical Design">
+          <img class="certLogo" src="solidworks\certs\Professional - Sheet Metal.jpg" alt="Professioevernal - Sheet Metal">
+          <img class="certLogo" src="solidworks\certs\Professional - Surfacing.jpg" alt="Professional - Surfacing">
+          <img class="certLogo" src="solidworks\certs\Professional - Weldments.jpg" alt="Professional - Weldments">
+        </div>
       </div>
     </div>
 
