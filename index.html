@@ -1,0 +1,52 @@
+---
+title: Ian Boraks
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/landing.css">
+
+    {% seo title=false %}
+
+    {% include head-custom.html %}
+</head>
+
+<body>
+    <div id="main">
+        <div class="container title">
+            <div class="wrapper">
+                <div id="first">
+                    <div> I </div>
+                    <div> A </div>
+                    <div> N </div>
+                </div>
+                <div id="last">
+                    <div> B </div>
+                    <div> O </div>
+                    <div> R </div>
+                    <div> A </div>
+                    <div> K </div>
+                    <div> S </div>
+                </div>
+            </div>
+            <div class="wrapper menu">
+                <input id="home-button" type="button" value="Home" onclick="location.href='/index.html';">
+                <input id="back-button" type="button" value="Back" onclick="history.back()">
+                <input id="solidworks-button" type="button" value="Solidworks" onclick="location.href='/solidworks.html';">
+                <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';">
+            </div>
+        </div>
+        <div class="container menu">
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,7 @@
 <div id="master">
+    <style scoped>
+        @import url("{{ '/assets/css/gallery.css?v=' | append: site.github.build_revision | relative_url }}");
+    </style>
     <div class="colElement">
         <p class="caption"> Astrophotography Equatorial Tracker/Mount </p>
         <a class="main-link" href="/solidworks/astro_tracker/README.html">
@@ -29,4 +32,5 @@
             <img src="/solidworks/lc_cover/cover.jpg" class="media">
         </a>
     </div>
+    <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
 </div>
