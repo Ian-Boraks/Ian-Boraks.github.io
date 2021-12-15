@@ -7,7 +7,7 @@ directory = r'./'
 
 astro = [["img"],["vid"]]
 city = [["img"],["vid"]]
-msc = [["img"],["vid"]]
+misc = [["img"],["vid"]]
 nature = [["img"],["vid"]]
 sky_landscape = [["img"],["vid"]]
 wildlife = [["img"],["vid"]]
@@ -31,13 +31,13 @@ for dir in os.listdir(directory):
                 city[1].append(os.path.join(dir, filename))
             else:
                 continue
-    elif dir == "msc":
+    elif dir == "misc":
         for filename in os.listdir(dir):
             if filename.endswith(".jpg") or filename.endswith(".ARW"):
                 # print(os.path.join(dir, filename))
-                msc[0].append(os.path.join(dir, filename))
+                misc[0].append(os.path.join(dir, filename))
             if filename.endswith(".mp4"):
-                msc[1].append(os.path.join(dir, filename))
+                misc[1].append(os.path.join(dir, filename))
             else:
                 continue
     elif dir == "nature":
@@ -72,7 +72,7 @@ for dir in os.listdir(directory):
 
 # print(astro)
 # print(city)
-# print(msc)
+# print(misc)
 # print(nature)
 # print(sky_landscape)
 # print(wildlife)
@@ -104,13 +104,13 @@ def explorationGallery():
         </div>
         </div>
         """)
-    for i in msc[0]:
+    for i in misc[0]:
         if i == "img": continue
         f.write("""
-        <div class="column msc">
+        <div class="column misc">
         <div class="content">
         """)
-        f.write("       <img src=\"" + i + "\" alt=\"msc\">") 
+        f.write("       <img src=\"" + i + "\" alt=\"misc\">") 
         f.write("""
         </div>
         </div>
@@ -157,8 +157,8 @@ def identifier(image):
         return "astro"
     elif "city" in image:
         return "city"
-    elif "msc" in image:
-        return "msc"
+    elif "misc" in image:
+        return "misc"
     elif "nature" in image:
         return "nature"
     elif "sky_landscape" in image:
@@ -166,7 +166,7 @@ def identifier(image):
     elif "wildlife" in image:
         return "wildlife"
     else:
-        return "msc"
+        return "misc"
 
 def flatten(t):
     return [item for sublist in t for item in sublist]
@@ -180,7 +180,7 @@ def vidOrPhoto(mediaItem):
 
 def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
     global mediaListSep 
-    mediaListSep = [astro[0][1:] + city[0][1:] + msc[0][1:] + nature[0][1:] + sky_landscape[0][1:] + wildlife[0][1:], astro[1][1:] + city[1][1:] + msc[1][1:] + nature[1][1:] + sky_landscape[1][1:] + wildlife[1][1:]]
+    mediaListSep = [astro[0][1:] + city[0][1:] + misc[0][1:] + nature[0][1:] + sky_landscape[0][1:] + wildlife[0][1:], astro[1][1:] + city[1][1:] + misc[1][1:] + nature[1][1:] + sky_landscape[1][1:] + wildlife[1][1:]]
 
     if doVideo:
         mediaList = mediaListSep[0] + mediaListSep[1]

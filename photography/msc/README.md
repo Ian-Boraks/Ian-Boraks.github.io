@@ -1,5 +1,5 @@
 ---
-title: "Msc Photography"
+title: "misc Photography"
 ---
 
 <style>
