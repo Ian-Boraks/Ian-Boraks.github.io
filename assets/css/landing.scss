@@ -3,6 +3,7 @@
 
 html,
 body {
+	font-family: "Lucida Console";
 	font-size: 10px;
 	height: 100%;
 	width: 100%;
@@ -41,13 +42,13 @@ body {
 }
 .container.title::before {
 	background-image: linear-gradient(transparent, rgb(44, 44, 44));
-	margin-top: -23rem;
-	padding-top: 20rem;
+	margin-top: -18rem;
+	padding-top: 15rem;
 }
 .container.title::after {
 	background-image: linear-gradient(rgb(44, 44, 44), transparent);
 	margin-top: 2.5rem;
-	padding-bottom: 20rem;
+	padding-bottom: 15rem;
 }
 
 .title .wrapper {
@@ -67,8 +68,8 @@ body {
 
 #first div,
 #last div {
+	color: whitesmoke;
 	display: table-cell;
-	color: mediumpurple;
 	padding: 0.05rem;
 	width: 5rem;
 	height: 4rem;
@@ -88,9 +89,9 @@ body {
 	margin-bottom: 0.5rem;
 	position: float;
 	background-color: #2222;
-	border-color: whitesmoke;
+	border-color: mediumpurple;
 	border-width: 0.5rem;
-	color: #9370db;
+	color: whitesmoke;
 	text-decoration: none;
 	transition: opacity ease-in-out 0.3s;
 	-webkit-transition: opacity ease-in-out 0.3s;
