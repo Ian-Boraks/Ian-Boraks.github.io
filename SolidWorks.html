@@ -1,0 +1,132 @@
+---
+title: Solid&#8203;Works Exploration
+tagline: "Compilation of some of my favorite SolidWorks projects."
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <style>
+    #master {
+      column-count: 5;
+      -webkit-column-count: 5;
+      -moz-column-count: 5;
+    }
+
+    .download-bar.menu {
+      border-bottom: 5px solid #444 !important;
+      margin-bottom: 0;
+    }
+
+    .download-bar.certs {
+      margin-bottom: 10px !important;
+      margin-top: 10px !important;
+    }
+
+    .download-bar.certs .inner {
+      line-height: 0;
+      column-count: 8;
+      -webkit-column-count: 8;
+      -moz-column-count: 8;
+
+      -webkit-column-gap: 0px;
+      -moz-column-gap: 0px;
+      column-gap: 0px;
+
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .certLogo {
+      line-height: 0;
+      flex: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 800px) and (min-width: 0px) {
+      .download-bar.certs .inner {
+        column-count: 4;
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+      }
+    }
+  </style>
+
+  {% seo title=false %}
+
+  {% include head-custom.html %}
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 class="title">{{ page.title | default: site.title }}</h1>
+    </header>
+    <div id="container">
+      <div class="download-bar menu">
+        <div class="inner">
+          <div class="menu-bar">
+            <input id="home-button" type="button" value="Home" onclick="location.href='/index.html';">
+            <input id="back-button" type="button" value="Back" onclick="history.back()">
+            <input id="SolidWorks-button" type="button" value="SolidWorks" onclick="location.href='/SolidWorks.html';">
+            <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';">
+          </div>
+        </div>
+      </div>
+      <h1 class="title splitter">{{ page.tagline }}</h1>
+      <div class="download-bar options"></div>
+      <!-- Exploration Gallery Grid -->
+      <div id="masterCont">
+        {% include_relative /SolidWorks/project_items.html %}
+      </div>
+      <div class="download-bar certs">
+        <div class="inner" style="width: 100%">
+          <!-- <img width="auto" src="SolidWorks\certs\Certificate_C-5UGRHJLZCV.jpg" alt="Certificate_C-5UGRHJLZCV"> -->
+          <a href="SolidWorks\certs\Certificate_C-5UGRHJLZCV.jpg"><img class="certLogo" src="SolidWorks\certs\Expert - Mechanical Design.jpg" alt="Expert - Mechanical Design"></a>
+          <img class="certLogo" src="SolidWorks\certs\Professional - Mechanical Design.jpg" alt="Professional - Mechanical Design">
+          <img class="certLogo" src="SolidWorks\certs\Professional - Drawing Tools.jpg" alt="Professional - Drawing Tools">
+          <img class="certLogo" src="SolidWorks\certs\Professional - Sheet Metal.jpg" alt="Professioevernal - Sheet Metal">
+          <img class="certLogo" src="SolidWorks\certs\Professional - Surfacing.jpg" alt="Professional - Surfacing">
+          <img class="certLogo" src="SolidWorks\certs\Professional - Weldments.jpg" alt="Professional - Weldments">
+          <img class="certLogo" src="SolidWorks\certs\Associate - Additive Manufacturing.jpg" alt="Additive Manufacturing">
+          <img class="certLogo" src="SolidWorks\certs\Associate - Mechanical Design.jpg" alt="Associate - Mechanical Design">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    // Modified from: https://css-tricks.com/block-links-the-search-for-a-perfect-solution/#method-4-sprinkle-javascript-on-the-second-method
+    const colElements = document.querySelectorAll(".colElement")
+    const mainLinks = document.querySelectorAll('.main-link')
+
+    for (let i = 0; i < colElements.length; i++) {
+      colElements[i].addEventListener("click", handleClick)
+
+      function handleClick(event) {
+        const isTextSelected = window.getSelection().toString();
+        if (!isTextSelected) {
+          mainLinks[i].click();
+        }
+      }
+    }
+
+  </script>
+
+
+
+
+</body>
+
+</html>
