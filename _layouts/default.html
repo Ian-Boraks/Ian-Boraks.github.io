@@ -10,8 +10,7 @@
 
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 
   {% seo title=false %}
@@ -34,8 +33,7 @@
             <div class="menu-bar">
               <input id="home-button" type="button" value="Home" onclick="location.href='/index.html';">
               <input id="back-button" type="button" value="Back" onclick="history.back()">
-              <input id="solidworks-button" type="button" value="Solidworks"
-                onclick="location.href='/solidworks.html';">
+              <input id="SolidWorks-button" type="button" value="SolidWorks" onclick="location.href='/SolidWorks.html';">
               <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';">
             </div>
           </div>
@@ -48,9 +46,7 @@
     <footer>
       <div class="owner">
         <p class="split-para"><a href="{{ site.github.owner_url }}" class="avatar">
-            <img src="{{ site.github.owner_gravatar_url }}" width="48" height="48"></a>View <a
-            href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> on <a
-            href="https://www.github.com">GitHub</a> & <a href="https://www.linkedin.com/in/ian-boraks/">LinkedIn</a>
+            <img src="{{ site.github.owner_gravatar_url }}" width="48" height="48"></a>View <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> on <a href="https://www.github.com">GitHub</a> & <a href="https://www.linkedin.com/in/ian-boraks/">LinkedIn</a>
         </p>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 ---
-title: "1st Place Catapult for TSA"
+title: "Catapult for TSA"
 ---
 
 <style>
@@ -8,10 +8,10 @@ title: "1st Place Catapult for TSA"
     }
 </style>
 
-# This is my 3d rendition of my teams 2019 TSA-Catapult.
+# This is a 3D rendition of my teams 2019 TSA-Catapult entry.
 
 Here is the finished product, that helped us place first at the state competition. This is a drawing made from a 35+ part assembly.
 
-<div markdown="1" id="solidworks100">
+<div markdown="1" id="SolidWorks100">
 ![Drawing](CAT.PNG)
 </div>

@@ -12,7 +12,7 @@ tagline:
   height: 100px;
 }
 
-#solidworks-button, #photo-button {
+#SolidWorks-button, #photo-button {
   width: 120px;
   border-width: 10px;
 }
