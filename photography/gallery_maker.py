@@ -174,9 +174,17 @@ def flatten(t):
 def vidOrPhoto(mediaItem):
     global mediaListSep
     if mediaItem in mediaListSep[1]:
-        return "<video alt=\"" + mediaItem + "\"class=\"" + identifier(mediaItem) + " media\" autoplay loop> <source src=\"\\photography\\" + mediaItem +  "\" type=\"video/mp4\"> </video>\n"
+        return """
+        <a href="photography\\""" + mediaItem +  """" target="_blank">
+            <video alt=\"""" + mediaItem + """"class=\"""" + identifier(mediaItem) + """ media\" autoplay loop> <source src="photography\\""" + mediaItem +  """" type="video/mp4"> </video>
+        </a>
+        """
     else:
-        return "<img src=\"\\photography\\" + mediaItem + "\" alt=\"" + mediaItem + "\"class=\"" + identifier(mediaItem) + " media\">\n"
+        return """
+        <a href="photography\\""" + mediaItem +  """" target="_blank">
+            <img src="photography\\""" + mediaItem +  """" alt=\"""" + mediaItem + """"class=\"""" + identifier(mediaItem) + """ media">
+        </a>
+        """
 
 def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
     global mediaListSep 
@@ -192,7 +200,12 @@ def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
 
 
     f = open("gallery_items.html", "w")
-    f.write("<div id=\"master\">")
+    f.write("""
+    <div id=\"master\">
+    <style scoped>
+        @import url("{{ '/assets/css/gallery.css?v=' | append: site.github.build_revision | relative_url }}");
+    </style>
+    """)
     f.close()
     f = open("gallery_items.html", "a")
     pos = 0
@@ -213,7 +226,10 @@ def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
         except IndexError:
             break
 
-    f.write("</div>")
+    f.write("""
+    <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
+    </div>
+    """)
     f.close()
 
 # explorationGallery()
