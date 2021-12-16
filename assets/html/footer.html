@@ -1,0 +1,36 @@
+<div>
+    <style scoped>
+        .container.footer {
+            font-family: "Lucida Console";
+            font-size: 10px;
+
+            height: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+
+        .container.footer::before {
+            /* create a full-height inline block pseudo-element */
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            /* vertical alignment of the inline element */
+            height: 100%;
+        }
+
+        .container.footer .content {
+            display: inline-block;
+            vertical-align: middle;
+            /* vertical alignment of the inline element */
+        }
+    </style>
+    <div class="container footer">
+        <div class="content">
+            &copy; Copyright 2021, Ian Boraks | <a href="https://www.linkedin.com/in/ian-boraks/" target="_blank">Linkedin</a> | <a href="https://github.com/Ian-Boraks" target="_blank">Github</a> | <a href="/contact.html" target="_blank">Contact</a>
+        </div>
+    </div>
+</div>

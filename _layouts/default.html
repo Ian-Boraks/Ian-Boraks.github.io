@@ -1,3 +1,6 @@
+---
+---
+
 <!doctype html>
 <!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
 <!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
@@ -43,13 +46,42 @@
         </article>
       </div>
     </div>
-    <footer>
-      <div class="owner">
-        <p class="split-para"><a href="{{ site.github.owner_url }}" class="avatar">
-            <img src="{{ site.github.owner_gravatar_url }}" width="48" height="48"></a>View <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> on <a href="https://www.github.com">GitHub</a> & <a href="https://www.linkedin.com/in/ian-boraks/">LinkedIn</a>
-        </p>
+  </div>
+  <div>
+    <style scoped>
+      .container.footer {
+        font-family: "Lucida Console";
+        font-size: 10px;
+
+        height: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: whitesmoke;
+        text-align: center;
+      }
+
+      .container.footer::before {
+        /* create a full-height inline block pseudo-element */
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        /* vertical alignment of the inline element */
+        height: 100%;
+      }
+
+      .container.footer .content {
+        display: inline-block;
+        vertical-align: middle;
+        /* vertical alignment of the inline element */
+      }
+    </style>
+    <div class="container footer">
+      <div class="content">
+        &copy; Copyright 2021, Ian Boraks | <a href="https://www.linkedin.com/in/ian-boraks/" target="_blank">Linkedin</a> | <a href="https://github.com/Ian-Boraks" target="_blank">Github</a> | <a href="/contact.html" target="_blank">Contact</a>
       </div>
-    </footer>
+    </div>
   </div>
 </body>
 
