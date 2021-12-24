@@ -15,7 +15,7 @@ I took inspiration to design this adapter from a few different already existing 
 <div markdown="1" id="SolidWorks50">
 ![Disc Golf Golden Retriever Disc Retriever](https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRdgho_n-xkyzlS5nzFaM5ZTafI_b89O3GQ54Zhjcjoivg13tAvACSwQD46FG0-xD7eMNSJDaiXARXvk94BioY87LJuHuYk7D9D8lIqkPVoGVKRzLYfd7f1lg&usqp=CAE)
 ![The Disc Claw](https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRnBNx-aJLXxMArebdH4rUv1kQN0lt_eQXeOQzUuzsyYpgqpVOKja8r_j7dOofbXxnE77scHHkHtrEb_hPthPl5M-quZ19pmvq3C8bVQVM6UnLRxrtuzr9k&usqp=CAE)
-![Impact Discs Hooker](https://cdn.shopify.com/s/files/1/0605/6573/products/2194.jpg?v=1474581487)
+![Impact Discs Hooker](https://cdn.shopify.com/s/files/1/0605/6573/products/2194.jpg1474581487)
 </div>
 
 The design:

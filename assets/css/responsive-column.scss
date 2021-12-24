@@ -20,13 +20,15 @@ body {
 }
 
 .download-bar.menu {
-  border-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 10px !important;
+  margin-top: 4px !important;
 }
 
 .download-bar.options {
-  margin-bottom: 10px !important;
+  margin-bottom: 4px !important;
+}
+
+.download-bar.options button {
+  margin-bottom: 0.3rem;
 }
 
 h1.splitter {

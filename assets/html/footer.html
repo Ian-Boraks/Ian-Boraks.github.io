@@ -36,21 +36,36 @@
         .contact {
             display: none;
         }
-
-        .stop-scrolling {
-            height: 100%;
-            overflow: hidden !important;
-        }
     </style>
     <div class="container footer">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
         <script>
+            // --------------------------------------------------
+            // The scroll stoping and starting functions are from https://www.geeksforgeeks.org/how-to-disable-scrolling-temporarily-using-javascript/
+
+            function disableScroll() {
+                // Get the current page scroll position
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+                    // if any scroll is attempted, set this to the previous value
+                    window.onscroll = function () {
+                        window.scrollTo(scrollLeft, scrollTop);
+                    };
+            }
+
+            function enableScroll() {
+                window.onscroll = function () { };
+            }
+
+            // --------------------------------------------------
+
             $(function () {
                 $(".contact").dialog({
                     closeText: "hide",
                     close: function (e, ui) {
-                        $('body').removeClass('stop-scrolling');
+                        enableScroll();
                     },
                     closeOnEscape: true,
                     autoOpen: false,
@@ -58,7 +73,7 @@
                 });
             });
             function openContactBox() {
-                $('body').addClass('stop-scrolling')
+                disableScroll();
                 $(".contact").dialog("close");
                 $(".contact").dialog("open");
             };               

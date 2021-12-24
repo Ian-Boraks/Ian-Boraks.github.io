@@ -203,7 +203,7 @@ def ResponsiveGallery(doVideo = False, doRandom = False, docolCaption = False):
     f.write("""
     <div id=\"master\">
     <style scoped>
-        @import url("{{ '/assets/css/responsive-column.css?v=' | append: site.github.build_revision | relative_url }}");
+        @import url("{{ '/assets/css/responsive-column.css' | relative_url }}");
     </style>
     """)
     f.close()

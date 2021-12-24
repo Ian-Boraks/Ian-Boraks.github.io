@@ -12,7 +12,7 @@ tagline: "."
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <style>
     #container {
       border: 0 none;
@@ -41,8 +41,8 @@ tagline: "."
       <div id="masterCont">
         <div id="master">
           <style scoped>
-            @import url("{{ '/assets/css/responsive-column.css?v=' | append: site.github.build_revision | relative_url }}");
-            @import url("{{ '/assets/css/related-edu.css?v=' | append: site.github.build_revision | relative_url }}");
+            @import url("{{ '/assets/css/responsive-column.css' | relative_url }}");
+            @import url("{{ '/assets/css/related-edu.css' | relative_url }}");
           </style>
           <div class="colElement">
             <div class="colCpationCont">
