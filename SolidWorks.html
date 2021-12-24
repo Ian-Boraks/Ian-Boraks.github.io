@@ -13,54 +13,7 @@ tagline: "Compilation of some of my favorite SolidWorks projects."
 
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  <style>
-    #master {
-      column-count: 5;
-      -webkit-column-count: 5;
-      -moz-column-count: 5;
-    }
-
-    .download-bar.menu {
-      border-bottom: 5px solid #444 !important;
-      margin-bottom: 0;
-    }
-
-    .download-bar.certs {
-      margin-bottom: 10px !important;
-      margin-top: 10px !important;
-    }
-
-    .download-bar.certs .inner {
-      line-height: 0;
-      column-count: 8;
-      -webkit-column-count: 8;
-      -moz-column-count: 8;
-
-      -webkit-column-gap: 0px;
-      -moz-column-gap: 0px;
-      column-gap: 0px;
-
-      padding: 0;
-      margin: 0;
-      width: 100%;
-    }
-
-    .certLogo {
-      line-height: 0;
-      flex: 0;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-
-    @media (max-width: 800px) and (min-width: 0px) {
-      .download-bar.certs .inner {
-        column-count: 4;
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/solidworks.css?v=' | append: site.github.build_revision | relative_url }}">
 
   {% seo title=false %}
 
@@ -74,16 +27,7 @@ tagline: "Compilation of some of my favorite SolidWorks projects."
       <h1 class="title">{{ page.title | default: site.title }}</h1>
     </header>
     <div id="container">
-      <div class="download-bar menu">
-        <div class="inner">
-          <div class="menu-bar">
-            <input id="home-button" type="button" value="Home" onclick="location.href='/index.html';">
-            <input id="back-button" type="button" value="Back" onclick="history.back()">
-            <input id="SolidWorks-button" type="button" value="SolidWorks" onclick="location.href='/SolidWorks.html';">
-            <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';">
-          </div>
-        </div>
-      </div>
+      {% include_relative /assets/html/download-bar.html %}
       <h1 class="title splitter">{{ page.tagline }}</h1>
       <div class="download-bar options"></div>
       <!-- Exploration Gallery Grid -->
@@ -124,10 +68,6 @@ tagline: "Compilation of some of my favorite SolidWorks projects."
     }
 
   </script>
-
-
-
-
 </body>
 
 </html>

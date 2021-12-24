@@ -186,7 +186,7 @@ def vidOrPhoto(mediaItem):
         </a>
         """
 
-def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
+def ResponsiveGallery(doVideo = False, doRandom = False, docolCaption = False):
     global mediaListSep 
     mediaListSep = [astro[0][1:] + city[0][1:] + misc[0][1:] + nature[0][1:] + sky_landscape[0][1:] + wildlife[0][1:], astro[1][1:] + city[1][1:] + misc[1][1:] + nature[1][1:] + sky_landscape[1][1:] + wildlife[1][1:]]
 
@@ -203,7 +203,7 @@ def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
     f.write("""
     <div id=\"master\">
     <style scoped>
-        @import url("{{ '/assets/css/gallery.css?v=' | append: site.github.build_revision | relative_url }}");
+        @import url("{{ '/assets/css/responsive-column.css?v=' | append: site.github.build_revision | relative_url }}");
     </style>
     """)
     f.close()
@@ -212,12 +212,12 @@ def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
 
     while True:
         try:
-            if not doCaption:
+            if not docolCaption:
                 f.write(vidOrPhoto(mediaList[pos]))
             else:
                 f.write("""
                 <div class="colElement">
-                    <p class="caption">""" + mediaList[pos] + """</p>
+                    <p class="colCaption">""" + mediaList[pos] + """</p>
                 """)
                 f.write(vidOrPhoto(mediaList[pos]))
                 f.write("</div>")
@@ -233,5 +233,5 @@ def ResponsiveGallery(doVideo = False, doRandom = False, doCaption = False):
     f.close()
 
 # explorationGallery()
-# ResponsiveGallery(doVideo, doRandom, doCaption)
+# ResponsiveGallery(doVideo, doRandom, docolCaption)
 ResponsiveGallery(True, True, False)

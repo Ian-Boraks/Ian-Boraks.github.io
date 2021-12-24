@@ -1,0 +1,153 @@
+---
+---
+
+.download-bar menu {
+  margin-bottom: 4px;
+}
+
+.colElement {
+  content: "";
+  font-size: 20px;
+  margin: 4px;
+  margin-top: 0;
+  font-size: 20px;
+  break-inside: avoid-column;
+  border: solid 1px;
+  border-color: whitesmoke;
+  box-shadow: 0 0 5px #b1b1b1;
+}
+
+.colCpationCont {
+  height: 48px; /* 2rem + 4px(margin) * 2 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colCaption {
+  vertical-align: middle;
+  width: fit-content;
+  display: flex;
+  padding-left: 0.3em;
+}
+.colCaption::after {
+  content: "";
+  position: absolute;
+  margin-top: 5.5px;
+  margin-right: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  border-bottom: 1px solid mediumpurple;
+  color: transparent;
+}
+
+#appBusEdu::after {
+  line-height: 2em;
+  content: "of Business Education";
+}
+#schoolAct::after {
+  line-height: 1em;
+  content: "School Activities";
+}
+#carRes::after {
+  line-height: 1em;
+  content: "Career Research Projects";
+}
+#occSkill::after {
+  line-height: 1em;
+  content: "Occupational Skills";
+}
+
+// This is for the reverse wrapping
+p.colCaption {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+p span {
+  margin-right: 0.3em;
+  // border: mediumpurple 1px solid;
+}
+// Modified from https://stackoverflow.com/a/63781543
+
+.colContent {
+  content: "";
+  color: whitesmoke;
+
+  margin: 1em;
+  margin-top: 0; /* No need as this margin is set by the .colCaption*/
+  margin-bottom: 4px; /* This now matches the margins in .colCaption*/
+
+  height: 20em;
+  line-height: 1em;
+}
+
+.colContent .colParentList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 1191px) {
+  #carRes::after {
+    line-height: 2em;
+    content: "Research Projects";
+  }
+}
+
+@media (max-width: 1092px) {
+  #appBusEdu::after {
+    line-height: 2em;
+    content: "Business Education";
+  }
+}
+
+@media (max-width: 1000px) {
+  #master {
+    column-count: 2 !important;
+    -webkit-column-count: 2 !important;
+    -moz-column-count: 2 !important;
+  }
+
+  #appBusEdu::after {
+    line-height: 1em;
+    content: "Application of Business Education";
+  }
+  #carRes::after {
+    line-height: 1em;
+    content: "Career Research Projects";
+  }
+}
+
+@media (max-width: 788px) {
+  #appBusEdu::after {
+    line-height: 2em;
+    content: "of Business Education";
+  }
+}
+
+@media (max-width: 600px) {
+  #master {
+    column-count: 1 !important;
+    -webkit-column-count: 1 !important;
+    -moz-column-count: 1 !important;
+  }
+
+  .colCaption {
+    height: auto;
+  }
+
+  #appBusEdu::after {
+    line-height: 1em;
+    content: "Application of Business Education";
+  }
+}
+
+@media (max-width: 395.2px) {
+  #appBusEdu::after {
+    line-height: 2em;
+    content: "of Business Education";
+  }
+}

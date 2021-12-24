@@ -27,10 +27,50 @@
             vertical-align: middle;
             /* vertical alignment of the inline element */
         }
+
+        .ui-dialog {
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+
+        .contact {
+            display: none;
+        }
+
+        .stop-scrolling {
+            height: 100%;
+            overflow: hidden !important;
+        }
     </style>
     <div class="container footer">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".contact").dialog({
+                    closeText: "hide",
+                    close: function (e, ui) {
+                        $('body').removeClass('stop-scrolling');
+                    },
+                    closeOnEscape: true,
+                    autoOpen: false,
+                    draggable: false
+                });
+            });
+            function openContactBox() {
+                $('body').addClass('stop-scrolling')
+                $(".contact").dialog("close");
+                $(".contact").dialog("open");
+            };               
+        </script>
         <div class="content">
-            &copy; Copyright 2021, Ian Boraks | <a href="https://www.linkedin.com/in/ian-boraks/" target="_blank">Linkedin</a> | <a href="https://github.com/Ian-Boraks" target="_blank">Github</a> | <a href="/contact.html" target="_blank">Contact</a>
+            &copy; Copyright 2021, Ian Boraks | <a href="https://www.linkedin.com/in/ian-boraks/" target="_blank">Linkedin</a> | <a href="https://github.com/Ian-Boraks" target="_blank">Github</a> | <a href="javascript:void(0);" onclick="openContactBox()">Contact</a>
         </div>
+    </div>
+    <div class="contact">
+        <p>
+            The best way to obtain my contact information is to request my resume on the homepage or with this link:
+            <a href="https://forms.gle/K9xrZ8yxC1t6pHo96" target="_blank">https://forms.gle/K9xrZ8yxC1t6pHo96</a>
+        </p>
     </div>
 </div>

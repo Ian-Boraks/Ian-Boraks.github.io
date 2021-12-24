@@ -13,6 +13,29 @@ tagline: Below are some of my favorite photos that I have taken
 
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <style>
+    .btn {
+      font-weight: bold;
+      height: 100%;
+      position: float;
+      background-color: #2222;
+      border-color: mediumpurple;
+      border-width: 3px;
+      color: whitesmoke;
+      text-decoration: none;
+      transition: opacity ease-in-out 0.3s;
+      -webkit-transition: opacity ease-in-out 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:active,
+    .btn.active,
+    .btn:hover {
+      outline: 0;
+      filter: brightness(105%);
+      text-shadow: 2px 2px 2px rgba(147, 112, 216, 0.753);
+    }
+  </style>
 
   {% seo title=false %}
 
@@ -26,16 +49,7 @@ tagline: Below are some of my favorite photos that I have taken
       <h1 class="title">{{ page.title | default: site.title }}</h1>
     </header>
     <div id="container">
-      <div class="download-bar menu">
-        <div class="inner">
-          <div class="menu-bar">
-            <input id="home-button" type="button" value="Home" onclick="location.href='/index.html';">
-            <input id="back-button" type="button" value="Back" onclick="history.back()">
-            <input id="SolidWorks-button" type="button" value="SolidWorks" onclick="location.href='/SolidWorks.html';">
-            <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';">
-          </div>
-        </div>
-      </div>
+      {% include_relative /assets/html/download-bar.html %}
       <h1 class="title splitter">{{ page.tagline }}</h1>
       <div class="download-bar options">
         <div class="inner">

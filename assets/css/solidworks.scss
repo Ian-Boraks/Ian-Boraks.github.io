@@ -1,0 +1,43 @@
+---
+---
+
+.download-bar.menu {
+  border-bottom: 5px solid #444 !important;
+  margin-bottom: 0;
+}
+
+.download-bar.certs {
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+}
+
+.download-bar.certs .inner {
+  line-height: 0;
+  column-count: 8;
+  -webkit-column-count: 8;
+  -moz-column-count: 8;
+
+  -webkit-column-gap: 0px;
+  -moz-column-gap: 0px;
+  column-gap: 0px;
+
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.certLogo {
+  line-height: 0;
+  flex: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 800px) and (min-width: 0px) {
+  .download-bar.certs .inner {
+    column-count: 4;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+  }
+}
