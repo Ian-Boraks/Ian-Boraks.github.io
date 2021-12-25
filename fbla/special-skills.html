@@ -1,0 +1,128 @@
+---
+title: Special Skills
+tagline: "."
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <style>
+    #container {
+      border: 0 none;
+      background-color: rgb(34, 34, 34);
+      background-image: none;
+    }
+
+    .download-bar.menu {
+      border-bottom: 5px solid #444 !important;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 800px) and (min-width: 0px) {}
+  </style>
+
+  {% seo title=false %} {% include head-custom.html %}
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 class="title">{{ page.title | default: site.title }}</h1>
+    </header>
+    <div id="container">
+      {% include assets/html/fbla-navigation-bar.html %}
+      <div id="masterCont">
+        <div id="master">
+          <style scoped>
+            @import url("{{ '/assets/css/responsive-column.css' | relative_url }}");
+            @import url("{{ '/assets/fbla_css/special-skill.css' | relative_url }}");
+          </style>
+          <div class="colElement">
+            <div class="colCpationCont">
+              <p id="schoolAct" class="colCaption">School Activities</p>
+            </div>
+            <div class="colContent">
+              <ul class="colParentList">
+                <li>TSA</li>
+                <ul class="colChildList">
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li>CAD Courses</li>
+                <ul class="colChildList">
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li>3D Printing & Manufacturing Courses</li>
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+              </ul>
+            </div>
+          </div>
+          <div class="colElement">
+            <div class="colCpationCont">
+              <p id="carRes" class="colCaption">Career Research Projects</p>
+            </div>
+            <div class="colContent">
+              <ul class="colParentList">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+              </ul>
+            </div>
+          </div>
+          <div class="colElement">
+            <div class="colCpationCont">
+              <p id="appBusEdu" class="colCaption">Application of Business Education</p>
+            </div>
+            <div class="colContent">
+              <ul class="colParentList">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+              </ul>
+            </div>
+          </div>
+          <div class="colElement">
+            <div class="colCpationCont">
+              <p id="occSkill" class="colCaption">Occupational Skills</p>
+            </div>
+            <div class="colContent">
+              <ul class="colParentList">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script> // Modified from https://stackoverflow.com/a/63781543
+    x = document.getElementsByClassName("colCaption");
+
+    for (i = 0; i < x.length; i++) {
+      const wrapText = x[i];
+      wrapText.innerHTML = wrapText.textContent.split(' ').map(function (y) {
+        return '<span>' + y + '</span>';
+      }).reverse().join('');
+    }
+  </script>
+  {% include assets/html/footer.html %}
+</body>
+
+</html>

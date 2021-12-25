@@ -1,4 +1,4 @@
-<div>
+<div style="z-index: 1000; position: fixed;">
     <style scoped>
         .container.footer {
             font-family: "Lucida Console";
@@ -37,7 +37,8 @@
             display: none;
         }
     </style>
-    <div class="container footer">
+
+    <section class="JS">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
         <script>
@@ -78,6 +79,10 @@
                 $(".contact").dialog("open");
             };               
         </script>
+    </section>
+
+    <div class="container footer">
+
         <div class="content">
             &copy; Copyright 2021, Ian Boraks | <a href="https://www.linkedin.com/in/ian-boraks/" target="_blank">Linkedin</a> | <a href="https://github.com/Ian-Boraks" target="_blank">Github</a> | <a href="javascript:void(0);" onclick="openContactBox()">Contact</a>
         </div>

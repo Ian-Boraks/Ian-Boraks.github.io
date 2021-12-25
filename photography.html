@@ -38,19 +38,18 @@ tagline: Below are some of my favorite photos that I have taken
   </style>
 
   {% seo title=false %}
-
-  {% include head-custom.html %}
 </head>
 
 
 <body>
+  {% include assets/html/header.html %}
   <div class="wrapper">
     <header>
       <h1 class="title">{{ page.title | default: site.title }}</h1>
     </header>
     <div id="container">
-      {% include_relative /assets/html/download-bar.html %}
-      <h1 class="title splitter">{{ page.tagline }}</h1>
+      {% include assets/html/navigation-bar.html %}
+      <h1 style="margin-top: -24px" class="title splitter">{{ page.tagline }}</h1>
       <div class="download-bar options">
         <div class="inner">
           <div class="menu-bar" id="myBtnContainer">
@@ -72,7 +71,7 @@ tagline: Below are some of my favorite photos that I have taken
     </div>
 
   </div>
-  {% include_relative /assets/html/footer.html %}
+  {% include assets/html/footer.html %}
 </body>
 
 </html>

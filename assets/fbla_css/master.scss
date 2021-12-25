@@ -11,10 +11,12 @@
   margin: 4px;
   margin-top: 0;
   font-size: 20px;
+
+  outline: 1px solid whitesmoke;
+  outline-offset: -1px;
+
+  // box-shadow: 0 0 5px #b1b1b1;
   break-inside: avoid-column;
-  border: solid 1px;
-  border-color: whitesmoke;
-  box-shadow: 0 0 5px #b1b1b1;
 }
 
 .colCpationCont {
@@ -39,23 +41,6 @@
   padding-right: 0.3em;
   border-bottom: 1px solid mediumpurple;
   color: transparent;
-}
-
-#appBusEdu::after {
-  line-height: 2em;
-  content: "of Business Education";
-}
-#schoolAct::after {
-  line-height: 1em;
-  content: "School Activities";
-}
-#carRes::after {
-  line-height: 1em;
-  content: "Career Research Projects";
-}
-#occSkill::after {
-  line-height: 1em;
-  content: "Occupational Skills";
 }
 
 // This is for the reverse wrapping
@@ -90,41 +75,32 @@ p span {
   list-style: none;
 }
 
-@media (max-width: 1191px) {
-  #carRes::after {
-    line-height: 2em;
-    content: "Research Projects";
-  }
+#masterCont {
+  margin-top: 4px;
 }
 
-@media (max-width: 1092px) {
-  #appBusEdu::after {
-    line-height: 2em;
-    content: "Business Education";
-  }
-}
+// TODO: Need to fix 3x column wrapping
+// @media (max-width: 1100px) {
+//   #master {
+//     column-count: 3 !important;
+//     -webkit-column-count: 3 !important;
+//     -moz-column-count: 3 !important;
+//   }
 
-@media (max-width: 1000px) {
+//   .colElement {
+//     margin-top: 4px;
+//   }
+// }
+
+@media (max-width: 1100px) {
   #master {
     column-count: 2 !important;
     -webkit-column-count: 2 !important;
     -moz-column-count: 2 !important;
   }
 
-  #appBusEdu::after {
-    line-height: 1em;
-    content: "Application of Business Education";
-  }
-  #carRes::after {
-    line-height: 1em;
-    content: "Career Research Projects";
-  }
-}
-
-@media (max-width: 788px) {
-  #appBusEdu::after {
-    line-height: 2em;
-    content: "of Business Education";
+  .colElement {
+    margin-top: 0;
   }
 }
 
@@ -137,17 +113,5 @@ p span {
 
   .colCaption {
     height: auto;
-  }
-
-  #appBusEdu::after {
-    line-height: 1em;
-    content: "Application of Business Education";
-  }
-}
-
-@media (max-width: 395.2px) {
-  #appBusEdu::after {
-    line-height: 2em;
-    content: "of Business Education";
   }
 }

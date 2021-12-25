@@ -1,5 +1,5 @@
 ---
-title: Career-Related Education
+title: Educational Enhancement
 tagline: "."
 ---
 
@@ -37,16 +37,16 @@ tagline: "."
       <h1 class="title">{{ page.title | default: site.title }}</h1>
     </header>
     <div id="container">
-      {% include_relative /assets/html/download-bar.html %}
+      {% include assets/html/fbla-navigation-bar.html %}
       <div id="masterCont">
         <div id="master">
-          <style scoped>
+          <style >
             @import url("{{ '/assets/css/responsive-column.css' | relative_url }}");
-            @import url("{{ '/assets/css/related-edu.css' | relative_url }}");
+            @import url("{{ '/assets/fbla_css/edu-enhancement.css' | relative_url }}");
           </style>
           <div class="colElement">
             <div class="colCpationCont">
-              <p id="schoolAct" class="colCaption">School Activities</p>
+              <p id="devPlan" class="colCaption">Career Development Plan</p>
             </div>
             <div class="colContent">
               <ul class="colParentList">
@@ -71,7 +71,7 @@ tagline: "."
           </div>
           <div class="colElement">
             <div class="colCpationCont">
-              <p id="carRes" class="colCaption">Career Research Projects</p>
+              <p id="jobShadow" class="colCaption">Job Shadowing</p>
             </div>
             <div class="colContent">
               <ul class="colParentList">
@@ -86,7 +86,7 @@ tagline: "."
           </div>
           <div class="colElement">
             <div class="colCpationCont">
-              <p id="appBusEdu" class="colCaption">Application of Business Education</p>
+              <p id="intern" class="colCaption">Internships</p>
             </div>
             <div class="colContent">
               <ul class="colParentList">
@@ -98,7 +98,7 @@ tagline: "."
           </div>
           <div class="colElement">
             <div class="colCpationCont">
-              <p id="occSkill" class="colCaption">Occupational Skills</p>
+              <p id="commServ" class="colCaption">Community Service</p>
             </div>
             <div class="colContent">
               <ul class="colParentList">
@@ -122,7 +122,7 @@ tagline: "."
       }).reverse().join('');
     }
   </script>
-  {% include_relative /assets/html/footer.html %}
+  {% include assets/html/footer.html %}
 </body>
 
 </html>
