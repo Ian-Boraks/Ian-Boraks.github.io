@@ -13,10 +13,12 @@
   font-size: 20px;
 
   outline: 1px solid whitesmoke;
-  outline-offset: -1px;
+  // outline-offset: -1px;
 
-  // box-shadow: 0 0 5px #b1b1b1;
   break-inside: avoid-column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
 }
 
 .colCpationCont {
@@ -24,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .colCaption {

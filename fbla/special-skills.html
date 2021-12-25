@@ -32,6 +32,7 @@ tagline: "."
 </head>
 
 <body>
+  {% include assets/html/header.html %}
   <div class="wrapper">
     <header>
       <h1 class="title">{{ page.title | default: site.title }}</h1>
@@ -46,45 +47,58 @@ tagline: "."
           </style>
           <div class="colElement">
             <div class="colCpationCont">
-              <p id="schoolAct" class="colCaption">School Activities</p>
+              <div class="menu-bar">
+                <div class="wrapper menu">
+                  <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';" />
+                </div>
+              </div>
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>TSA</li>
-                <ul class="colChildList">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
+                <li>Marketing</li>
+                <ul>
+                  <li>I would be able to help with marketing as well as my main job.</li>
                 </ul>
-                <li>CAD Courses</li>
-                <ul class="colChildList">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
+                <li>Social Media</li>
+                <ul>
+                  <li>I would be able to help with social media as well as my main job.</li>
                 </ul>
-                <li>3D Printing & Manufacturing Courses</li>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
               </ul>
             </div>
           </div>
           <div class="colElement">
             <div class="colCpationCont">
-              <p id="carRes" class="colCaption">Career Research Projects</p>
+              <p id="orgMod" class="colCaption">Organic 3D Modeling & Game Design</p>
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                <li>Blender</li>
+                <ul>
+                  <li>
+                    Blender is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games.<br>
+                    <blockquote style="margin-top: .2em; margin-bottom: 0;">
+                      <sup style="line-height: 1em; font-size: .5em;">
+                        Taken from: https://en.wikipedia.org/wiki/Blender_(software)
+                      </sup>
+                    </blockquote>
+                  </li>
+                  <li>
+                    By knowing how to use Blender, I would be able to help with promotional material that might use organic 3D modeling.
+                  </li>
+                </ul>
+                <li>Unity/Unreal Engine</li>
+                <ul>
+                  <li>
+                    Unity and Unreal Engine are open-source game engines developed by Unity Technologies Epic Games respecitivly. Both of these applications are used for creating video games, interactive 3D applications, and virtual reality.<br>
+                  </li>
+                  <li>
+                    Unity and Unreal Engine are used exentivly in promotianl material and VR applciation design.
+                  </li>
+                </ul>
               </ul>
             </div>
           </div>
-          <div class="colElement">
+          <!-- <div class="colElement">
             <div class="colCpationCont">
               <p id="appBusEdu" class="colCaption">Application of Business Education</p>
             </div>
@@ -107,7 +121,7 @@ tagline: "."
                 <li>c</li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

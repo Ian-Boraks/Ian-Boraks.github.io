@@ -3,65 +3,52 @@
 
 @import "/assets/fbla_css/master.css";
 
-#appBusEdu::after {
-  line-height: 2em;
-  content: "of Business Education";
+#master {
+  column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
 }
-#schoolAct::after {
+
+.colElement {
+  margin-top: 0;
+}
+
+#orgMod::after {
   line-height: 1em;
-  content: "School Activities";
-}
-#carRes::after {
-  line-height: 1em;
-  content: "Career Research Projects";
-}
-#occSkill::after {
-  line-height: 1em;
-  content: "Occupational Skills";
+  content: "Organic 3D Modeling & Game Design";
 }
 
-@media (max-width: 1191px) {
-  #carRes::after {
+@media (max-width: 852px) {
+  #orgMod::after {
     line-height: 2em;
-    content: "Research Projects";
+    content: "3D Modeling & Game Design";
   }
 }
 
-@media (max-width: 1092px) {
-  #appBusEdu::after {
+@media (max-width: 666px) {
+  #orgMod::after {
     line-height: 2em;
-    content: "Business Education";
-  }
-}
-
-@media (max-width: 1000px) {
-  #appBusEdu::after {
-    line-height: 1em;
-    content: "Application of Business Education";
-  }
-  #carRes::after {
-    line-height: 1em;
-    content: "Career Research Projects";
-  }
-}
-
-@media (max-width: 788px) {
-  #appBusEdu::after {
-    line-height: 2em;
-    content: "of Business Education";
+    content: "Modeling & Game Design";
   }
 }
 
 @media (max-width: 600px) {
-  #appBusEdu::after {
+  #orgMod::after {
     line-height: 1em;
-    content: "Application of Business Education";
+    content: "Organic 3D Modeling & Game Design";
   }
 }
 
-@media (max-width: 395.2px) {
-  #appBusEdu::after {
+@media (max-width: 428px) {
+  #orgMod::after {
     line-height: 2em;
-    content: "of Business Education";
+    content: "3D Modeling & Game Design";
+  }
+}
+
+@media (max-width: 328px) {
+  #orgMod::after {
+    line-height: 2em;
+    content: "Modeling & Game Design";
   }
 }
