@@ -19,13 +19,10 @@ tagline: "."
       background-color: rgb(34, 34, 34);
       background-image: none;
     }
-
     .download-bar.menu {
       border-bottom: 5px solid #444 !important;
       margin-bottom: 0;
     }
-
-    @media (max-width: 800px) and (min-width: 0px) {}
   </style>
 
   {% seo title=false %} {% include head-custom.html %}
@@ -45,23 +42,26 @@ tagline: "."
             @import url("{{ '/assets/css/responsive-column.css' | relative_url }}");
             @import url("{{ '/assets/fbla_css/special-skill.css' | relative_url }}");
           </style>
+          <!-- TODO: Make these accordion boxes with <details> elements instead of JS. -->
           <div class="colElement">
             <div class="colCpationCont">
-              <div class="menu-bar">
-                <div class="wrapper menu">
-                  <input id="photo-button" type="button" value="Photography" onclick="location.href='/photography.html';" />
-                </div>
-              </div>
+              <p id="photo" class="colCaption">Photography</p>
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>Marketing</li>
-                <ul>
+                <li class="accordion">Marketing</li>
+                <ul class="panel">
                   <li>I would be able to help with marketing as well as my main job.</li>
                 </ul>
-                <li>Social Media</li>
-                <ul>
+                <li class="accordion">Social Media</li>
+                <ul class="panel">
                   <li>I would be able to help with social media as well as my main job.</li>
+                </ul>
+                <li id="workExamp" class="accordion">Examples of My Work</li>
+                <ul class="panel">
+                  <li>
+                    <a href="/photography.html" taget="_blank">Click Here</a>
+                  </li>
                 </ul>
               </ul>
             </div>
@@ -72,8 +72,8 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>Blender</li>
-                <ul>
+                <li class="accordion">Blender</li>
+                <ul class="panel">
                   <li>
                     Blender is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games.<br>
                     <blockquote style="margin-top: .2em; margin-bottom: 0;">
@@ -86,8 +86,8 @@ tagline: "."
                     By knowing how to use Blender, I would be able to help with promotional material that might use organic 3D modeling.
                   </li>
                 </ul>
-                <li>Unity/Unreal Engine</li>
-                <ul>
+                <li class="accordion">Unity/Unreal Engine</li>
+                <ul class="panel">
                   <li>
                     Unity and Unreal Engine are open-source game engines developed by Unity Technologies Epic Games respecitivly. Both of these applications are used for creating video games, interactive 3D applications, and virtual reality.<br>
                   </li>
@@ -98,44 +98,12 @@ tagline: "."
               </ul>
             </div>
           </div>
-          <!-- <div class="colElement">
-            <div class="colCpationCont">
-              <p id="appBusEdu" class="colCaption">Application of Business Education</p>
-            </div>
-            <div class="colContent">
-              <ul class="colParentList">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-              </ul>
-            </div>
-          </div>
-          <div class="colElement">
-            <div class="colCpationCont">
-              <p id="occSkill" class="colCaption">Occupational Skills</p>
-            </div>
-            <div class="colContent">
-              <ul class="colParentList">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-              </ul>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
   </div>
-  <script> // Modified from https://stackoverflow.com/a/63781543
-    x = document.getElementsByClassName("colCaption");
-
-    for (i = 0; i < x.length; i++) {
-      const wrapText = x[i];
-      wrapText.innerHTML = wrapText.textContent.split(' ').map(function (y) {
-        return '<span>' + y + '</span>';
-      }).reverse().join('');
-    }
-  </script>
+  <script src="{{ '/assets/js/accordion.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/reverse_wrap.js' | relative_url }}"></script>
   {% include assets/html/footer.html %}
 </body>
 

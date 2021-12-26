@@ -41,7 +41,7 @@ tagline: "."
       {% include assets/html/fbla-navigation-bar.html %}
       <div id="masterCont">
         <div id="master">
-          <style >
+          <style>
             @import url("{{ '/assets/css/responsive-column.css' | relative_url }}");
             @import url("{{ '/assets/fbla_css/edu-enhancement.css' | relative_url }}");
           </style>
@@ -51,22 +51,24 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>TSA</li>
-                <ul class="colChildList">
+                <li class="accordion">Past</li>
+                <ul class="panel">
                   <li>a</li>
                   <li>b</li>
                   <li>c</li>
                 </ul>
-                <li>CAD Courses</li>
-                <ul class="colChildList">
+                <li class="accordion">Present</li>
+                <ul class="panel">
                   <li>a</li>
                   <li>b</li>
                   <li>c</li>
                 </ul>
-                <li>3D Printing & Manufacturing Courses</li>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                <li class="accordion">Future</li>
+                <ul class="panel">
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
               </ul>
             </div>
           </div>
@@ -79,9 +81,6 @@ tagline: "."
                 <li>a</li>
                 <li>b</li>
                 <li>c</li>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
               </ul>
             </div>
           </div>
@@ -91,9 +90,18 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                <li class="accordion">Lockheed Martin</li>
+                <ul class="panel">
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li class="accordion">The 3D Printing Store</li>
+                <ul class="panel">
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
               </ul>
             </div>
           </div>
@@ -103,9 +111,36 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                <li class="accordion">Integrated Family Community Services (IFCS)</li>
+                <ul class="panel">
+                  <li class="clickable-list">
+                    <a href="https://ifcs.org/" target="_blank">
+                      Link to IFCS website
+                    </a>
+                  </li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li class="accordion">Alititude Youth Ultimate (AYU)</li>
+                <ul class="panel">
+                  <li class="clickable-list">
+                    <a href="https://www.altitudeyouthultimate.org/" target="_blank">
+                      Link to AYU website
+                    </a>
+                  </li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li class="accordion">STEM School Highlands Ranch</li>
+                <ul class="panel">
+                  <li class="clickable-list">
+                    <a href="https://stemk12.org/" target="_blank">
+                      Link to STEM School
+                    </a>
+                  </li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
               </ul>
             </div>
           </div>
@@ -113,16 +148,8 @@ tagline: "."
       </div>
     </div>
   </div>
-  <script> // Modified from https://stackoverflow.com/a/63781543
-    x = document.getElementsByClassName("colCaption");
-
-    for (i = 0; i < x.length; i++) {
-      const wrapText = x[i];
-      wrapText.innerHTML = wrapText.textContent.split(' ').map(function (y) {
-        return '<span>' + y + '</span>';
-      }).reverse().join('');
-    }
-  </script>
+  <script src="{{ '/assets/js/accordion.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/reverse_wrap.js' | relative_url }}"></script>
   {% include assets/html/footer.html %}
 </body>
 

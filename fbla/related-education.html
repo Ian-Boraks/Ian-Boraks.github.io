@@ -28,7 +28,7 @@ tagline: "."
     @media (max-width: 800px) and (min-width: 0px) {}
   </style>
 
-  {% seo title=false %} {% include head-custom.html %}
+  {% seo title=false %}
 </head>
 
 <body>
@@ -51,20 +51,20 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>TSA</li>
-                <ul class="colChildList">
+                <li class="accordion">TSA</li>
+                <ul class="panel">
                   <li>Team Building</li>
                   <li>Project/Time Managment</li>
                   <li>Leadership</li>
                 </ul>
-                <li>CAD Courses</li>
-                <ul class="colChildList">
+                <li class="accordion">CAD Courses</li>
+                <ul class="panel">
                   <li>Solidworks</li>
                   <li>3D Spatial Awareness</li>
                   <li>Good Design Practices</li>
                 </ul>
-                <li>3D Printing & Manufacturing Courses</li>
-                <ul class="colChildList">
+                <li class="accordion">3D Printing & Manufacturing Courses</li>
+                <ul class="panel">
                   <li>Modeling Skills for Additive Manufacturing</li>
                   <li>3D Printer Maintenince and Support</li>
                   <li>Subtractive/Additive Manufacturing Best Practices</li>
@@ -78,8 +78,8 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>SolidWorks Certificates</li>
-                <ul>
+                <li class="accordion">SolidWorks Certificates</li>
+                <ul class="panel">
                   <li><a target="_blank" href="https://ian-boraks.github.io/SolidWorks/certs/Certificate_C-5UGRHJLZCV.jpg">Certified SolidWorks Expert (CSWE)</a> - The highest level of certification you can obtain for using SolidWorks</li>
                   <li>Associte Certification in Additive Manufacturing - The highest level of certification you can obtain from Dassault Systems relating to additive manufacturing</li>
                   <li>Solidworks Certification</li>
@@ -93,9 +93,9 @@ tagline: "."
             </div>
             <div class="colContent">
               <ul class="colParentList">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                <li class="accordion">a</li>
+                <li class="accordion">b</li>
+                <li class="accordion">c</li>
               </ul>
             </div>
           </div>
@@ -121,16 +121,8 @@ tagline: "."
       </div>
     </div>
   </div>
-  <script> // Modified from https://stackoverflow.com/a/63781543
-    x = document.getElementsByClassName("colCaption");
-
-    for (i = 0; i < x.length; i++) {
-      const wrapText = x[i];
-      wrapText.innerHTML = wrapText.textContent.split(' ').map(function (y) {
-        return '<span>' + y + '</span>';
-      }).reverse().join('');
-    }
-  </script>
+  <script src="{{ '/assets/js/accordion.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/reverse_wrap.js' | relative_url }}"></script>
   {% include assets/html/footer.html %}
 </body>
 

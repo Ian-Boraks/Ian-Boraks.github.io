@@ -2,6 +2,7 @@
 title: "Astro&#8203;photo&#8203;graphy Equatorial Tracker/&#8203;Mount"
 ---
 
+<link rel="stylesheet" type="text/css" href="/assets/css/solidworks.css">
 <style>
     p.tagline {
         display: none;

@@ -2,6 +2,7 @@
 title: "Logitech Camera Cover"
 ---
 
+<link rel="stylesheet" type="text/css" href="/assets/css/solidworks.css">
 <style>
     p.tagline {
         display: none;
