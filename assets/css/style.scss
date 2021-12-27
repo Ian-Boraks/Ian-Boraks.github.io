@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+#master {
+	background-color: rgb(34, 34, 34);
+}
+
 html::-webkit-scrollbar {
 	display: thin;
 }
