@@ -2,9 +2,11 @@
 ---
 
 @import "{{ site.theme }}";
+@import "/assets/css/variables.css";
 
-#master {
-	background-color: rgb(34, 34, 34);
+#master,
+#main {
+	background-color: var(--background_color);
 }
 
 html::-webkit-scrollbar {
@@ -25,7 +27,8 @@ body {
 	margin-bottom: 20px !important;
 }
 
-.download-bar.menu {
+.download-bar.menu,
+#container {
 	border-radius: 10px 10px 0px 0px;
 }
 
@@ -41,10 +44,10 @@ body {
 	font-weight: bold;
 	height: 100%;
 	position: float;
-	background-color: #2222;
-	border-color: mediumpurple;
+	background-color: var(--background_color);
+	border-color: var(--main_accent_color);
 	border-width: 4px;
-	color: whitesmoke;
+	color: var(--main_text_color);
 	text-decoration: none;
 	transition: opacity ease-in-out 0.3s;
 	-webkit-transition: opacity ease-in-out 0.3s;

@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "/assets/css/variables.css";
+
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
@@ -32,7 +34,7 @@ body {
 }
 
 h1.splitter {
-	color: whitesmoke;
+	color: var(--main_text_color);
 	font-size: 40px;
 }
 
@@ -87,7 +89,7 @@ div#master.threeCol.filtered {
 
 .colCaption {
 	line-height: normal;
-	color: whitesmoke;
+	color: var(--main_text_color);
 	text-align: center;
 	font-weight: bold;
 	overflow-wrap: break-word;
