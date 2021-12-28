@@ -9,7 +9,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: var(--main_text_color);
+            background-color: var(--text_color);
             text-align: center;
         }
 
@@ -29,8 +29,9 @@
         }
 
         .ui-dialog {
-            background-color: var(--main_text_color);
+            background-color: var(--text_color);
             padding: 20px;
+            z-index: 1000; /* ensure it's on top of EVERYTHING!!!!!!!!! */
         }
 
         .contact {

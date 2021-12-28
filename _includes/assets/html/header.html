@@ -9,7 +9,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            background-color: var(--main_text_color);
+            background-color: var(--text_color);
             text-align: center;
         }
 
@@ -28,6 +28,33 @@
             /* vertical alignment of the inline element */
         }
     </style>
+    <a class="skip-to-content-link" href="#master">
+        <style>
+            .skip-to-content-link {
+                left: 50%;
+                position: absolute;
+                transform: translateY(-100%);
+                z-index: 1000;
+            }
+
+            .skip-to-content-link {
+                background: #e77e23;
+                height: 30px;
+                left: 50%;
+                padding: 8px;
+                position: absolute;
+                transform: translateY(-100rem);
+                transform: translateX(-100rem);
+                transition: transform 0.3s;
+            }
+
+            .skip-to-content-link:focus {
+                transform: translateY(0%);
+                transform: translateX(0%);
+            }
+        </style>
+        Skip to content
+    </a>
     <div class="container header">
 
         <div class="content">

@@ -9,18 +9,38 @@ function closeActive(currElem) {
   }
 }
 
-// Modified from: https://www.w3schools.com/howto/howto_js_accordion.asp
+function scrollToPanel(panel) {
+  console.log("scrolling to panel");
+  panel.scrollIntoView({ block: "end", inline: "nearest" });
+}
+
+function accordionToggle(currElem) {
+  closeActive(currElem);
+  currElem.classList.toggle("active");
+  var panel = currElem.nextElementSibling;
+  panel.classList.toggle("active");
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    // setTimeout(scrollToPanel, 500, panel);
+  }
+}
+
+// Modified from: 
+// https://www.w3schools.com/howto/howto_js_accordion.asp
 for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", 
-    function() {
-      closeActive(this);
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-   }
+  acc[i].addEventListener("click",
+    function () { accordionToggle(this); }
+  );
+
+  // This is for accessibility so that the user can tab to the 
+  // accordion and then press enter to toogle.
+  acc[i].addEventListener("keypress",
+    function (e) {
+      if (e.key === "Enter") {
+        accordionToggle(this);
+      }
+    }
   );
 }

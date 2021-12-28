@@ -34,7 +34,7 @@ body {
 }
 
 h1.splitter {
-	color: var(--main_text_color);
+	color: var(--text_color);
 	font-size: 40px;
 }
 
@@ -89,7 +89,7 @@ div#master.threeCol.filtered {
 
 .colCaption {
 	line-height: normal;
-	color: var(--main_text_color);
+	color: var(--text_color);
 	text-align: center;
 	font-weight: bold;
 	overflow-wrap: break-word;

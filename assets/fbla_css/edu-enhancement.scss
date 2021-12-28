@@ -2,3 +2,9 @@
 ---
 
 @import "/assets/fbla_css/master.css";
+
+#master {
+	column-count: 1 !important;
+	-webkit-column-count: 1 !important;
+	-moz-column-count: 1 !important;
+}
