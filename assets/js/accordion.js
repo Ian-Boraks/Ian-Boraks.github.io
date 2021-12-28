@@ -18,12 +18,16 @@ function accordionToggle(currElem) {
   closeActive(currElem);
   currElem.classList.toggle("active");
   var panel = currElem.nextElementSibling;
-  panel.classList.toggle("active");
-  if (panel.style.maxHeight) {
-    panel.style.maxHeight = null;
+  if (panel.classList.contains("panel")) {
+    panel.classList.toggle("active");
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      // setTimeout(scrollToPanel, 500, panel);
+    }
   } else {
-    panel.style.maxHeight = panel.scrollHeight + "px";
-    // setTimeout(scrollToPanel, 500, panel);
+    console.log("no panel!");
   }
 }
 
