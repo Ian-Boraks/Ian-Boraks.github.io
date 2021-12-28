@@ -18,7 +18,9 @@ function accordionToggle(currElem) {
   closeActive(currElem);
   currElem.classList.toggle("active");
   var panel = currElem.nextElementSibling;
-  if (panel.classList.contains("panel")) {
+
+  // This stops a crash bug and makes sure the panel is there and that it is actually a panel
+  if (panel && panel.classList.contains("panel")) {
     panel.classList.toggle("active");
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
@@ -26,8 +28,6 @@ function accordionToggle(currElem) {
       panel.style.maxHeight = panel.scrollHeight + "px";
       // setTimeout(scrollToPanel, 500, panel);
     }
-  } else {
-    console.log("no panel!");
   }
 }
 
