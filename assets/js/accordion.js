@@ -9,9 +9,15 @@ function closeActive(currElem) {
   }
 }
 
-function scrollToPanel(panel) {
-  console.log("scrolling to panel");
-  panel.scrollIntoView({ block: "end", inline: "nearest" });
+function scrollToTargetAdjusted(panel) {
+  var headerOffset = 20;
+  var elementPosition = panel.getBoundingClientRect().bottom;
+  var offsetPosition = elementPosition + headerOffset;
+
+  window.scrollTo({
+    bottom: offsetPosition,
+    behavior: "smooth"
+  });
 }
 
 function accordionToggle(currElem) {
@@ -26,7 +32,8 @@ function accordionToggle(currElem) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = (panel.scrollHeight + 10) + "px";
-      // setTimeout(scrollToPanel, 500, panel);
+      // TODO: Add scroll to target for drop downs for QOL
+      // setTimeout(scrollToTargetAdjusted, 100, panel);
     }
   }
 }
