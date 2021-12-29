@@ -22,12 +22,10 @@ function scrollToTargetAdjusted(panel) {
 
 function accordionToggle(currElem) {
   closeActive(currElem);
-  currElem.classList.toggle("active");
   var panel = currElem.nextElementSibling;
 
   // This stops a crash bug and makes sure the panel is there and that it is actually a panel
   if (panel && panel.classList.contains("panel")) {
-    panel.classList.toggle("active");
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
@@ -36,6 +34,7 @@ function accordionToggle(currElem) {
       // setTimeout(scrollToTargetAdjusted, 100, panel);
     }
   }
+  currElem.classList.toggle("active");
 }
 
 // Modified from: 

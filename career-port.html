@@ -6,45 +6,81 @@ title: Ian Boraks
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/landing.css">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/landing.css">
 
-    {% seo title=false %}
+  <style>
+    .wrapper p {
+      color: var(--text-color);
+      font-size: 2rem;
+      margin: -1px 0 4.5px 0;
+
+      width: 80%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .wrapper p {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-left: 0;
+        transform: translateX(0);
+      }
+    }
+  </style>
+
+  {% seo title=false %}
 </head>
 
 <body>
-    {% include assets/html/header.html %}
-    <div id="master"></div> <!-- This is for the skip to content button -->
-    <div id="main">
-        <div class="container title">
-            <div class="wrapper">
-                <div class="splitWord first">Career</div>
-                <div class="splitWord last">Portfolio</div>
-            </div>
-            <div class="wrapper menu">
-                <input type="button" value="Career Summary" onclick="location.href='/fbla/summary.html';">
-                <input type="button" value="Resume" onclick="window.open('https://forms.gle/K9xrZ8yxC1t6pHo96?type=individual','_blank')">
-                <input type="button" value="Career‑Related Education" onclick="location.href='/fbla/related-education.html';" />
-                <input type="button" value="Educational Enhancement" onclick="location.href='/fbla/educational-enhancement.html';" />
-                <input type="button" value="Special Skills" onclick="location.href='/fbla/special-skills.html';" />
-            </div>
-        </div>
+  {% include assets/html/header.html %}
+  <div id="master"></div> <!-- This is for the skip to content button -->
+  <div id="main">
+    <div class="container title">
+      <div class="wrapper">
+        <div class="split-word shadow-above-purple">Ian</div>
+        <div class="split-word shadow-above-purple">Boraks'</div>
+      </div>
+      <div class="wrapper">
+        <div class="split-word shadow-below-blue">Career</div>
+        <div class="split-word shadow-below-blue">Portfolio</div>
+      </div>
+      <div class="wrapper">
+        <p>
+          Detail-oriented Systems Engineer, Software Developer, and CAD Designer with a zest for solving complex problems. Seeking to use proven design and leadership skills to improve quality, reduce cost, and maximize efficiency.
+        </p>
+      </div>
+      <div class="wrapper menu">
+        <!-- <input type="button" value="Career Summary" onclick="location.href='/fbla/summary.html';"> -->
+        <input type="button" value="Resume" onclick="window.open('https://forms.gle/K9xrZ8yxC1t6pHo96?type=individual','_blank')">
+        <input type="button" value="Career-Related Education" onclick="location.href='/fbla/related-education.html';" />
+        <input type="button" value="Educational Enhancement" onclick="location.href='/fbla/educational-enhancement.html';" />
+        <input type="button" value="Special Skills" onclick="location.href='/fbla/special-skills.html';" />
+      </div>
     </div>
-    {% include assets/html/footer.html %}
-    <script> // Modified from https://stackoverflow.com/a/63781543
-        x = document.getElementsByClassName("splitWord");
+  </div>
+  {% include assets/html/footer.html %}
+  <script> // Modified from https://stackoverflow.com/a/63781543
+    x = document.getElementsByClassName("split-word");
 
-        for (i = 0; i < x.length; i++) {
-            const wrapText = x[i];
-            wrapText.innerHTML = wrapText.textContent.split('').map(function (y) {
-                return '<div>' + y + '</div>';
-            }).join('');
+    for (i = 0; i < x.length; i++) {
+      const wrapText = x[i];
+      wrapText.innerHTML = wrapText.textContent.split('').map(function (y) {
+        if (y != "'") {
+          return '<div>' + y + '</div>';
+        } else {
+          return '<div style="width: 0px;">' + y + '</div>';
         }
-    </script>
+      }).join('');
+    }
+  </script>
 </body>
 
 </html>

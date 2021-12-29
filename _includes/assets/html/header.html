@@ -1,66 +1,66 @@
 <div style="z-index: 1000; position: fixed;">
-    <style scoped>
-        .container.header {
-            font-family: "Lucida Console";
-            font-size: 10px;
+  <style scoped>
+    .container.header {
+      font-family: "Lucida Console";
+      font-size: 10px;
 
-            height: 20px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            background-color: var(--text_color);
-            text-align: center;
-        }
+      height: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: var(--text-color);
+      text-align: center;
+    }
 
-        .container.header::after {
-            /* create a full-height inline block pseudo-element */
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            /* vertical alignment of the inline element */
-            height: 100%;
-        }
+    .container.header::after {
+      /* create a full-height inline block pseudo-element */
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      /* vertical alignment of the inline element */
+      height: 100%;
+    }
 
-        .container.header .content {
-            display: inline-block;
-            vertical-align: middle;
-            /* vertical alignment of the inline element */
-        }
+    .container.header .content {
+      display: inline-block;
+      vertical-align: middle;
+      /* vertical alignment of the inline element */
+    }
+  </style>
+  <a class="skip-to-content-link" href="#master">
+    <style>
+      .skip-to-content-link {
+        left: 50%;
+        position: absolute;
+        transform: translateY(-100%);
+        z-index: 1000;
+      }
+
+      .skip-to-content-link {
+        background: #e77e23;
+        height: 30px;
+        left: 50%;
+        padding: 8px;
+        position: absolute;
+        transform: translateY(-100rem);
+        transform: translateX(-100rem);
+        transition: transform 0.3s;
+      }
+
+      .skip-to-content-link:focus {
+        transform: translateY(0%);
+        transform: translateX(0%);
+      }
     </style>
-    <a class="skip-to-content-link" href="#master">
-        <style>
-            .skip-to-content-link {
-                left: 50%;
-                position: absolute;
-                transform: translateY(-100%);
-                z-index: 1000;
-            }
+    Skip to content
+  </a>
+  <div class="container header">
 
-            .skip-to-content-link {
-                background: #e77e23;
-                height: 30px;
-                left: 50%;
-                padding: 8px;
-                position: absolute;
-                transform: translateY(-100rem);
-                transform: translateX(-100rem);
-                transition: transform 0.3s;
-            }
-
-            .skip-to-content-link:focus {
-                transform: translateY(0%);
-                transform: translateX(0%);
-            }
-        </style>
-        Skip to content
-    </a>
-    <div class="container header">
-
-        <div class="content">
-            <a href="javascript:void(0);" onclick="location.href='/index.html';">Home</a>
-            |
-            <a href="javascript:void(0);" onclick="history.back()">Back</a>
-        </div>
+    <div class="content">
+      <a href="javascript:void(0);" onclick="location.href='/index.html';">Home</a>
+      |
+      <a href="javascript:void(0);" onclick="history.back()">Back</a>
     </div>
+  </div>
 </div>
