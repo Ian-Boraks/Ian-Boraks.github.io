@@ -28,45 +28,25 @@ body {
 
 #bg div {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vmax;
+  height: 100vmax;
   background-image: linear-gradient(var(--background_colordark), var(--background_color), var(--background_colorlight));
-  -webkit-animation: bg-animation 100s infinite;
-          animation: bg-animation 100s infinite;
+  -webkit-animation: bg-animation 100s infinite linear;
+          animation: bg-animation 100s infinite linear;
 }
-@media (max-width: 960px) {
-  @-webkit-keyframes bg-animation {
-    0% {
-      transform: scale(5) rotate(30deg);
-    }
-    100% {
-      transform: scale(5) rotate(390deg);
-    }
+@-webkit-keyframes bg-animation {
+  0% {
+    transform: scale(3) rotate(3deg);
   }
-  @keyframes bg-animation {
-    0% {
-      transform: scale(5) rotate(30deg);
-    }
-    100% {
-      transform: scale(5) rotate(390deg);
-    }
+  100% {
+    transform: scale(3) rotate(390deg);
   }
 }
-@media (min-width: 960px) {
-  @-webkit-keyframes bg-animation {
-    0% {
-      transform: scale(3) rotate(3deg);
-    }
-    100% {
-      transform: scale(3) rotate(390deg);
-    }
+@keyframes bg-animation {
+  0% {
+    transform: scale(3) rotate(3deg);
   }
-  @keyframes bg-animation {
-    0% {
-      transform: scale(3) rotate(3deg);
-    }
-    100% {
-      transform: scale(3) rotate(390deg);
-    }
+  100% {
+    transform: scale(3) rotate(390deg);
   }
 }/*# sourceMappingURL=shared.css.map */
