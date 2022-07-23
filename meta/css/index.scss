@@ -1,0 +1,195 @@
+@import url("./shared.css");
+
+:root {
+	--positionX: 9;
+	--positionY: 9;
+}
+
+#name {
+	height: 100vh;
+	width: 100vw;
+
+	display: grid;
+	grid-template: repeat(17, 1fr) / repeat(17, 1fr);
+
+	// START OF NAME FOLLOWING
+	.cell {
+		width: 100%;
+		height: 100%;
+		// border: 1px solid gray;
+		z-index: 2;
+	}
+
+	.content {
+		white-space: nowrap;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.name_followers {
+		position: absolute;
+		width: fit-content;
+		top: 50%;
+		left: 50%;
+		text-align: center;
+
+		color: whitesmoke;
+		text-shadow: 0 0 10px grey;
+
+		transition: transform 100ms linear;
+
+		@for $i from 0 to 10 {
+			&:nth-child(#{$i + 1}) {
+				font-size: #{100 + $i * 10}px;
+				animation-delay: #{$i * -0.3}s;
+				opacity: #{0.1 + $i * 0.1};
+				transform: scale(1)
+					translateX(calc(-50% - (var(--positionX) - 9) * #{(9 - $i) * 3px}))
+					translateY(calc(-50% - (var(--positionY) - 9) * #{(9 - $i) * 3px}))
+					rotateX(calc(0deg - (var(--positionY) - 9) * 5deg))
+					rotateY(calc((var(--positionX) - 9) * 5deg));
+			}
+		}
+	}
+
+	@for $i from 0 to 289 {
+		.cell:nth-child(#{$i + 1}):hover ~ .content {
+			--positionX: #{$i % 17};
+			--positionY: #{floor($i / 17)};
+		}
+	}
+}
+
+#name_description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	.content {
+		text-align: center;
+		color: whitesmoke;
+		position: relative;
+		top: calc(100vh - 2em);
+	}
+}
+
+.social_icon {
+	position: absolute;
+
+	height: 5.88vmin * 3.5;
+	width: 5.88vmin * 3.5;
+	z-index: 3;
+
+	&:hover {
+		& ~ #name .name_followers {
+			transition: all 300ms linear;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+
+		&:hover {
+			animation: spin 700ms;
+
+			@keyframes spin {
+				25% {
+					filter: brightness(1.1);
+					transform: scale(1.1) rotate(15deg);
+				}
+				75% {
+					filter: brightness(1.2);
+					transform: scale(1.2) rotate(-15deg);
+				}
+			}
+		}
+	}
+
+	// border: 1px solid red;
+}
+
+#LinkedIn {
+	top: 5.88vh;
+	left: 5.88vw;
+
+	&:hover {
+		& ~ #name .content {
+			--positionX: 1;
+			--positionY: 1;
+
+			.name_followers {
+				color: #31a8e7;
+				text-shadow: 0 0 10px black;
+			}
+		}
+	}
+}
+
+#Instagram {
+	top: 5.88vh;
+	right: 5.88vw;
+
+	&:hover {
+		& ~ #name .content {
+			--positionX: 16;
+			--positionY: 1;
+
+			.name_followers {
+				color: #ff543e;
+				text-shadow: 0 0 10px black;
+			}
+		}
+	}
+}
+
+#GitHub {
+	bottom: 5.88vh;
+	right: 5.88vw;
+
+	object {
+		transform: scale(1.11);
+	}
+
+	&:hover {
+		& ~ #name .content {
+			--positionX: 16;
+			--positionY: 16;
+
+			.name_followers {
+				color: #6e5494;
+				text-shadow: 0 0 10px black;
+			}
+		}
+	}
+}
+
+#Contact {
+	bottom: 5.88vh;
+	left: 5.88vw;
+
+	object {
+		transform: scale(1.11);
+	}
+
+	&:hover {
+		& ~ #name .content {
+			--positionX: 1;
+			--positionY: 16;
+
+			.name_followers {
+				color: greenyellow;
+				text-shadow: 0 0 10px black;
+			}
+		}
+	}
+}
