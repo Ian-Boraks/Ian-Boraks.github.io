@@ -156,7 +156,7 @@
 	bottom: 5.88vh;
 	right: 5.88vw;
 
-	object {
+	img {
 		transform: scale(1.11);
 	}
 
@@ -166,7 +166,7 @@
 			--positionY: 16;
 
 			.name_followers {
-				color: #6e5494;
+				color: #9370db;
 				text-shadow: 0 0 10px black;
 			}
 		}
@@ -177,17 +177,13 @@
 	bottom: 5.88vh;
 	left: 5.88vw;
 
-	object {
-		transform: scale(1.11);
-	}
-
 	&:hover {
 		& ~ #name .content {
 			--positionX: 1;
 			--positionY: 16;
 
 			.name_followers {
-				color: greenyellow;
+				color: gold;
 				text-shadow: 0 0 10px black;
 			}
 		}
