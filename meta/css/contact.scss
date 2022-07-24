@@ -7,4 +7,62 @@
 
 	width: 100vw;
 	height: 100vh;
+
+	#back_button {
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		background-color: whitesmoke;
+    transition: background-color 100ms linear;
+		border-radius: 30px;
+
+		p {
+			margin-top: -35px;
+			text-align: center;
+			font-size: 100px;
+		}
+
+    &:hover {
+      cursor: pointer;
+      background-color: grey;
+    }
+	}
+
+	#content {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-image: linear-gradient(-20deg, whitesmoke, lightgrey, grey);
+		border-radius: 10px;
+
+		#email {
+			margin: 1em;
+			padding: 0 0.5em 1em 0.5em;
+			font-size: xx-large;
+			position: relative;
+			max-width: 70vw;
+			height: fit-content;
+			text-align: center;
+			background-color: whitesmoke;
+			border-radius: 10px;
+
+			p {
+				word-wrap: break-word;
+				padding-top: 1em;
+			}
+
+			a {
+				@media screen and (max-width: 960px) {
+					font-size: large;
+				}
+				@media screen and (min-width: 960px) {
+					font-size: xx-large;
+				}
+			}
+		}
+	}
 }
