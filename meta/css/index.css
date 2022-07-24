@@ -1273,10 +1273,27 @@
   width: 100%;
 }
 #name_description .content {
+  z-index: 3;
   text-align: center;
   color: whitesmoke;
   position: relative;
-  top: calc(100vh - 2em);
+  top: calc(100vh - 4em);
+}
+#name_description button {
+  background-color: rgb(14, 214, 214);
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  margin-top: 0.2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#name_description button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
 }
 
 .social_icon {
