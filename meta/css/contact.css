@@ -15,11 +15,12 @@
   background-color: whitesmoke;
   transition: background-color 100ms linear;
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#main #back_button p {
-  margin-top: -35px;
-  text-align: center;
-  font-size: 100px;
+#main #back_button span {
+  transform: scale(2);
 }
 #main #back_button:hover {
   cursor: pointer;
