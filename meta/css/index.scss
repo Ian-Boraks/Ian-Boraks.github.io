@@ -141,8 +141,8 @@
 }
 
 #LinkedIn {
-	top: 5.88vh;
-	left: 5.88vw;
+	top: 5.88vh *1.5;
+	left: 5.88vw *1.5;
 
 	&:hover {
 		& ~ #name .content {
@@ -158,8 +158,8 @@
 }
 
 #Instagram {
-	top: 5.88vh;
-	right: 5.88vw;
+	top: 5.88vh *1.5;
+	right: 5.88vw *1.5;
 
 	&:hover {
 		& ~ #name .content {
@@ -175,8 +175,8 @@
 }
 
 #GitHub {
-	bottom: 5.88vh;
-	right: 5.88vw;
+	bottom: 5.88vh *1.5;
+	right: 5.88vw *1.5;
 
 	img {
 		transform: scale(1.11);
@@ -196,8 +196,8 @@
 }
 
 #Contact {
-	bottom: 5.88vh;
-	left: 5.88vw;
+	bottom: 5.88vh * 1.5;
+	left: 5.88vw * 1.5;
 
 	&:hover {
 		& ~ #name .content {

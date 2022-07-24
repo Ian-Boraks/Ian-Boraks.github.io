@@ -1335,8 +1335,8 @@
 }
 
 #LinkedIn {
-  top: 5.88vh;
-  left: 5.88vw;
+  top: 8.82vh;
+  left: 8.82vw;
 }
 #LinkedIn:hover ~ #name .content {
   --positionX: 1;
@@ -1348,8 +1348,8 @@
 }
 
 #Instagram {
-  top: 5.88vh;
-  right: 5.88vw;
+  top: 8.82vh;
+  right: 8.82vw;
 }
 #Instagram:hover ~ #name .content {
   --positionX: 16;
@@ -1361,8 +1361,8 @@
 }
 
 #GitHub {
-  bottom: 5.88vh;
-  right: 5.88vw;
+  bottom: 8.82vh;
+  right: 8.82vw;
 }
 #GitHub img {
   transform: scale(1.11);
@@ -1377,8 +1377,8 @@
 }
 
 #Contact {
-  bottom: 5.88vh;
-  left: 5.88vw;
+  bottom: 8.82vh;
+  left: 8.82vw;
 }
 #Contact:hover ~ #name .content {
   --positionX: 1;
