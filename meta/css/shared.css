@@ -11,6 +11,7 @@
   --background_color: #001d5c;
   --background_colorlight: rgb(88, 0, 22);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  overflow: hidden;
 }
 
 body {

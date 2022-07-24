@@ -66,4 +66,8 @@ $(document).ready(function () {
       $('#name_content').append('<div class="name_followers">Ian Boraks</div>');
     }
   }
+
+  if (location.href.includes('#CSS')) {
+    document.getElementById('name_description_button').click();
+  }
 });
