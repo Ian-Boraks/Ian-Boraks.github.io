@@ -49,6 +49,10 @@ $(document).ready(function () {
     document.getElementById('name_description_button').click();
   }
 
+  if (window.innerWidth < 960) {
+    document.getElementById('name_description').style.display = 'none';
+  }
+
   for (let i = 0; i < 289; i++) {
     $('#name').append('<div class="cell"></div>');
   }
