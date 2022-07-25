@@ -57,8 +57,8 @@ body {
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 5px;
+  left: 5px;
   z-index: 3;
   background-color: whitesmoke;
   transition: background-color 100ms linear;
@@ -66,6 +66,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-height: 800px) {
+  #back_button {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
 #back_button span {
   transform: scale(2);
