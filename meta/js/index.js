@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   $("#name_description_button").click(function () {
     if (location.href.includes('#JS')) {
-      location.href = location.href.replace('#JS', '#CSS');
+      history.replaceState(null, '', "#CSS");
       document.querySelectorAll('.cell').forEach(cell => {
         cell.style.zIndex = '2';
       });
@@ -32,19 +32,19 @@ $(document).ready(function () {
       document.getElementById('name_content').style.removeProperty('--positionX');
       document.getElementById('name_content').style.removeProperty('--positionY');
     } else if (location.href.includes('#CSS')) {
-      location.href = location.href.replace('#CSS', '#JS');
+      history.replaceState(null, '', "#JS");
       document.querySelectorAll('.cell').forEach(cell => {
         cell.style.zIndex = '0';
       });
       document.getElementById('name_description_content').textContent = "Mouse following is done with JS";
       document.getElementById('name_description_button').textContent = "CLICK ME TO FOLLOW WITH CSS";
     } else {
-      location.href = location.href + '#CSS';
+      history.replaceState(null, '', "#CSS");
     }
   });
 
   if (!location.href.includes('#CSS') ? !location.href.includes('#JS') : location.href.includes('#JS')) {
-    location.href = location.href + '#CSS';
+    history.replaceState(null, '', "#CSS");
   } else if (location.href.includes('#JS')) {
     document.getElementById('name_description_button').click();
   }
@@ -70,4 +70,6 @@ $(document).ready(function () {
   if (location.href.includes('#CSS')) {
     document.getElementById('name_description_button').click();
   }
+
+  console.log(location.href);
 });
