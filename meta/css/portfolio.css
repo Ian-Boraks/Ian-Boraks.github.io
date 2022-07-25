@@ -28,7 +28,9 @@
   padding: 0px 10px;
   z-index: 3;
   display: flex;
-  overflow: scroll;
+  overflow: scroll hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 #main #content #buttons .tab_button {
   line-height: calc(5vh - 10px);
@@ -43,6 +45,11 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.4666666667);
   transition: all 300ms;
 }
+@media screen and (max-width: 960px) {
+  #main #content #buttons .tab_button {
+    padding: 0px 5px;
+  }
+}
 #main #content #buttons .tab_button:hover {
   cursor: pointer;
   background-position: 100%;
@@ -55,7 +62,7 @@
   transition: all 300ms ease-in-out;
 }
 #main #content #buttons .button_space {
-  min-width: 20px;
+  min-width: 5px;
 }
 #main #content .tab {
   position: absolute;
