@@ -59,7 +59,7 @@
   width: 80vw;
   height: 75vh;
   transform: translate(100vw);
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.514);
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
   overflow: hidden;
@@ -75,8 +75,12 @@
 }
 #main #content .tab .inner_tab {
   position: absolute;
-  height: 100%;
+  height: calc(100% - 32px);
   width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  overflow: auto scroll;
 }
 #main #content .tab .inner_tab.active {
   z-index: 2;
@@ -87,6 +91,11 @@
   transform: translate(100vw);
   transition: transform 500ms ease-in-out;
 }
+#main #content .tab .inner_tab .inner_tab_image {
+  height: 37.5vh;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 #main #content .tab .selector {
   position: absolute;
   align-self: baseline;
@@ -94,11 +103,21 @@
   width: 100%;
   bottom: 0;
   z-index: 3;
+  background-color: whitesmoke;
 }
 #main #content .tab .selector .selector_button {
   transition: all 100ms linear;
+  padding-top: 4px;
 }
 #main #content .tab .selector .selector_button:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+#main #content .tab .selector::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 80vw;
+  height: 1px;
+  background-color: black;
 }/*# sourceMappingURL=portfolio.css.map */

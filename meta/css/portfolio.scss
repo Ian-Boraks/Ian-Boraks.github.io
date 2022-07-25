@@ -86,7 +86,7 @@
 			height: 75vh;
 
 			transform: translate(100vw);
-			background-color: whitesmoke;
+			background-color: rgba(0, 0, 0, 0.514);
 			border-radius: 10px;
 			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
 
@@ -107,8 +107,14 @@
 
 			.inner_tab {
 				position: absolute;
-				height: 100%;
+				height: calc(100% - 32px);
 				width: 100%;
+
+        background-color: whitesmoke;
+
+        display: flex;
+        flex-direction: column;
+        overflow: auto scroll;
 
 				&.active {
 					z-index: 2;
@@ -122,6 +128,12 @@
 
 					transition: transform 500ms ease-in-out;
 				}
+
+				.inner_tab_image {
+					height: calc(75vh * 0.5);
+					border-radius: 10px;
+          margin-top: 10px;
+				}
 			}
 
 			.selector {
@@ -130,17 +142,33 @@
 				text-align: center;
 				width: 100%;
 				bottom: 0;
-        z-index: 3;
+				z-index: 3;
+
+        background-color: whitesmoke;
 
 				.selector_button {
 					transition: all 100ms linear;
+          padding-top: 4px;
 				}
 
 				.selector_button:hover {
 					cursor: pointer;
 					transform: scale(1.2);
 				}
+
+        &::before {
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 80vw;
+          height: 1px;
+          background-color: black;
+        }
 			}
+		}
+
+		.material-symbols-outlined {
+			//
 		}
 	}
 }
