@@ -7,9 +7,9 @@
 }
 
 :root {
-  --background_colordark: #6a0085c4;
-  --background_color: #001d5c;
-  --background_colorlight: rgb(88, 0, 22);
+  --background_colordark: #2a0042c4;
+  --background_color: #45454e;
+  --background_colorlight: rgb(108, 110, 131);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   overflow: hidden;
 }
@@ -32,23 +32,67 @@ body {
   position: absolute;
   width: 100vmax;
   height: 100vmax;
-  background-image: linear-gradient(var(--background_colordark), var(--background_color), var(--background_colorlight));
+  background-image: linear-gradient(var(--background_colordark) 35%, var(--background_color), var(--background_colorlight) 65%);
   -webkit-animation: bg-animation 100s infinite linear;
           animation: bg-animation 100s infinite linear;
 }
 @-webkit-keyframes bg-animation {
   0% {
-    transform: scale(3) rotate(3deg);
+    transform: scale(3) rotate(45deg);
   }
   100% {
-    transform: scale(3) rotate(390deg);
+    transform: scale(3) rotate(405deg);
   }
 }
 @keyframes bg-animation {
   0% {
-    transform: scale(3) rotate(3deg);
+    transform: scale(3) rotate(45deg);
   }
   100% {
-    transform: scale(3) rotate(390deg);
+    transform: scale(3) rotate(405deg);
+  }
+}
+
+#back_button {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  background-color: whitesmoke;
+  transition: background-color 100ms linear;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#back_button span {
+  transform: scale(2);
+}
+#back_button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+@-webkit-keyframes wobble {
+  25% {
+    filter: brightness(1.1);
+    transform: scale(1.1) rotate(15deg);
+  }
+  75% {
+    filter: brightness(1.2);
+    transform: scale(1.2) rotate(-15deg);
+  }
+}
+
+@keyframes wobble {
+  25% {
+    filter: brightness(1.1);
+    transform: scale(1.1) rotate(15deg);
+  }
+  75% {
+    filter: brightness(1.2);
+    transform: scale(1.2) rotate(-15deg);
   }
 }/*# sourceMappingURL=shared.css.map */

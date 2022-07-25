@@ -6,26 +6,6 @@
   width: 100vw;
   height: 100vh;
 }
-#main #back_button {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: whitesmoke;
-  transition: background-color 100ms linear;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#main #back_button span {
-  transform: scale(2);
-}
-#main #back_button:hover {
-  cursor: pointer;
-  background-color: grey;
-}
 #main #content {
   margin: 0;
   position: absolute;

@@ -1280,7 +1280,7 @@
   top: calc(100vh - 4em);
 }
 #name_description button {
-  background-color: rgb(14, 214, 214);
+  background-color: #5dacd6;
   border: none;
   color: black;
   padding: 5px 10px;
@@ -1310,28 +1310,8 @@
   height: 100%;
 }
 .social_icon img:hover {
-  -webkit-animation: spin 700ms;
-          animation: spin 700ms;
-}
-@-webkit-keyframes spin {
-  25% {
-    filter: brightness(1.1);
-    transform: scale(1.1) rotate(15deg);
-  }
-  75% {
-    filter: brightness(1.2);
-    transform: scale(1.2) rotate(-15deg);
-  }
-}
-@keyframes spin {
-  25% {
-    filter: brightness(1.1);
-    transform: scale(1.1) rotate(15deg);
-  }
-  75% {
-    filter: brightness(1.2);
-    transform: scale(1.2) rotate(-15deg);
-  }
+  -webkit-animation: wobble 700ms;
+          animation: wobble 700ms;
 }
 
 #LinkedIn {

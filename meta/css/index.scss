@@ -83,7 +83,7 @@
 	}
 
 	button {
-		background-color: rgb(14, 214, 214);
+		background-color: #5dacd6;
 		border: none;
 		color: black;
 
@@ -122,18 +122,7 @@
 		height: 100%;
 
 		&:hover {
-			animation: spin 700ms;
-
-			@keyframes spin {
-				25% {
-					filter: brightness(1.1);
-					transform: scale(1.1) rotate(15deg);
-				}
-				75% {
-					filter: brightness(1.2);
-					transform: scale(1.2) rotate(-15deg);
-				}
-			}
+			animation: wobble 700ms;
 		}
 	}
 
