@@ -71,5 +71,5 @@ $(document).ready(function () {
     document.getElementById('name_description_button').click();
   }
 
-  console.log(location.href);
+  // console.log(location.href);
 });

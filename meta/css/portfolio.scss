@@ -33,15 +33,14 @@
 			position: absolute;
 			width: calc(80vw + 10px);
 			height: calc(5vh - 10px);
-			top: 0;
-			left: 0;
-			margin: 10px;
+			top: 10px;
+			left: 10px;
 
 			z-index: 3;
 
 			display: flex;
 
-			.button {
+			.tab_button {
 				line-height: calc(5vh - 10px);
 				letter-spacing: 1px;
 
@@ -80,7 +79,8 @@
 
 		.tab {
 			position: absolute;
-			margin: calc(5vh + 10px) 10px 10px 10px;
+			bottom: 10px;
+			left: 10px;
 
 			width: 80vw;
 			height: 75vh;
@@ -90,7 +90,7 @@
 			border-radius: 10px;
 			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
 
-			overflow: auto scroll;
+			overflow: hidden;
 
 			&.active {
 				z-index: 2;
@@ -103,6 +103,43 @@
 				transform: translate(100vw);
 
 				transition: transform 500ms ease-in-out;
+			}
+
+			.inner_tab {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+
+				&.active {
+					z-index: 2;
+					transform: translate(0);
+
+					transition: transform 500ms ease-in-out;
+				}
+
+				&:not(.active) {
+					transform: translate(100vw);
+
+					transition: transform 500ms ease-in-out;
+				}
+			}
+
+			.selector {
+				position: absolute;
+				align-self: baseline;
+				text-align: center;
+				width: 100%;
+				bottom: 0;
+        z-index: 3;
+
+				.selector_button {
+					transition: all 100ms linear;
+				}
+
+				.selector_button:hover {
+					cursor: pointer;
+					transform: scale(1.2);
+				}
 			}
 		}
 	}
