@@ -8,7 +8,7 @@
 	width: 100vw;
 	height: 100vh;
 
-	#content {
+	#content_holder {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -49,10 +49,10 @@
 				letter-spacing: 1px;
 
 				padding: 0px 10px;
-        @media screen and (max-width: 960px) {
-          padding: 0px 5px;
-        }
-        
+				@media screen and (max-width: 960px) {
+					padding: 0px 5px;
+				}
+
 				border-radius: 5px;
 
 				background-image: linear-gradient(
@@ -126,7 +126,6 @@
 
 				display: flex;
 				flex-direction: column;
-				overflow: auto scroll;
 
 				&.active {
 					z-index: 2;
@@ -141,21 +140,41 @@
 					transition: transform 500ms ease-in-out;
 				}
 
-        .inner_tab_title {
-          margin-top: 10px;
-          font-size: large;
-        }
-
-				.inner_tab_image {
-					height: calc(75vh * 0.5);
-					max-width: 100%;
-					border-radius: 10px;
-          margin: 10px auto;
+				.inner_tab_title {
+					position: relative;
+					margin-top: 10px;
+					font-size: large;
 				}
 
-        .inner_tab_description {
-          margin: auto 10px;
-        }
+				.github_icon {
+					position: fixed;
+					height: 40px;
+					bottom: 0;
+					right: 0;
+
+					&:hover {
+						cursor: pointer;
+						filter: brightness(1.2);
+						animation: wobble 700ms linear;
+					}
+				}
+
+				.inner_tab_content {
+					display: flex;
+					flex-direction: column;
+					overflow: auto scroll;
+
+					.inner_tab_image {
+						height: calc(75vh * 0.5);
+						max-width: 100%;
+						border-radius: 10px;
+						margin: 10px auto;
+					}
+
+					.inner_tab_description {
+						margin: auto 10px;
+					}
+				}
 			}
 
 			.selector {
