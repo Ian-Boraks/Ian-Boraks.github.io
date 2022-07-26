@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  history.replaceState(null, '', '#SolidWorks1');
-
   $('.tab_button').each(function (id, button) {
     $(button).click(function () {
       $('.tab_button').each(function () {
@@ -31,4 +29,13 @@ $(document).ready(function () {
       });
     });
   });
+
+  if (location.href.includes('#')) {
+    var hrefSplit = location.href.split('#');
+    var selectorNumber = hrefSplit[1].replace(/\D/g, '');
+    var tabName = hrefSplit[1].replace(/[^a-zA-Z]/g, "");
+
+    $('#' + tabName + '_button').trigger("click");
+    $('#' + tabName + '_selector #selector' + selectorNumber).trigger("click");
+  }
 });

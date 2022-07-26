@@ -141,12 +141,21 @@
 					transition: transform 500ms ease-in-out;
 				}
 
+        .inner_tab_title {
+          margin-top: 10px;
+          font-size: large;
+        }
+
 				.inner_tab_image {
 					height: calc(75vh * 0.5);
 					max-width: 100%;
 					border-radius: 10px;
-					margin-top: 10px;
+          margin: 10px auto;
 				}
+
+        .inner_tab_description {
+          margin: auto 10px;
+        }
 			}
 
 			.selector {

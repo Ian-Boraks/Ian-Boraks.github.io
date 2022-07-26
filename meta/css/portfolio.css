@@ -103,11 +103,18 @@
   transform: translate(100vw);
   transition: transform 500ms ease-in-out;
 }
+#main #content .tab .inner_tab .inner_tab_title {
+  margin-top: 10px;
+  font-size: large;
+}
 #main #content .tab .inner_tab .inner_tab_image {
   height: 37.5vh;
   max-width: 100%;
   border-radius: 10px;
-  margin-top: 10px;
+  margin: 10px auto;
+}
+#main #content .tab .inner_tab .inner_tab_description {
+  margin: auto 10px;
 }
 #main #content .tab .selector {
   position: absolute;
