@@ -91,17 +91,24 @@
 
 	.section-main {
 		position: relative;
+		display: flex;
+		flex-flow: column;
 
 		.text-box {
 			background-color: var(--color-secondary);
-			top: 46.5%;
 			margin: 10px;
 			padding: 5px;
 
-			position: absolute;
+			position: relative;
 
-			transform: translateY(-50%);
+			
 			border-radius: 20px;
+		}
+
+		.text-box-holder {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 
 		.section-title {
@@ -173,7 +180,7 @@
 		text-align: center;
 		border-radius: 0 !important;
 		word-spacing: 40px;
-		
+
 		img:hover {
 			cursor: pointer;
 			animation: wobble 700ms;

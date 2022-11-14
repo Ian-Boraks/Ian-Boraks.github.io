@@ -72,15 +72,20 @@
 }
 #main-content .section-main {
   position: relative;
+  display: flex;
+  flex-flow: column;
 }
 #main-content .section-main .text-box {
   background-color: var(--color-secondary);
-  top: 46.5%;
   margin: 10px;
   padding: 5px;
-  position: absolute;
-  transform: translateY(-50%);
+  position: relative;
   border-radius: 20px;
+}
+#main-content .section-main .text-box-holder {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #main-content .section-main .section-title {
   background-color: var(--color-secondary);
