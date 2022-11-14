@@ -73,7 +73,6 @@
 
 		&.spacer {
 			background-color: var(--color-secondary);
-			color: var(--color-accent);
 			width: fit-content;
 			height: 45px !important;
 			min-height: 0 !important;
@@ -101,7 +100,6 @@
 
 			position: relative;
 
-			
 			border-radius: 20px;
 		}
 
@@ -112,13 +110,14 @@
 		}
 
 		.section-title {
-			background-color: var(--color-secondary);
-			color: var(--color-primary);
+			&:not(.accent-text) {
+				color: var(--color-primary);
+			}
 
 			text-align: center;
 			border-radius: 20px;
 
-			&:first-of-type {
+			&:first-of-type:not(:only-child) {
 				margin-bottom: 10px;
 			}
 
@@ -182,7 +181,6 @@
 		word-spacing: 40px;
 
 		img:hover {
-			cursor: pointer;
 			animation: wobble 700ms;
 		}
 	}
