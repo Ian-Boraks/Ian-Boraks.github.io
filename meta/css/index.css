@@ -1,12 +1,14 @@
 @import url("./shared.css");
 #top-nav {
-  background-color: var(--color-secondary);
-  color: var(--font-color);
+  background-color: var(--color-primary-dark);
+  color: var(--font-color-light);
   position: fixed;
-  width: 100vw;
-  height: 60px;
+  width: 1200px;
   top: 0;
-  right: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  height: 60px;
   z-index: 9999;
 }
 #top-nav #top-nav-holder {
@@ -33,7 +35,7 @@
 
 #main-content {
   background-color: var(--color-primary);
-  max-width: 1500px;
+  max-width: 1200px;
   position: absolute;
   top: 60px;
   left: 50%;
@@ -46,7 +48,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-flow: row;
   align-items: stretch;
@@ -72,30 +74,25 @@
   position: relative;
 }
 #main-content .section-main .text-box {
-  top: 46%;
+  background-color: var(--color-secondary);
+  top: 46.5%;
   margin: 10px;
+  padding: 5px;
   position: absolute;
   transform: translateY(-50%);
+  border-radius: 20px;
 }
 #main-content .section-main .section-title {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 10px;
   text-align: center;
+  border-radius: 20px;
 }
 #main-content .section-main .section-title:first-of-type {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 #main-content .section-main .section-title:not(:first-of-type) {
-  margin-top: 20px;
-}
-#main-content .section-main .text-box > * {
-  background-color: var(--color-secondary);
-  padding: 10px;
-  border-radius: 10px;
+  margin-top: 10px;
 }
 #main-content .section-main .section-text {
   font-size: large;
@@ -127,9 +124,35 @@
 #main-content .rw50 > .right {
   width: 50%;
 }
+#main-content .lw100 > .left,
+#main-content .rw100 > .right {
+  width: 100%;
+  margin: auto !important;
+}
+#main-content #contact .text-box {
+  width: 100%;
+  margin: auto !important;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 !important;
+  word-spacing: 40px;
+}
+#main-content #contact .text-box img:hover {
+  cursor: pointer;
+  -webkit-animation: wobble 700ms;
+          animation: wobble 700ms;
+}
 #main-content .left {
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 80px 80px 0;
+}
+#main-content .left .text-box {
+  padding-left: 80px;
+  margin-left: -70px;
 }
 #main-content .right {
-  border-radius: 20px 0 0 20px;
+  border-radius: 80px 0 0 80px;
+}
+#main-content .right .text-box {
+  padding-right: 80px;
+  margin-right: -70px;
 }/*# sourceMappingURL=index.css.map */

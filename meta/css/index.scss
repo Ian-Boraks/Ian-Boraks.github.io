@@ -1,15 +1,18 @@
 @import url("./shared.css");
 
 #top-nav {
-	background-color: var(--color-secondary);
-	color: var(--font-color);
+	background-color: var(--color-primary-dark);
+	color: var(--font-color-light);
 
 	position: fixed;
-	width: 100vw;
-	height: 60px;
+	width: 1200px;
 
+	// position: absolute;
 	top: 0;
-	right: 0;
+	left: 50%;
+	margin-right: -50%;
+	transform: translateX(-50%);
+	height: 60px;
 
 	z-index: 9999;
 
@@ -48,20 +51,19 @@
 	background-color: var(--color-primary);
 	// min-width: fit-content;
 	// width: 700px;
-	max-width: 1500px;
+	max-width: 1200px;
 
 	position: absolute;
 	top: 60px;
 	left: 50%;
 	margin-right: -50%;
 	transform: translateX(-50%);
-	// outline: 5px solid var(--color-accent);
 
 	.main-content-section {
 		display: block;
 		min-height: 300px;
 		height: fit-content;
-		overflow: auto;
+		overflow: hidden;
 
 		display: flex;
 		flex-flow: row;
@@ -91,38 +93,31 @@
 		position: relative;
 
 		.text-box {
-			top: 46%;
+			background-color: var(--color-secondary);
+			top: 46.5%;
 			margin: 10px;
+			padding: 5px;
 
 			position: absolute;
 
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
+			border-radius: 20px;
 		}
 
 		.section-title {
 			background-color: var(--color-secondary);
 			color: var(--color-primary);
-			width: fit-content;
 
-			border-radius: 10px;
 			text-align: center;
+			border-radius: 20px;
 
 			&:first-of-type {
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 			}
 
 			&:not(:first-of-type) {
-				margin-top: 20px;
+				margin-top: 10px;
 			}
-		}
-
-		.text-box > * {
-			background-color: var(--color-secondary);
-			padding: 10px;
-
-			border-radius: 10px;
 		}
 
 		.section-text {
@@ -165,11 +160,39 @@
 		width: 50%;
 	}
 
+	.lw100 > .left,
+	.rw100 > .right {
+		width: 100%;
+		margin: auto !important;
+	}
+
+	#contact .text-box {
+		width: 100%;
+		margin: auto !important;
+		align-items: center;
+		text-align: center;
+		border-radius: 0 !important;
+		word-spacing: 40px;
+		
+		img:hover {
+			cursor: pointer;
+			animation: wobble 700ms;
+		}
+	}
+
 	.left {
-		border-radius: 0 20px 20px 0;
+		border-radius: 0 80px 80px 0;
+		.text-box {
+			padding-left: 80px;
+			margin-left: -70px;
+		}
 	}
 
 	.right {
-		border-radius: 20px 0 0 20px;
+		border-radius: 80px 0 0 80px;
+		.text-box {
+			padding-right: 80px;
+			margin-right: -70px;
+		}
 	}
 }

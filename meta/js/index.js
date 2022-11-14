@@ -9,11 +9,36 @@ $(document).ready(function () {
       $(value).addClass('active');
 
       $('html,body').animate({
-        scrollTop: $('#' + value.innerText.toLowerCase()).offset().top - 65
+        scrollTop: $('#' + value.innerText.toLowerCase()).offset().top - 80
       },
         'medium');
     });
   });
+
+  $('#contact-email').click(function () {
+    $("<a>").prop({
+      target: "_blank",
+      href: "mailto::ianbor.contact@gmail.com"
+    })[0].click();
+  })
+  $('#contact-github').click(function () {
+    $("<a>").prop({
+      target: "_blank",
+      href: "https://github.com/Ian-Boraks"
+    })[0].click();
+  })
+  $('#contact-linkedin').click(function () {
+    $("<a>").prop({
+      target: "_blank",
+      href: "https://www.linkedin.com/in/ian-boraks/"
+    })[0].click();
+  })
+  $('#contact-instagram').click(function () {
+    $("<a>").prop({
+      target: "_blank",
+      href: "https://www.instagram.com/ianboraks.photo/"
+    })[0].click();
+  })
 });
 
 setInterval(() => {
