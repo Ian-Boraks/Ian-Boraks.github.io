@@ -28,6 +28,11 @@
   text-align: center;
   transition: 0.2s;
 }
+@media (max-width: 800px) {
+  #top-nav .top-nav-button {
+    font-size: medium;
+  }
+}
 #top-nav .top-nav-button:hover, #top-nav .top-nav-button.active {
   background-color: var(--color-primary);
   cursor: pointer;
