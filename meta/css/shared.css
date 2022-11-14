@@ -73,10 +73,6 @@ pre {
   line-height: 18.5667px;
 }
 
-.accent-text {
-  color: var(--color-accent);
-}
-
 .clickable:hover {
   cursor: pointer;
 }
