@@ -163,6 +163,9 @@
   width: 100%;
   margin: auto !important;
 }
+#main-content #contact {
+  min-height: 0 !important;
+}
 #main-content #contact .text-box,
 #main-content #contact .text-box-holder {
   width: 100%;
@@ -171,6 +174,7 @@
   text-align: center;
   border-radius: 0 !important;
   word-spacing: 40px;
+  transform: translateY(0) !important;
 }
 #main-content #contact .text-box img,
 #main-content #contact .text-box-holder img {
@@ -181,19 +185,23 @@
   -webkit-animation: wobble 700ms;
           animation: wobble 700ms;
 }
-#main-content .left {
-  border-radius: 0 80px 80px 0;
+@media (min-width: 800px) {
+  #main-content .left {
+    border-radius: 0 80px 80px 0 !important;
+  }
+  #main-content .left .text-box {
+    padding-left: 80px !important;
+    margin-left: -70px !important;
+  }
 }
-#main-content .left .text-box {
-  padding-left: 80px;
-  margin-left: -70px;
-}
-#main-content .right {
-  border-radius: 80px 0 0 80px;
-}
-#main-content .right .text-box {
-  padding-right: 80px;
-  margin-right: -70px;
+@media (min-width: 800px) {
+  #main-content .right {
+    border-radius: 80px 0 0 80px !important;
+  }
+  #main-content .right .text-box {
+    padding-right: 80px !important;
+    margin-right: -70px !important;
+  }
 }
 @media (max-width: 800px) {
   #main-content .left,
