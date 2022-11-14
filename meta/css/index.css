@@ -99,7 +99,7 @@
   background-color: var(--color-secondary);
 }
 #main-content .section-main .text-box-holder .text-box.more .section-title {
-  color: var(--font-color-dark);
+  color: var(--font-color-light);
 }
 #main-content .section-main .text-box-holder .text-box.more * {
   padding: 10px;
