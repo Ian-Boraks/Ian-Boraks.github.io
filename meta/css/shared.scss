@@ -6,95 +6,90 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--background_colordark: #2a0042c4;
-	--background_color: #45454e;
-	--background_colorlight: rgb(108, 110, 131);
-
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
-
-	overflow: hidden;
+.theme-light {
+	--color-primary: #0098df;
+	--color-primary-dark: rgba(2, 0, 36, 1);
+	--color-secondary: whitesmoke;
+	--color-accent: #9370db;
+	--font-color-dark: #000000;
+	--font-color-light: whitesmoke;
+}
+.theme-dark {
+	--color-primary: #17ed90;
+	--color-secondary: #243133;
+	--color-accent: #12cdea;
+	--font-color: whitesmoke;
 }
 
 body {
+	font-family: Andale Mono, AndaleMono, monospace;
+
+	// background-image: url("/meta/img/silver-geometric-repeating-pattern.jpg");
+	// background-size: 20%;
+	// background-repeat: repeat-y;
+
+	background: var(--color-primary-dark);
+	// background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
 	margin: 0;
-	overflow: hidden;
 }
 
-#bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100vw;
-	overflow: hidden;
+h1 {
+	font-family: Andale Mono, AndaleMono, monospace;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 26.4px;
+}
+h3 {
+	font-family: Andale Mono, AndaleMono, monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 15.4px;
+}
+p {
+	font-family: Andale Mono, AndaleMono, monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote {
+	font-family: Andale Mono, AndaleMono, monospace;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: Andale Mono, AndaleMono, monospace;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5667px;
 }
 
-#bg div {
-	position: absolute;
-	width: 100vmax;
-	height: 100vmax;
-
-	background-image: linear-gradient(
-		var(--background_colordark) 35%,
-		var(--background_color),
-		var(--background_colorlight) 65%
-	);
-
-	animation: bg-animation 100s infinite linear;
-
-	@keyframes bg-animation {
-		0% {
-			transform: scale(3) rotate(45deg);
-		}
-		100% {
-			transform: scale(3) rotate(405deg);
-		}
-	}
+.accent-text {
+	color: var(--color-accent);
 }
 
-#back_button {
-	width: 60px;
-	height: 60px;
-
-	@media screen and (max-height: 800px) {
-		width: 40px !important;
-		height: 40px !important;
-	}
-
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	z-index: 3;
-
-	background-color: whitesmoke;
-	transition: background-color 100ms linear;
-	border-radius: 30px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	span {
-		transform: scale(2);
-	}
-
-	&:hover {
-		cursor: pointer;
-		background-color: grey;
-	}
-
-	// transform: scale(0.75);
+.clickable:hover {
+	cursor: pointer;
 }
 
 @keyframes wobble {
 	25% {
-		filter: brightness(1.1);
+		filter: brightness(1.05);
 		transform: scale(1.1) rotate(15deg);
 	}
 	75% {
-		filter: brightness(1.2);
+		filter: brightness(1.1);
 		transform: scale(1.2) rotate(-15deg);
 	}
 }
