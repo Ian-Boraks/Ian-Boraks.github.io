@@ -4,39 +4,105 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="./meta/js/index.js"></script>
+
   <link rel="stylesheet" href="./meta/css/index.css">
   <title>Ian Boraks</title>
+
+  <style>
+    a:hover {
+      cursor: pointer;
+    }
+  </style>
 </head>
 
-<body>
-  <div id="bg">
-    <div></div>
-  </div>
-  <div id="name_description">
-    <div class="content">
-      <div id="name_description_content">Mouse following is done 100% with CSS no JS<br></div>
-      <button id="name_description_button">CLICK ME TO FOLLOW WITH JS</button>
+<body class="theme-light">
+  <div id="top-nav">
+    <div id="top-nav-holder">
+      <h1 class="top-nav-button active" id="top-nav-about"> About </h1>
+      <h1 class="top-nav-button" id="top-nav-photos"> Photos </h1>
+      <h1 class="top-nav-button" id="top-nav-projects"> Projects </h1>
+      <h1 class="top-nav-button" id="top-nav-education"> Education </h1>
+      <h1 class="top-nav-button" id="top-nav-contact"> Contact </h1>
     </div>
   </div>
-  <a href="https://www.linkedin.com/in/ian-boraks/" id="LinkedIn" class="social_icon">
-    <!-- https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg -->
-    <img src="./meta/img/LinkedIn.svg"></img>
-  </a>
-  <a href="https://www.instagram.com/ianboraks.photo/" id="Instagram" class="social_icon">
-    <!-- https://commons.wikimedia.org/wiki/File:Instagram_logo_2022.svg -->
-    <img src="./meta/img/Instagram.svg" type="image/svg+xml"></img>
-  </a>
-  <a href="https://github.com/Ian-Boraks" id="GitHub" class="social_icon">
-    <!-- https://commons.wikimedia.org/wiki/File:Github-desktop-logo-symbol.svg -->
-    <img src="./meta/img/GitHub.svg" type="image/svg+xml"></img>
-  </a>
-  <a href="./contact.html" id="Contact" class="social_icon">
-    <!-- https://commons.wikimedia.org/wiki/File:Contact_(50339)_-_The_Noun_Project.svg -->
-    <img src="./meta/img/Contact.svg" type="image/svg+xml"></img>
-  </a>
-  <div id="name"></div>
+
+  <div id="main-content">
+    <div class="main-content-section spacer" id="about">
+      <div class="text-box">
+        <h1 class="section-title"> About Me </h1>
+      </div>
+    </div>
+    <div class="main-content-section lw50 rw50">
+      <div class="section-main left">
+        <div class="text-box">
+          <p class="section-text">
+            Hi! My name is Ian and I am <span id="age">Over 21 ;)</span> years old. I am an undergraduate student studying at Georgia Institute of Technology majoring in Computer Engineering. I am interested in computer science, CAD, PCB design, and so much more. I am also a competitive drone racer in my free time.
+          </p>
+        </div>
+      </div>
+      <div class="section-secondary right">
+        <img width="33.3333%" src="https://lh3.googleusercontent.com/ANPU0bm1wCfk-_UtwJItbS0hOpjJMG6Nf8v6AY4A0VpgKxKIF1YNLLPxW512g1sJfAdlPIsWx32b7ccsMQm1Xidn7eFRL0BI8n61hbuMX5Qjcn-gWYTxJe1ub9ChFBgRjevIi1JOwqzs5MnR4aRkC7q0rxrz79e7IK6TiHNp7TNNGKLTSM4HGqKNb4I3D4-S_LlM33LEkJO7SnvDQcjQw-6p4JlZoeKfct1_WHkjucoPVsqrxb9UTKMOQS7pxAfurCVC7LuUO2nEto5S6Vu0Ejx7GyYRE_0jnihSXLAI-PL0gKW2wiU39VHwwyVSXuCzZKm0G71s6inXl2dJXUariz48vB5ok8ijVklYyLu84Yt_JpLFuSK_aBAVnPuHv-V7MWzHwrDDZ195QU162JVb3Qd4-WQ_SHyGhQci4Jw903EHUb-zTKtDYqlf5-MvMPpTxVmsUod-kUBYrXSAt1y-8pYaSDDJ7qgZEeHKam26_2CrtGhEW7eZ6auUYTHYQQPeRY1ehztAtEur88TMH3MNHM_kZdDs52MrQDnow-Ark0hflKMMTijKCzNt8sfUERIuvOqtGvXlhWeijvDoh-cOKfZIuOudXt7dDTwOzXsQ7-R-W8r7fN2CtrueWFbFqNuky-tHsiYN5vOTYr7ikcggcuXouCJJs8p8kvZT_WMhYMWoU-o-Eq3QrqXOUVlHD7SjfM1s_g1UuBREReTbpD3pZHH9rsX_moZI6542jLAUSCoPbT97og0HJsftR9TnIupkVqA4iXgK9r6V1cG2Yu36eFJ-Ky9hDEdIhQxIYw5FG19aAV2tpcJj3qdMXaS1h76LjrY0cz0gtd11QZ-ErtOUSnPauhxE6NztbpWKnXe9IdK6lzQ19XXg7RxkTR4uYLektUCeNjPM9am8mPebMNFRU_4TnKLn-YMqp6mOdB6fBzBe=w614-h919-no?authuser=0">
+        <img width="33.3333%" src="https://lh3.googleusercontent.com/Oj2YiUREQjShCIS-uRvY2mBlCn3HsiDN13j5fjrgCqMpofdYUTKU03kt5zrk-F1RWiSt6ITSJLSXttF4l1Ga8MX1lTsGVtQ4IKyyDQric3hsF2mwYM4e3VWagrSwTkA9HbPeHnAIDXXFQR_FA1XV3FnUwbN1xe7eq2rIKIOBfhyeJQCCpPFCjaW5uCYcgwgaE_EteUmj_qFi8Yppc1LpXhZuhVmLWqrSEVG9VH0N7yj0SQApg9Q5LLg8MQ_QGdM6_8A52mTog5Ybsw74GWnQFiaxu4J45jHgKy4tbaPZcHMaReTICX5zFlQpRBc7PFDekTMTQ3HyX1QuarhMqs9e2tWodQ42MtcfDlfOQBfl_g0NCrcPJb-GIxGlqjfgED2n0CchxfWQrvUgDvyp3JWUoUJvKzBdIivyRJQ3pVI-jsi9mSHPKyAou_s4Gsx-y8DChFdVM2PL_8qxgDSs4MdWdNk1GZ_uibgVhWgnCuEEm6x_hQ-dnO4WVmU-KR3uAWiROM6qCjPcw_64qOsG8QgFjt-YakGDxylpnsZboiE-OW4CEff592tzHFljwmZ_8Gfc48XPBTQBXDKg3Z1f05VFcBvrXohqt-awyi3utB--c03D_N7Oq_hZzMqdjYmsb5rOPOnkr7uvQhpbPmdFuYzakDEGOUAej0vs-UsiEx0pQLm_9z0ZwAfBZfANOTXrhQ538bo0oHTvcGsKbEuVziwkFNFOnRLrnHLOUw8dEXAQOQ2gQlQNTV8GP0HP6-klRSPO-8A3WnIvLwgv7Dll8tOTf1CahN0bSrLJzS98rso4as4NBGNkscS31L1HjEVsU18c9EDxTt6qMlun9JALMhEevGPhZ6QcRIXHx3eaUTwFfxrabizE8T8ceetU9J6QdozqHEogfHxlsytp0m3t7ycmWlWkd7t0OHr_JGSyEV5HoDs-=w614-h919-no?authuser=0">
+        <img width="33.3333%" src="https://lh3.googleusercontent.com/U_aJYIJU5MoRyVAfpBj0hvnPVuv3yLujjYRlvVqo4NMGJbCFDWXas2My4CwCKjtg2LvE0DjN-OgebBcDR5jxMUbn6UvtxSUWh47fi6JdfaCdiI9Js0QpqgytFN41f08PDljlxEH-HZhUICKfu3luMU4nsz8Mp7WPR1d_6OZbmpRmMJYhHTR89ELCBjaw8JUBVegtplIieO79FfAU0cblpEIia5jGMTEU2RWZNyO87SXu-19aDv3hS2-3b9nmGkLizL4demexuF69C4Xm2zEE09H0sr3mOGZjESGjfW5bgZ3vCpeMakF7Y5oEe-1ezVzz9EzsoyMsE5NbUj9sBjboozRN7fvvel7aZOU63QgKn8c7YNi3wRTb03eFVM_LtdVrHT-q8zn3Svl3UKGgRSlvznXQWly-ZHYgOIMZXtvMfZEbte9-QILyF3fnITbRjv7B7S5ldjYYameJMIYVAu-Af29ccvSJjBXc_kpN4nnJ3ljM24erl0EJYzzJnGH6qOnPfBOLBwqPsDu8RbtT_ppKEoko-Y_pRo6pPtKP0CMZeSeK2fB4IlAvEFyKey9_klLeIjJu7N32w0V6HQ0Q97LTB5d3ykabjyam24gP-qkTFsdHuAfAhKx8Ewxxl95_akqT86dZ-xvH3BBy-VDi6ZzCJNkDldWaP-_XNp7Z5VjfJnVN_GA99xE5O7ghPEYxAtLUABsJD1TUV7RCtZ8JRtwmjIgVv5yQ57hnvcFwsL5pivv8JdYNb1conPFxUKDeMZRK8EEAy_CgkLyfEnKEpJPo4hOa0J9k18mMVHt8tGoDx-EQR8WKWwBmRVUKnolhdr5Ah5Dn1OnErOMsQA6BazYgNpIqxFmaXXn45k_oHRVUoYE_kM3hmlyXlgoYJwCwoig0JFuPERI5vcbHyGcY5jI6YMD3HYGgGHNl4tSwcN44g6Pi=w614-h919-no?authuser=0">
+      </div>
+    </div>
+
+    <div class="main-content-section spacer" id="photos">
+      <div class="text-box">
+        <h1 class="section-title"> Photography </h1>
+      </div>
+    </div>
+
+    <div class="main-content-section lw40 rw60">
+      <div class="section-main left">
+        <div class="text-box">
+          <h1 class="section-title"> Astro </h1>
+          <p class="section-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus fermentum euismod. Mauris mattis erat eu urna semper, at congue purus faucibus. Suspendisse potenti. Donec sollicitudin dignissim eros, non cursus nibh vehicula ut. Duis tempor ex id mauris fringilla pharetra. Cras ut ex et dolor ornare aliquet. In lacus orci, gravida non dictum vel, semper ut ante. </p>
+
+        </div>
+      </div>
+      <div class="section-secondary flex-row right">
+        <img width="100%" style="object-position: 0 0;" src="https://lh3.googleusercontent.com/3inIVSQfsQUoEcW4iI1U3mHplChpM1ScMrH1AiBYCKbc4OF_6u9UTEZq9w4P445PXcHdWzzwWB1VPreEBvEP_dJPNguNddC2paAlKkCn40j2e7K7b9x4fkgUpkkt1A7Kf8sOf2k0RlXnUTFdsSZejMoLI98ozli88J15uSia_lDqlS73NLR6O39iupQSrbAqBDY1CPd02VyMOw_7vhW-zahuhqOt-jJISL6Iox3C8edKlHu9YZIfxlo1BN-a4_hAFP_gwbdym9X0d0C5jQtYWKgGoi_nGa01ZarNHEy42G1uUooOMA3CHOUFhSB2JWJnz_Fb1vK2HNzhjafqGsQ6sH28L7UWD_0yyjFCweJHo8twHsgUXbY-ny-f6q2Ul7xZlCVJXXklUlNDc1eygtVCY2dTEUiCKAqMjElpLgqVc2EXEMfNm2K4VeZ1uVfHlkZfVwckFO9JLfTteD-HfXzUzKpm-mAbouE9ZVEzKaMAEalLPAeFJ_cuurX2DEA28JnNuGfMV0k0Gk1orEqqAZ6l1AifnQRgBZZD5GEAT3t0k7hpKFmsbZhzC2pkTqAzIhiEZmGyvS151-fmZhKvpvgBQEB31XUOH_y4B9w1OgLu6WUIWFJVu2bZZuYU5AAiWxwDqCR_rrj0TzfkkecUs1c0QKPBtcjxcq09nr6P1Uuj_Jdyth4Y8F06nB5_-gECKoRibvJ-FA0WEVCDF7Rort3UI9c_YnubIeX9ZtQUO8MtCCxqlCt1iYu9D_j6jVcKvEwy0gFAr3sKG0Am36BLQSy9pycRWe4y5_5Rd4o3HBnUJ4LULB7PogHlVEPeq7ElrNxm3jD1R7q5S1PoY6B7qcU8ChIUxmQor4AXupewPpLfPL1X5p3hj9PazQR1CIyKohb9bH-K7h_lobanEMyhKjs-nmUEzrAHz3JqJanq68vG4RWdsw=s919-no?authuser=0">
+        <img width="100%" src="https://lh3.googleusercontent.com/bzuKWOG5s0teKSLQ5nv-8XLVQ6y8GiSYiu5w-xzlbAjSG4a8Clas2OVOph9223uEjDRz_0AO0CQoyvftT4OTlArPbnpZMWJixx8kUJ0Ae3iqyfYDQwnypXX4QlLWTkKMYnCwnN3tnfHjAyp2tbmZmAAkkS06_H3XEYB-u_fCrA4J9YMBSvSB9igF1wSjioR7nPQnpe51lDed9CtvafwSu-PKSj976PbpnGsFI6B4wIDGGgmQobFmP6fVa4fVlmgJc5dBahYovvLamC0L3QQiZ8XFPX8A967N8ij4u-beNfgBKQTwZQN2fslY_rSg0ijqxQDAzeQtbS0fOPU3Dxp5wBhrAy8Fhb7EEGkt0m6GzMhBFwu9rFo3-cLnCpmgmbLqiXb71L_8tdI0tO-17H7OEdXym7pL1vZEGJexbP_OGbsXWl31Wzs0hGp1Hc5lFIgQtUzIs6yHP6zi517LDTAN5qWfZ80HGioCFi1TZ-Jx2ikyP8q4SoskvJgjhTgNxlk2pW70rVfIXqCNEFROEKAzqpmgLZXa1VKi2f-dAxcBWwSV84ASmGDyGDiFc1Cz6ZkVEHbU_Tgt60_d2XdLe7QAoldsKB1YZDYnXf48RLXm8LCnIMmS1LlvyNvphDVC5JfMkneDnOCtQFpTK9T0MAxZj7L-jOAiCBWXxv0ltZ3J_flOJZzYsp3FbM2A2jqmBNM8uVl2kYbafKPlPfIfLHyfdC8BE8kUcO08CTKZN55dz2gVmYwbvH26IbIUQAlnlVRisNp1ee_NxKur8QxDMUrQHMsYz6p3RtaOCqAkmKT220dG0vXmPxAulaU6kYWI6V5NixKSCxNmPniiuxj7Pl2uZZqCzE9sjISmnomzqXSCEY9cPRFASr1Ys5zr99oqr6M_DaZNgUs4UrPJn23izHQ7t4AMQAxhQk9epjH9cM1CTV5OkA=w1157-h773-no?authuser=0">
+      </div>
+
+    </div>
+
+    <div class="main-content-section lw40 rw60">
+      <div class="section-main left">
+        <div class="text-box">
+          <h1 class="section-title"> Nature </h1>
+          <p class="section-text"> I love animals :) </p>
+
+        </div>
+      </div>
+      <div class="section-secondary flex-row right">
+        <img width="100%" style="object-position: 0 0;" src="https://lh3.googleusercontent.com/j_-KmhkDr27alSY-qaFUVx_DKx5-9w0mVot0WTBTIUUO3xLeFUkzHZ1L71UcqhsRgtH9HNbtDLTqQmRxbj2xX4bCv2i1TW272a9fVS96vBUi2s3JF2VxlPaglaofH4sS_cYTuw5q4ax3ugxl9wF06oOz0X5QBo-S8EbdsGXaKisuWn8HJM-v3_7O76f-tzJjQXK2OV-rIMJP8oUx2F1szc9Z30DlJqGYExI11IUU5EK0H-SmEWdietv_KaQaw8r4aOTMkVTniMSgwYlxiOaZsPoA_aF7ysNm5puxeT1OEmt5G3_8V8a2OSXdNzeXisHsJ2bMjnyLtHk-UUYngJ4jo8rWSLJZ_0S29LTxfvDHILhjiTmPMk2_gIzUuInZgjCJiv1fRX0ewYUoone2jBZ-BjwBW3VthVGyLavuJ7UAWhC4NxP0R6O6xvVkhd7vSuZ0dnE768WKd9rombXTZtTdAYb6jj4Q2BcRau0GKqmBjkebKWXM3-u1BTDzef2jITbCT0vwYM9ZmvLaFYkoj0WwNQdVaji1M6L0iR68f5ahzC_1zv4O7_hLmaGiGVhx-2OOdrPoplhC86SFFfgHlIpmZkbsOIRmXK26H0rHsm0WbHe2ytv2AsH969JY8sJubvdQZAx74PO56dYqm6y9HE2iWfdyC6x0IuP73yhGFzoESRIsz4r_wqDIIRharXXraXlGE1I1qtLxHifqKfrG1633zmhGAyPXFwXaIF0y4J9uZ1zs_paCtsPesuQSuDTB75L0DTYq7D_PqHgCf7dhFLhNk-I-MEtRWEaJcW722hJlL473pIYTjO-HjBHcapwsKoTn4K0EFCcCdmjp2_o7yolQDvxG82mCYWydppcPXVpG_cdcBvuLZIUtPU8RFKvNTQoFDgG4E-VYTyD8RaxKXs2hq9mzlnDhwMKbGPvDV8vhBbzayg=s335-no?authuser=0">
+        <img width="100%" src="https://lh3.googleusercontent.com/iaCZGKdekydHKQtS1MwIhrERJibnIEhBJUm4ulISjJd_qlgWrmezjlnh4uhFdreJbimLKodFBVflM33DZJ8a9xk4pykbCWX3V_0vDQpu0otkkGofMFq5_QFVeOxQ3mO2-_3ZJNiwmQrV8jldtW83DAEtdZNIT5FkSasdlZfZdPcga5g-IYIgqisV08r2B99X0YR8tu4_INpcAJgKS8PDcOO4ybmswOV2RXhRtpfd1a86l3RFzT_YwpUIKwvo_eAu7O00FxnUskDXt0jq3fQBNj4gpIGznsTOxJ3u0lgz7rSlOndzbMmtdgl-ng5_4kWOdf2YvR_I43wITjWT-KFfPEX28CDJ-hckkDXebBXv8RJwzHo9XanRXmRqOuKdlX-zj_7bU9UDKkij9tya97qiK0LIETa-Pb0GTf4FSHMJcwgQpqwaaPhCQIRZR9fnmC4OFdagpjNuXxFv0socaqUjcl8lV7AcwXOixDGtHnrkKI8fVslGb2BI002X4HVvGChlBE2Kh1EmInReN4EBWPZBta3o3G7gHcDvQthN9pKoELiGX9cIends1D-izjCmHtasu7uJb20XHi06LFm3FWmyBuVxFNHeOyy0EZczUIxG8J2VV2lHVK165WQBRIOnGrxHPKd99z-QCn6mdFTWoQ9RoBhoczVMxdypCabX04F0nVHGw5ZRRCAwwvV4LI53rwBw6UvxZopod-5N1_L8H-3sY8ikyNA4CKUpMUwtskjkOIcaI6fJslNe2-VaI5dY-5rBLZyvFpDJmPnhjuFIc2KvHQDhCbMfC-k0ag5K5AS6ASQ7vbnNNfLnTLYWc3JsYlLxLutyutMLJGyr4brLGDqK1QBF--e4cOsqb_DdyMorqLPSEtDJxVtNSDxJnuI0qgj1cp8DmdX_icsAaXNefwjANQ_O0UVK_DtYI3Mtw-nX1z0QYg=s919-no?authuser=0">
+      </div>
+
+    </div>
+
+    <div class="main-content-section" id="education">
+      <div class="section-main right"></div>
+      <div class="section-secondary left"></div>
+    </div>
+
+    <div class="main-content-section" id="education">
+      <div class="section-main right"></div>
+      <div class="section-secondary left"></div>
+    </div>
+
+    <div class="main-content-section " id="contact">
+      <div class="section-secondary right"></div>
+      <div class="section-main left"></div>
+    </div>
+
+  </div>
 </body>
 
 </html>

@@ -6,99 +6,67 @@
   box-sizing: border-box;
 }
 
-:root {
-  --background_colordark: #2a0042c4;
-  --background_color: #45454e;
-  --background_colorlight: rgb(108, 110, 131);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  overflow: hidden;
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #9370db;
+  --font-color: #000000;
+}
+
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #243133;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
 }
 
 body {
-  margin: 0;
-  overflow: hidden;
-}
-
-#bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-#bg div {
-  position: absolute;
-  width: 100vmax;
-  height: 100vmax;
-  background-image: linear-gradient(var(--background_colordark) 35%, var(--background_color), var(--background_colorlight) 65%);
-  -webkit-animation: bg-animation 100s infinite linear;
-          animation: bg-animation 100s infinite linear;
-}
-@-webkit-keyframes bg-animation {
-  0% {
-    transform: scale(3) rotate(45deg);
-  }
-  100% {
-    transform: scale(3) rotate(405deg);
-  }
-}
-@keyframes bg-animation {
-  0% {
-    transform: scale(3) rotate(45deg);
-  }
-  100% {
-    transform: scale(3) rotate(405deg);
-  }
-}
-
-#back_button {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 3;
-  background-color: whitesmoke;
-  transition: background-color 100ms linear;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (max-height: 800px) {
-  #back_button {
-    width: 40px !important;
-    height: 40px !important;
-  }
-}
-#back_button span {
-  transform: scale(2);
-}
-#back_button:hover {
-  cursor: pointer;
+  font-family: Andale Mono, AndaleMono, monospace;
   background-color: grey;
+  margin: 0;
 }
 
-@-webkit-keyframes wobble {
-  25% {
-    filter: brightness(1.1);
-    transform: scale(1.1) rotate(15deg);
-  }
-  75% {
-    filter: brightness(1.2);
-    transform: scale(1.2) rotate(-15deg);
-  }
+h1 {
+  font-family: Andale Mono, AndaleMono, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
 }
 
-@keyframes wobble {
-  25% {
-    filter: brightness(1.1);
-    transform: scale(1.1) rotate(15deg);
-  }
-  75% {
-    filter: brightness(1.2);
-    transform: scale(1.2) rotate(-15deg);
-  }
+h3 {
+  font-family: Andale Mono, AndaleMono, monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
+p {
+  font-family: Andale Mono, AndaleMono, monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+blockquote {
+  font-family: Andale Mono, AndaleMono, monospace;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+pre {
+  font-family: Andale Mono, AndaleMono, monospace;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5667px;
 }/*# sourceMappingURL=shared.css.map */
