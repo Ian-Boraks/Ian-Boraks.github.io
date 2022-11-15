@@ -1,4 +1,32 @@
+addEventListener("resize", (event) => {
+  if ($(window).width() < 800) {
+    if (children.length < 2) {
+      return;
+    }
+    $('.main-content-section').each(function () {
+      var children = $(this).children("div");
+      if (children[0].classList.contains('section-secondary') && children[0].classList.contains('left')) {
+        children[0].parentNode.insertBefore(children[1], children[0]);
+      }
+    });
+  } else {
+    $('.main-content-section').each(function () {
+      var children = $(this).children("div");
+      if (children.length < 2) {
+        return;
+      }
+      if (children[0].classList.contains('section-main') && children[0].classList.contains('right')) {
+        children[0].parentNode.insertBefore(children[1], children[0]);
+      }
+    });
+  }
+});
+
 $(document).ready(function () {
+  window.dispatchEvent(new Event('resize'));
+
+  enableClicks();
+
   $('.top-nav-button').each(function (key, value) {
     let id = '#top-nav-' + value.innerText.toLowerCase()
     $(id).click(function () {
@@ -15,6 +43,16 @@ $(document).ready(function () {
     });
   });
 
+  $('.more').each(function (key, value) {
+      $('#' + value.id).click(function () {
+        $("<a>").prop({
+          href: "/projects/" + value.id + ".html"
+        })[0].click();
+      })
+  });
+});
+
+function enableClicks() {
   $('#contact-email').click(function () {
     $("<a>").prop({
       target: "_blank",
@@ -39,7 +77,7 @@ $(document).ready(function () {
       href: "https://www.instagram.com/ianboraks.photo/"
     })[0].click();
   })
-});
+}
 
 setInterval(() => {
   var t = dayjs().diff(dayjs(1094443200000), 'year', true);

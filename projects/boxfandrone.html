@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="/meta/js/shared.js"></script>
+
+    <link rel="stylesheet" href="/meta/css/projects.css">
+    <title>Ian Boraks</title>
+
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="theme-light">
+    <div id="top-nav">
+        <div id="top-nav-holder">
+            <h1 class="top-nav-button" id="home"> Home </h1>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <!-- <div class="main-content-section spacer" id="about">
+        <div class="text-box">
+          <h1 class="section-title"> About Me </h1>
+        </div>
+      </div> -->
+        <div class="main-content-section lw40 rw60" id="about">
+            <div class="section-main left">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> About Me </h1>
+                        <p class="section-text">
+                            Hi! My name is Ian, I am <span id="age">
+                                <404>
+                            </span> years old. I am an undergraduate student studying at Georgia Institute of Technology majoring in Computer Engineering. I am interested in computer science, CAD, PCB design, and so much more. I am also a competitive drone racer in my free time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-secondary right">
+                <img width="34%" src="/meta/img/About/Ian1.jpg">
+                <img width="34%" src="/meta/img/About/Ian2.jpg">
+                <img width="34%" src="/meta/img/About/Ian3.jpg">
+            </div>
+        </div>
+
+        <div class="main-content-section rw100" id="contact">
+            <div class="section-main left right">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> Contact </h1>
+                        <div class="section-text">
+                            <img class="clickable" id="contact-email" src="/meta/img/Contact.svg" width="100px">
+                            <img class="clickable" id="contact-github" src="/meta/img/GitHub.svg" width="100px">
+                            <img class="clickable" id="contact-linkedin" src="/meta/img/LinkedIn.svg" width="100px">
+                            <img class="clickable" id="contact-instagram" src="/meta/img/Instagram.svg" width="100px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $('#home').click(function () {
+        $("<a>").prop({
+            href: "/index.html"
+        })[0].click();
+    });
+</script>
+
+</html>
