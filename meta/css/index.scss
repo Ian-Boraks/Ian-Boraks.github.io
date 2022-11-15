@@ -114,13 +114,18 @@
 				}
 
 				&.more {
+					user-select: none;
+
 					.section-title {
 						color: var(--font-color-light);
+						background-color: rgba($color: whitesmoke, $alpha: 0.25);
+						font-size: medium !important;
+						outline: var(--color-accent) solid 5px;
 					}
 
 					* {
-						padding: 10px;
-						margin-top: -10px;
+						padding: 0px 5px 0px 5px;
+						margin-top: 0px;
 						transition: 100ms;
 						width: fit-content;
 					}
@@ -132,7 +137,7 @@
 						width: fit-content;
 					}
 				}
-				
+
 				padding: 5px;
 
 				@media (min-width: 800px) {
@@ -141,7 +146,6 @@
 				@media (max-width: 800px) {
 					margin-top: 10px;
 					margin-bottom: 10px;
-					
 				}
 
 				position: relative;

@@ -98,12 +98,21 @@
 #main-content .section-main .text-box-holder .text-box:not(.more) {
   background-color: var(--color-secondary);
 }
+#main-content .section-main .text-box-holder .text-box.more {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 #main-content .section-main .text-box-holder .text-box.more .section-title {
   color: var(--font-color-light);
+  background-color: rgba(245, 245, 245, 0.25);
+  font-size: medium !important;
+  outline: var(--color-accent) solid 5px;
 }
 #main-content .section-main .text-box-holder .text-box.more * {
-  padding: 10px;
-  margin-top: -10px;
+  padding: 0px 5px 0px 5px;
+  margin-top: 0px;
   transition: 100ms;
   width: -webkit-fit-content;
   width: -moz-fit-content;
