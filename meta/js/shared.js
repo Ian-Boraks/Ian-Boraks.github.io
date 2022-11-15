@@ -25,6 +25,8 @@ addEventListener("resize", (event) => {
 $(document).ready(function () {
   window.dispatchEvent(new Event('resize'));
 
+  enableClicks();
+
   $('.top-nav-button').each(function (key, value) {
     let id = '#top-nav-' + value.innerText.toLowerCase()
     $(id).click(function () {
@@ -40,6 +42,17 @@ $(document).ready(function () {
         'medium');
     });
   });
+
+  $('.more').each(function (key, value) {
+      $('#' + value.id).click(function () {
+        $("<a>").prop({
+          href: "/projects/" + value.id + ".html"
+        })[0].click();
+      })
+  });
+});
+
+function enableClicks() {
   $('#contact-email').click(function () {
     $("<a>").prop({
       target: "_blank",
@@ -64,7 +77,7 @@ $(document).ready(function () {
       href: "https://www.instagram.com/ianboraks.photo/"
     })[0].click();
   })
-});
+}
 
 setInterval(() => {
   var t = dayjs().diff(dayjs(1094443200000), 'year', true);
