@@ -1,10 +1,10 @@
 addEventListener("resize", (event) => {
   if ($(window).width() < 800) {
-    if (children.length < 2) {
-      return;
-    }
     $('.main-content-section').each(function () {
       var children = $(this).children("div");
+      if (children.length < 2) {
+        return;
+      }
       if (children[0].classList.contains('section-secondary') && children[0].classList.contains('left')) {
         children[0].parentNode.insertBefore(children[1], children[0]);
       }

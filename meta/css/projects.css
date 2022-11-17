@@ -342,4 +342,16 @@ pre {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+@media (max-width: 800px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .expand-mobile {
+    width: 100%;
+  }
 }/*# sourceMappingURL=projects.css.map */
