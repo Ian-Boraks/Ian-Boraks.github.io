@@ -114,8 +114,8 @@
         </div>
 
         <div class="main-content-section rw100" id="resume">
-            <div class="section-main left right hide-mobile">
-                <iframe src="/meta/img/About/resume.pdf" width="100%" height="600px" style="padding: 0px 10px 0px 10px; border: none;"></iframe>
+            <div class="section-main left right hide-mobile" id="resume-holder">
+
             </div>
             <div class="text-box-holder">
                 <div class="text-box show-mobile">
@@ -131,7 +131,7 @@
                 <img width="34%" src="/meta/img/Orginizations/RotorJackets.jpeg">
             </div>
         </div>
-        
+
         <div class="main-content-section rw100" id="contact">
             <div class="section-main left right">
                 <div class="text-box-holder">
@@ -160,6 +160,11 @@
         wrapText.innerHTML = wrapText.textContent.split('').map(function (y) {
             return '<div>' + y + '</div>';
         }).join('');
+    }
+    if ($(window).width() > 800) {
+        $("#resume-holder").append(
+            "<iframe src=\"/meta/img/About/resume.pdf\" width=\"100%\" height=\"600px\" style=\"padding: 0px 10px 0px 10px; border: none;\"></iframe>"
+        );
     }
 </script>
 
