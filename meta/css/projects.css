@@ -80,30 +80,190 @@ pre {
 
 @-webkit-keyframes wobble {
   25% {
-    filter: brightness(1.05);
     transform: scale(1.1) rotate(15deg);
   }
   75% {
-    filter: brightness(1.1);
     transform: scale(1.2) rotate(-15deg);
   }
 }
 
 @keyframes wobble {
   25% {
-    filter: brightness(1.05);
     transform: scale(1.1) rotate(15deg);
   }
   75% {
-    filter: brightness(1.1);
     transform: scale(1.2) rotate(-15deg);
   }
 }
+@media (max-width: 800px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .show-mobile {
+    display: none;
+  }
+}
+
+.dropin .split-word:nth-child(1) div:nth-child(1) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+.dropin .split-word:nth-child(1) div:nth-child(2) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.dropin .split-word:nth-child(1) div:nth-child(3) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(1) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(2) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(3) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(4) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(5) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(6) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.6) translateY(30px);
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.6) translateY(30px);
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+.dropin {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -16px;
+}
+
+.split-word {
+  font-size: 40px;
+  display: table-cell;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.split-word div {
+  display: table-cell;
+}
+
 #top-nav {
   background-color: var(--color-primary-dark);
   color: var(--font-color-light);
   position: fixed;
-  width: 1200px;
+  width: 1000px;
   top: 0;
   left: 50%;
   margin-right: -50%;
@@ -124,6 +284,10 @@ pre {
   height: 100%;
   margin: 0;
   padding: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   line-height: calc(30px + 0.5em);
   text-align: center;
   transition: 0.2s;
@@ -140,7 +304,7 @@ pre {
 
 #main-content {
   background-color: var(--color-primary);
-  max-width: 1200px;
+  max-width: 1000px;
   position: absolute;
   top: 60px;
   left: 50%;
@@ -205,7 +369,7 @@ pre {
           user-select: none;
 }
 #main-content .section-main .text-box-holder .text-box.more .section-title {
-  color: var(--font-color-light);
+  color: var(--font-color-dark);
   background-color: rgba(245, 245, 245, 0.25);
   font-size: medium !important;
   outline: var(--color-accent) solid 5px;
@@ -302,10 +466,6 @@ pre {
   word-spacing: 40px;
   transform: translateY(0) !important;
 }
-#main-content #contact .text-box img,
-#main-content #contact .text-box-holder img {
-  filter: hue-rotate(0deg) !important;
-}
 #main-content #contact .text-box img:hover,
 #main-content #contact .text-box-holder img:hover {
   -webkit-animation: wobble 700ms;
@@ -344,10 +504,40 @@ pre {
   }
 }
 
-@media (max-width: 800px) {
-  .hide-mobile {
-    display: none;
-  }
+#contact-email {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(48%) saturate(2479%) hue-rotate(340deg) brightness(102%) contrast(101%);
+}
+
+#about-center {
+  height: calc(100vh - 60px);
+}
+
+#about-holder {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  place-self: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 32px;
+}
+
+#about.main-content-section {
+  min-height: 0;
+  margin: 0;
+}
+#about.main-content-section .section-secondary {
+  height: 300px;
+}
+#about.main-content-section .section-main,
+#about.main-content-section .text-box-holder {
+  min-height: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  transform: translateY(0);
 }
 
 @media (max-width: 800px) {

@@ -1,11 +1,12 @@
 @use "shared";
+@use "dropin";
 
 #top-nav {
 	background-color: var(--color-primary-dark);
 	color: var(--font-color-light);
 
 	position: fixed;
-	width: 1200px;
+	width: $content-width;
 
 	// position: absolute;
 	top: 0;
@@ -33,7 +34,9 @@
 		margin: 0;
 		padding: 10px;
 
-		@media (max-width: 800px) {
+		user-select: none;
+
+		@media (max-width: $mobile-width) {
 			font-size: medium;
 		}
 
@@ -55,7 +58,7 @@
 	background-color: var(--color-primary);
 	// min-width: fit-content;
 	// width: 700px;
-	max-width: 1200px;
+	max-width: $content-width;
 
 	position: absolute;
 	top: 60px;
@@ -65,13 +68,13 @@
 
 	.main-content-section {
 		display: block;
-		min-height: 300px;
+		// min-height: 300px;
 		height: fit-content;
 		overflow: hidden;
 
 		display: flex;
 
-		@media (max-width: 800px) {
+		@media (max-width: $mobile-width) {
 			flex-flow: column;
 		}
 
@@ -103,7 +106,7 @@
 		.text-box-holder {
 			position: relative;
 
-			@media (min-width: 800px) {
+			@media (min-width: $mobile-width) {
 				top: 50%;
 				transform: translateY(-50%);
 			}
@@ -117,7 +120,7 @@
 					user-select: none;
 
 					.section-title {
-						color: var(--font-color-light);
+						color: var(--font-color-dark);
 						background-color: rgba($color: whitesmoke, $alpha: 0.25);
 						font-size: medium !important;
 						outline: var(--color-accent) solid 5px;
@@ -140,10 +143,10 @@
 
 				padding: 5px;
 
-				@media (min-width: 800px) {
+				@media (min-width: $mobile-width) {
 					margin: 10px;
 				}
-				@media (max-width: 800px) {
+				@media (max-width: $mobile-width) {
 					margin-top: 10px;
 					margin-bottom: 10px;
 				}
@@ -218,7 +221,7 @@
 	#contact {
 		min-height: 0 !important;
 
-		@media (max-width: 800px) {
+		@media (max-width: $mobile-width) {
 			margin-right: -10px;
 			margin-left: -10px;
 		}
@@ -236,7 +239,6 @@
 		transform: translateY(0) !important;
 
 		img {
-			filter: hue-rotate(0deg) !important;
 			&:hover {
 				animation: wobble 700ms;
 			}
@@ -244,7 +246,7 @@
 	}
 
 	.left {
-		@media (min-width: 800px) {
+		@media (min-width: $mobile-width) {
 			border-radius: 0 80px 80px 0 !important;
 			.text-box {
 				padding-left: 80px !important;
@@ -254,7 +256,7 @@
 	}
 
 	.right {
-		@media (min-width: 800px) {
+		@media (min-width: $mobile-width) {
 			border-radius: 80px 0 0 80px !important;
 			.text-box {
 				padding-right: 80px !important;
@@ -265,7 +267,7 @@
 
 	.left,
 	.right {
-		@media (max-width: 800px) {
+		@media (max-width: $mobile-width) {
 			border-radius: 40px;
 			width: calc(100% - 10px) !important;
 			.text-box {
@@ -275,5 +277,49 @@
 				margin-left: auto;
 			}
 		}
+	}
+}
+
+#contact-email {
+	filter: brightness(0) saturate(100%) invert(42%) sepia(48%) saturate(2479%)
+		hue-rotate(340deg) brightness(102%) contrast(101%);
+}
+
+#contact-resume {
+	filter: brightness(0) saturate(100%) invert(50%) sepia(53%) saturate(982%)
+		hue-rotate(300deg) brightness(102%) contrast(101%);
+}
+
+#about-center {
+	height: calc(100vh - 60px);
+	min-height: 400px;
+	position: relative;
+	display: block;
+}
+#about-holder {
+	position: relative;
+	height: fit-content;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-top: 32px;
+	&::after {
+		content: "⇓";
+		font-size: 10vh;
+		display: block;
+		text-align: center;
+	}
+}
+#about.main-content-section {
+	min-height: 0;
+	margin: 0;
+	.section-secondary {
+		height: calc(30vh);
+	}
+	.section-main,
+	.text-box-holder {
+		min-height: 0;
+		height: fit-content;
+		top: 0;
+		transform: translateY(0);
 	}
 }

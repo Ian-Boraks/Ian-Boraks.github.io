@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="/meta/js/shared.js"></script>
+
+    <link rel="stylesheet" href="/meta/css/projects.css">
+    <title>Ian Boraks</title>
+
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="theme-light">
+    <div id="top-nav">
+        <div id="top-nav-holder">
+            <h1 class="top-nav-button" id="home"> Home </h1>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="main-content-section lw40 rw60" id="about">
+            <div class="section-main left">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> Why? </h1>
+                        <p class="section-text">
+                            While taking long exposure photos of the stars, you encounter a problem where the stars appear to move across the sky. This is due to the rotation of the Earth. This project aims to solve this problem by using a camera with a wide angle lens and a motorized mount to track the stars.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-secondary right">
+                <img width="34%" src="/meta/img/Projects/AstroTracker/Stars1.jpg">
+                <img width="34%" src="/meta/img/Projects/AstroTracker/Stars2.png">
+                <img width="34%" src="/meta/img/Projects/AstroTracker/Stars3.jpg">
+            </div>
+        </div>
+
+        <div class="main-content-section lw60 rw40" id="device">
+            <div class="section-secondary left">
+                <img width="50%" src="/meta/img/Projects/AstroTracker/Mount1.jpg">
+                <!-- <img width="34%" src="/meta/img/Projects/AstroTracker/Mount2.jpg"> -->
+                <img width="50%" src="/meta/img/Projects/AstroTracker/Mount3.webp">
+            </div>
+            <div class="section-main right">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> What the Pros Use </h1>
+                        <p class="section-text">
+                            Most deep sky photographers use a motorized mount to track the stars. These mounts are expensive, and I wanted to make my own. The most common type of mount is the equatorial mount such as the <a href="https://www.ioptron.com/product-p/3322.htm">SkyTracker Pro</a>. The other mount types are alt-azimuth and polar, but they are not as accurate as the equatorial mount. <br><br>
+                            The cheapest type of equatorial mount is a "barn-door" mount, such as the <a href="https://nyxtech.us/products/nyx-tracker?variant=21473884045372&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic">Nyx Tracker</a>. Because of the simplicity of a "barn-door" style mount, this is the design I went with.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-section lw100" id="hardware">
+            <div class="section-secondary">
+                <img width="60%" class="expand-mobile" src="/meta/img/Projects/AstroTracker/tracker.jpg">
+                <img width="40%" class="hide-mobile" src="/meta/img/Projects/AstroTracker/iso.png">
+            </div>
+        </div>
+
+        <div class="main-content-section lw40 rw60" id="howitworks">
+            <div class="section-secondary left">
+                <img width="100%" src="/meta/img/Projects/AstroTracker/IsoTan.jpg">
+            </div>
+            <div class="section-main right">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> How it Works? </h1>
+                        <p class="section-text">
+                            By using a hinge to join two pieces of wood, it is possible to create a straightforward single-arm barn door tracker.
+                            On the top board is a camera affixed, typically with a ball joint to allow the camera to be directed in any direction.
+                            A threaded rod or bolt is often turned to force the boards apart (or together) at a steady rate after the hinge is positioned in relation to a celestial pole. <br><br>
+                            An example of this is a tangent drive. When utilizing a 50 mm lens, this style of mount is effective for about 5 to 10 minutes before tracking issues are noticeable.
+                            The tangent mistake is the cause of this.
+                            When employing an isosceles mount, that time can be extended to roughly 20 minutes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-section lw40 rw60" id="results">
+            <div class="section-main left">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> Results </h1>
+                        <p class="section-text">
+                            With the tracker, I was able to get some pretty promising results. The first photo is with out the tracker and the second is with the tracker. <br><br>
+                            There is a clear reduction in the star trails, but the stars are still not as sharp as I would like. I think this is due to the fact that I don't have a reliable way of aiming the tracker. I am currently working on a way to do this.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-secondary right">
+                <img style="border-right: solid .5px;" width="50%" src="/meta/img/Projects/AstroTracker/wo_tracker.jpg">
+                <img style="border-left: solid .5px;" width="50%" src="/meta/img/Projects/AstroTracker/w_tracker.jpg">
+            </div>
+        </div>
+
+        <div class="main-content-section rw100" id="contact">
+            <div class="section-main left right">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> Contact </h1>
+                        <div class="section-text">
+                            <img class="clickable" id="contact-email" src="/meta/img/Contact.svg" width="100px">
+                            <img class="clickable" id="contact-github" src="/meta/img/GitHub.svg" width="100px">
+                            <img class="clickable" id="contact-linkedin" src="/meta/img/LinkedIn.svg" width="100px">
+                            <img class="clickable" id="contact-instagram" src="/meta/img/Instagram.svg" width="100px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $('#home').click(function () {
+        $("<a>").prop({
+            href: "/index.html"
+        })[0].click();
+    });
+</script>
+
+</html>
