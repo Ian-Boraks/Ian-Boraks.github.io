@@ -1,13 +1,10 @@
 @use "index";
 
-.hide-mobile {
-    @media (max-width: 800px) {
-        display: none;
-    }
-}
+$content-width: 1000px;
+$mobile-width: 800px;
 
 .expand-mobile {
-    @media (max-width: 800px) {
-        width: 100%;
-    }
+	@media (max-width: $mobile-width) {
+		width: 100%;
+	}
 }

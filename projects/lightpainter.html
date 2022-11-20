@@ -61,7 +61,7 @@
                         <h1 class="section-title"> What the Pros Use </h1>
                         <p class="section-text">
                             Darren Pearson uses his own <a href="https://www.dariustwin.com/shop/p/night-writer-pro">"Night-Writer Pro"</a> to help him take these amazing photos. Because of the cost of one of these devices, I decided to make my own. I used a couple <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide">NeoPixels</a> and a <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO/">Seed Studio XIAO</a> to make my own. I also used the same keyboard style switches to pay homage to the original device. <br><br>
-                            My "Light Painter" uses 3 3w RGBW LEDs instead of an array of single color LEDs. This allows for more color options and a wider range of brightness. The XIAO is a microcontroller that is capable of running the code needed to control the LEDs (on a side note, the XIAO is also capable of acting as a USB HID device, which allows it to act as a keyboard).<br><br>
+                            My "Light Painter" uses 3 3w RGBW LEDs instead of an array of single color LEDs. This allows for more color options and a wider range of brightness. The XIAO is a microcontroller that is capable of running the code needed to control the LEDs (on a side note, the XIAO is also capable of acting as a USB HID device, which allows it to act as a keyboard).
                         </p>
                     </div>
                 </div>
@@ -77,6 +77,25 @@
             </div>
         </div>
 
+        <div class="main-content-section lw60 rw40" id="device">
+            <div class="section-secondary left">
+                <img width="50%" src="/meta/img/Projects/LightPainterMissingWire.jpg">
+                <img width="50%" src="/meta/img/Projects/LightPainter1.jpg">
+            </div>
+            <div class="section-main right">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        <h1 class="section-title"> What Went Wrong? <br> v1&#8614;v2 </h1>
+                        <p class="section-text">
+                            v1 of the light painter was a great success! Except that it didn't work. I had a lot of trouble getting the charlieplexing working for the indicator lights, this was the result of forgetting a wire on the schematic. This was fixed with an external wire taped onto the board. <br><br>
+                            Another issue with v1 was that I swapped pad 3 and 4 of the NeoPixels on my part footprint. This didn't have an easy fix like the previous problem, and required a new PCB to be manufactured.<br><br>
+                            The final issue with v1 was that the mouse bites to make the corner break off didn't work. This was fixed by using a dremel to cut the corner off.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="main-content-section lw40 rw60" id="myphotos">
             <div class="section-main left">
                 <div class="text-box-holder">
@@ -84,6 +103,10 @@
                         <h1 class="section-title"> Am I Worthy of Wielding<br>Such a Device? </h1>
                         <p class="section-text">
                             You should judge for yourself. Most of other work is posted on my Instagram at <a href="https://www.instagram.com/ianboraks.photo/">@ianboraks.photo</a>.
+                        </p>
+                        <h1 class="section-title"> View the Code </h1>
+                        <p class="section-text">
+                            GITHUB LINK: <a href="https://github.com/Ian-Boraks/Light-Painter">Ian-Boraks/Light-Painter</a>
                         </p>
                     </div>
                 </div>

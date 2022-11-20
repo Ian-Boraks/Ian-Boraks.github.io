@@ -80,22 +80,29 @@ pre {
 
 @-webkit-keyframes wobble {
   25% {
-    filter: brightness(1.05);
     transform: scale(1.1) rotate(15deg);
   }
   75% {
-    filter: brightness(1.1);
     transform: scale(1.2) rotate(-15deg);
   }
 }
 
 @keyframes wobble {
   25% {
-    filter: brightness(1.05);
     transform: scale(1.1) rotate(15deg);
   }
   75% {
-    filter: brightness(1.1);
     transform: scale(1.2) rotate(-15deg);
+  }
+}
+@media (max-width: 800px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .show-mobile {
+    display: none;
   }
 }/*# sourceMappingURL=shared.css.map */

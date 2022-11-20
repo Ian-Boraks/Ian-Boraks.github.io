@@ -80,30 +80,38 @@ pre {
 
 @-webkit-keyframes wobble {
   25% {
-    filter: brightness(1.05);
     transform: scale(1.1) rotate(15deg);
   }
   75% {
-    filter: brightness(1.1);
     transform: scale(1.2) rotate(-15deg);
   }
 }
 
 @keyframes wobble {
   25% {
-    filter: brightness(1.05);
     transform: scale(1.1) rotate(15deg);
   }
   75% {
-    filter: brightness(1.1);
     transform: scale(1.2) rotate(-15deg);
   }
 }
+@media (max-width: 800px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .show-mobile {
+    display: none;
+  }
+}
+
 #top-nav {
   background-color: var(--color-primary-dark);
   color: var(--font-color-light);
   position: fixed;
-  width: 1200px;
+  width: 1000px;
   top: 0;
   left: 50%;
   margin-right: -50%;
@@ -124,6 +132,10 @@ pre {
   height: 100%;
   margin: 0;
   padding: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   line-height: calc(30px + 0.5em);
   text-align: center;
   transition: 0.2s;
@@ -140,7 +152,7 @@ pre {
 
 #main-content {
   background-color: var(--color-primary);
-  max-width: 1200px;
+  max-width: 1000px;
   position: absolute;
   top: 60px;
   left: 50%;
@@ -205,7 +217,7 @@ pre {
           user-select: none;
 }
 #main-content .section-main .text-box-holder .text-box.more .section-title {
-  color: var(--font-color-light);
+  color: var(--font-color-dark);
   background-color: rgba(245, 245, 245, 0.25);
   font-size: medium !important;
   outline: var(--color-accent) solid 5px;
@@ -302,10 +314,6 @@ pre {
   word-spacing: 40px;
   transform: translateY(0) !important;
 }
-#main-content #contact .text-box img,
-#main-content #contact .text-box-holder img {
-  filter: hue-rotate(0deg) !important;
-}
 #main-content #contact .text-box img:hover,
 #main-content #contact .text-box-holder img:hover {
   -webkit-animation: wobble 700ms;
@@ -342,4 +350,8 @@ pre {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+#contact-email {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(48%) saturate(2479%) hue-rotate(340deg) brightness(102%) contrast(101%);
 }/*# sourceMappingURL=index.css.map */

@@ -6,6 +6,9 @@
 	box-sizing: border-box;
 }
 
+$content-width: 1000px;
+$mobile-width: 800px;
+
 .theme-light {
 	--color-primary: #0098df;
 	--color-primary-dark: rgba(2, 0, 36, 1);
@@ -84,11 +87,23 @@ pre {
 
 @keyframes wobble {
 	25% {
-		filter: brightness(1.05);
+		// filter: brightness(1.05);
 		transform: scale(1.1) rotate(15deg);
 	}
 	75% {
-		filter: brightness(1.1);
+		// filter: brightness(1.1);
 		transform: scale(1.2) rotate(-15deg);
+	}
+}
+
+.hide-mobile {
+	@media (max-width: $mobile-width) {
+		display: none !important;
+	}
+}
+
+.show-mobile {
+	@media (min-width: $mobile-width) {
+		display: none;
 	}
 }
