@@ -224,6 +224,7 @@ $mobile-width: shared.$mobile-width;
 
 	#contact {
 		min-height: 0 !important;
+		overflow: hidden;
 
 		@media (max-width: $mobile-width) {
 			margin-right: -10px;
