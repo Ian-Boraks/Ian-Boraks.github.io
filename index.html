@@ -114,12 +114,11 @@
         </div>
 
         <div class="main-content-section rw100" id="resume">
-            <div class="section-main left right hide-mobile" id="resume-holder">
-
-            </div>
-            <div class="text-box-holder">
-                <div class="text-box show-mobile">
-                    Download my resume <a href="/meta/img/About/resume.pdf">here</a>.
+            <div class="section-main left right" id="resume-holder">
+                <div class="text-box-holder">
+                    <div class="text-box">
+                        Download my resume <a href="/meta/img/About/resume.pdf">here</a>.
+                    </div>
                 </div>
             </div>
         </div>
@@ -161,11 +160,18 @@
             return '<div>' + y + '</div>';
         }).join('');
     }
-    if ($(window).width() > 800) {
-        $("#resume-holder").append(
-            "<iframe src=\"/meta/img/About/resume.pdf\" width=\"100%\" height=\"600px\" style=\"padding: 0px 10px 0px 10px; border: none;\"></iframe>"
-        );
-    }
+    
+    addEventListener("resize", (event) => {
+        if ($(window).width() > 800 && !$("#resume-holder iframe").length && !mobileCheck()) {
+            $("#resume-holder").append(
+                "<iframe src=\"/meta/img/About/resume.pdf\" width=\"100%\" height=\"600px\" style=\"padding: 0px 10px 0px 10px; border: none;\"></iframe>"
+            );
+        } else if ($(window).width() < 800 && $("#resume-holder iframe").length) {
+            $("#resume-holder iframe").remove();
+        }
+    });
+
+    window.dispatchEvent(new Event('resize'));
 </script>
 
 </html>

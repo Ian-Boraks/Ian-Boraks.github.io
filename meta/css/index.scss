@@ -1,6 +1,9 @@
 @use "shared";
 @use "dropin";
 
+$content-width: shared.$content-width;
+$mobile-width: shared.$mobile-width;
+
 #top-nav {
 	background-color: var(--color-primary-dark);
 	color: var(--font-color-light);
@@ -60,6 +63,8 @@
 	// width: 700px;
 	max-width: $content-width;
 
+	overflow-x: hidden;
+
 	position: absolute;
 	top: 60px;
 	left: 50%;
@@ -70,7 +75,6 @@
 		display: block;
 		// min-height: 300px;
 		height: fit-content;
-		overflow: hidden;
 
 		display: flex;
 

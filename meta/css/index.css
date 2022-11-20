@@ -23,11 +23,15 @@
   --font-color: whitesmoke;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Andale Mono, AndaleMono, monospace;
   background: var(--color-primary-dark);
   margin: 0;
-  overflow-x: hidden;
+  position: relative;
 }
 
 h1 {
@@ -306,6 +310,7 @@ pre {
 #main-content {
   background-color: var(--color-primary);
   max-width: 1000px;
+  overflow-x: hidden;
   position: absolute;
   top: 60px;
   left: 50%;
@@ -317,7 +322,6 @@ pre {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
   display: flex;
   align-items: stretch;
   margin-top: 20px;
