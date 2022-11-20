@@ -23,19 +23,15 @@ $mobile-width: 800px;
 	--color-accent: #12cdea;
 	--font-color: whitesmoke;
 }
-
+html {
+	overflow-x: hidden;
+}
 body {
 	font-family: Andale Mono, AndaleMono, monospace;
-
-	// background-image: url("/meta/img/silver-geometric-repeating-pattern.jpg");
-	// background-size: 20%;
-	// background-repeat: repeat-y;
-
 	background: var(--color-primary-dark);
-	// background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
 	margin: 0;
-	overflow-x: hidden;
+	position: relative;
 }
 
 h1 {

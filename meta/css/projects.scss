@@ -1,7 +1,7 @@
 @use "index";
 
-$content-width: 1000px;
-$mobile-width: 800px;
+$content-width: shared.$content-width;
+$mobile-width: shared.$mobile-width;
 
 .expand-mobile {
 	@media (max-width: $mobile-width) {

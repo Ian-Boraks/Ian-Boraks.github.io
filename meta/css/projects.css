@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -22,11 +23,16 @@
   --font-color: whitesmoke;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Andale Mono, AndaleMono, monospace;
   background: var(--color-primary-dark);
   margin: 0;
   overflow-x: hidden;
+  position: relative;
 }
 
 h1 {
@@ -313,7 +319,6 @@ pre {
 }
 #main-content .main-content-section {
   display: block;
-  min-height: 300px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -508,8 +513,15 @@ pre {
   filter: brightness(0) saturate(100%) invert(42%) sepia(48%) saturate(2479%) hue-rotate(340deg) brightness(102%) contrast(101%);
 }
 
+#contact-resume {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(53%) saturate(982%) hue-rotate(300deg) brightness(102%) contrast(101%);
+}
+
 #about-center {
   height: calc(100vh - 60px);
+  min-height: 400px;
+  position: relative;
+  display: block;
 }
 
 #about-holder {
@@ -517,10 +529,15 @@ pre {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  place-self: center;
   top: 50%;
   transform: translateY(-50%);
   padding-top: 32px;
+}
+#about-holder::after {
+  content: "⇓";
+  font-size: 10vh;
+  display: block;
+  text-align: center;
 }
 
 #about.main-content-section {
@@ -528,7 +545,7 @@ pre {
   margin: 0;
 }
 #about.main-content-section .section-secondary {
-  height: 300px;
+  height: 30vh;
 }
 #about.main-content-section .section-main,
 #about.main-content-section .text-box-holder {
