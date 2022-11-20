@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -107,6 +108,158 @@ pre {
   }
 }
 
+.dropin .split-word:nth-child(1) div:nth-child(1) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+.dropin .split-word:nth-child(1) div:nth-child(2) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.dropin .split-word:nth-child(1) div:nth-child(3) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(1) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(2) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(3) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(4) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(5) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+.dropin .split-word:nth-child(2) div:nth-child(6) {
+  color: blank !important;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.6) translateY(30px);
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.6) translateY(30px);
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+.dropin {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -16px;
+}
+
+.split-word {
+  font-size: 40px;
+  display: table-cell;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.split-word div {
+  display: table-cell;
+}
+
 #top-nav {
   background-color: var(--color-primary-dark);
   color: var(--font-color-light);
@@ -161,7 +314,6 @@ pre {
 }
 #main-content .main-content-section {
   display: block;
-  min-height: 300px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -354,4 +506,48 @@ pre {
 
 #contact-email {
   filter: brightness(0) saturate(100%) invert(42%) sepia(48%) saturate(2479%) hue-rotate(340deg) brightness(102%) contrast(101%);
+}
+
+#contact-resume {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(53%) saturate(982%) hue-rotate(300deg) brightness(102%) contrast(101%);
+}
+
+#about-center {
+  height: calc(100vh - 60px);
+  min-height: 400px;
+  position: relative;
+  display: block;
+}
+
+#about-holder {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 32px;
+}
+#about-holder::after {
+  content: "⇓";
+  font-size: 10vh;
+  display: block;
+  text-align: center;
+}
+
+#about.main-content-section {
+  min-height: 0;
+  margin: 0;
+}
+#about.main-content-section .section-secondary {
+  height: 30vh;
+}
+#about.main-content-section .section-main,
+#about.main-content-section .text-box-holder {
+  min-height: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  transform: translateY(0);
 }/*# sourceMappingURL=index.css.map */

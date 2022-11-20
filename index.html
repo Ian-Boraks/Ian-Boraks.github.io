@@ -22,23 +22,15 @@
 <body class="theme-light">
     <div id="top-nav">
         <div id="top-nav-holder">
-            <h1 class="top-nav-button active" id="top-nav-about"> About </h1>
+            <h1 class="top-nav-button active" id="top-nav-main-content"> About </h1>
             <!-- <h1 class="top-nav-button" id="top-nav-photos"> Photos </h1> -->
             <h1 class="top-nav-button" id="top-nav-projects"> Projects </h1>
-            <h1 class="top-nav-button" id="top-nav-orginizations"> Orginizations </h1>
             <h1 class="top-nav-button" id="top-nav-resume"> Resume </h1>
+            <!-- <h1 class="top-nav-button" id="top-nav-resume"> Resume </h1> -->
             <h1 class="top-nav-button" id="top-nav-contact"> Contact </h1>
         </div>
     </div>
-
-    <div id="main-content">
-        <!-- <div class="main-content-section spacer" id="about">
-        <div class="text-box">
-          <h1 class="section-title"> About Me </h1>
-        </div>
-      </div> -->
-        <div class="main-content-section lw40 rw60" id="about">
-            <div class="section-main left">
+    <!-- <div class="section-main left">
                 <div class="text-box-holder">
                     <div class="text-box">
                         <h1 class="section-title"> About Me </h1>
@@ -49,11 +41,38 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="section-secondary right">
-                <img width="34%" src="/meta/img/About/Ian1.jpg">
-                <img width="34%" src="/meta/img/About/Ian2.jpg">
-                <img width="34%" src="/meta/img/About/Ian3.jpg">
+            </div> -->
+    <div id="main-content">
+        <div id="about-center">
+            <div id="about-holder">
+                <div class="main-content-section spacer" style="border: none;">
+                    <div class="text-box dropin">
+                        <div class=" section-title split-word">Ian</div>
+                        <div class=" section-title split-word">Boraks</div>
+                    </div>
+                </div>
+                <div class="main-content-section rw100" id="about">
+                    <div class="section-secondary">
+                        <img width="34%" src="/meta/img/About/Ian1.jpg">
+                        <img width="34%" src="/meta/img/About/Ian2.jpg">
+                        <img width="34%" src="/meta/img/About/Ian3.jpg">
+                    </div>
+
+                </div>
+                <div class="main-content-section rw100" id="about">
+                    <div class="section-main left right">
+                        <div class="text-box-holder">
+                            <div class="text-box">
+                                <h1 class="section-title"> About Me </h1>
+                                <p class="section-text">
+                                    Hi! I am a <span id="age">
+                                        <404>
+                                    </span> year old undergraduate student studying at Georgia Institute of Technology majoring in Computer Engineering. I am interested in computer science, CAD, PCB design, and so much more. I am also a competitive drone racer in my free time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -123,14 +142,25 @@
         </div>
 
 
-        <div class="main-content-section spacer " id="orginizations">
+        <div class="main-content-section spacer " id="resume">
             <div class="text-box">
-                <h1 class="section-title">Orginizations </h1>
+                <h1 class="section-title">Resume</h1>
             </div>
         </div>
 
-        <div class="main-content-section lw40 rw60" id="orginizations">
-            <div class="section-main left">
+        <div class="main-content-section rw100" id="resume">
+            <div class="section-main left right hide-mobile">
+                <iframe src="/meta/img/About/resume.pdf" width="100%" height="600px" style="padding: 0px 10px 0px 10px; border: none;"></iframe>
+            </div>
+            <div class="text-box-holder">
+                <div class="text-box show-mobile">
+                    Download my resume <a href="/meta/img/About/resume.pdf">here</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-section rw100" id="resume">
+            <!-- <div class="section-main left">
                 <div class="text-box-holder">
                     <div class="text-box">
                         <h1 class="section-title"> Georgia Institute of Technology </h1>
@@ -151,27 +181,11 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="section-secondary right">
-                <!-- <img width="100%" src="/meta/img/Education/GaTech1.png"> -->
+            </div> -->
+            <div class="section-secondary" style="height: 20vh;">
                 <img width="34%" src="/meta/img/Education/GaTech2.png">
                 <img width="34%" src="/meta/img/Orginizations/GT Off Road Vehicle_0.jpg">
                 <img width="34%" src="/meta/img/Orginizations/RotorJackets.jpeg">
-            </div>
-        </div>
-
-        <div class="main-content-section spacer" id="resume">
-            <div class="text-box">
-                <h1 class="section-title hide-mobile"> Resume </h1>
-                <h1 class="section-title show-mobile"> <a href="/meta/img/About/resume.pdf">Resmue (CLICK ME)</a> </h1>
-            </div>
-        </div>
-
-        <div class="main-content-section rw100 hide-mobile" id="resume">
-            <div class="section-main left right">
-                <div class="text-box">
-                    <iframe src="/meta/img/About/resume.pdf" width="100%" height="600px"></iframe>
-                </div>
             </div>
         </div>
 
@@ -185,6 +199,7 @@
                             <img class="clickable" id="contact-github" src="/meta/img/GitHub.svg" width="100px">
                             <img class="clickable" id="contact-linkedin" src="/meta/img/LinkedIn.svg" width="100px">
                             <img class="clickable" id="contact-instagram" src="/meta/img/Instagram.svg" width="100px">
+                            <img class="clickable" id="contact-resume" src="/meta/img/Resume.svg" width="100px">
                         </div>
                     </div>
                 </div>
@@ -194,5 +209,15 @@
     </div>
 
 </body>
+<script> // Modified from https://stackoverflow.com/a/63781543
+    x = document.getElementsByClassName("split-word");
+
+    for (i = 0; i < x.length; i++) {
+        const wrapText = x[i];
+        wrapText.innerHTML = wrapText.textContent.split('').map(function (y) {
+            return '<div>' + y + '</div>';
+        }).join('');
+    }
+</script>
 
 </html>

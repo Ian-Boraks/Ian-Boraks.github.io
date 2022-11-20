@@ -1,7 +1,5 @@
 @use "shared";
-
-$content-width: 1000px;
-$mobile-width: 800px;
+@use "dropin";
 
 #top-nav {
 	background-color: var(--color-primary-dark);
@@ -70,7 +68,7 @@ $mobile-width: 800px;
 
 	.main-content-section {
 		display: block;
-		min-height: 300px;
+		// min-height: 300px;
 		height: fit-content;
 		overflow: hidden;
 
@@ -285,4 +283,43 @@ $mobile-width: 800px;
 #contact-email {
 	filter: brightness(0) saturate(100%) invert(42%) sepia(48%) saturate(2479%)
 		hue-rotate(340deg) brightness(102%) contrast(101%);
+}
+
+#contact-resume {
+	filter: brightness(0) saturate(100%) invert(50%) sepia(53%) saturate(982%)
+		hue-rotate(300deg) brightness(102%) contrast(101%);
+}
+
+#about-center {
+	height: calc(100vh - 60px);
+	min-height: 400px;
+	position: relative;
+	display: block;
+}
+#about-holder {
+	position: relative;
+	height: fit-content;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-top: 32px;
+	&::after {
+		content: "⇓";
+		font-size: 10vh;
+		display: block;
+		text-align: center;
+	}
+}
+#about.main-content-section {
+	min-height: 0;
+	margin: 0;
+	.section-secondary {
+		height: calc(30vh);
+	}
+	.section-main,
+	.text-box-holder {
+		min-height: 0;
+		height: fit-content;
+		top: 0;
+		transform: translateY(0);
+	}
 }

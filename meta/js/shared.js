@@ -43,12 +43,25 @@ $(document).ready(function () {
     });
   });
 
+  $("#top-nav-main-content").click(function () {
+    $('.top-nav-button').each(function (key1, value1) {
+      $(value1).removeClass('active');
+    });
+
+    $(this).addClass('active');
+
+    $('html,body').animate({
+      scrollTop: $("#main-content").offset().top - 80
+    },
+      'medium');
+  });
+
   $('.more').each(function (key, value) {
-      $('#' + value.id).click(function () {
-        $("<a>").prop({
-          href: "/projects/" + value.id + ".html"
-        })[0].click();
-      })
+    $('#' + value.id).click(function () {
+      $("<a>").prop({
+        href: "/projects/" + value.id + ".html"
+      })[0].click();
+    })
   });
 });
 
@@ -56,7 +69,7 @@ function enableClicks() {
   $('#contact-email').click(function () {
     $("<a>").prop({
       target: "_blank",
-      href: "mailto::ianbor.contact@gmail.com"
+      href: "mailto:ianbor.contact@gmail.com"
     })[0].click();
   })
   $('#contact-github').click(function () {
@@ -75,6 +88,12 @@ function enableClicks() {
     $("<a>").prop({
       target: "_blank",
       href: "https://www.instagram.com/ianboraks.photo/"
+    })[0].click();
+  })
+  $('#contact-resume').click(function () {
+    $("<a>").prop({
+      target: "_blank",
+      href: "/meta/img/About/resume.pdf"
     })[0].click();
   })
 }
