@@ -217,7 +217,7 @@ pre {
           user-select: none;
 }
 #main-content .section-main .text-box-holder .text-box.more .section-title {
-  color: var(--font-color-light);
+  color: var(--font-color-dark);
   background-color: rgba(245, 245, 245, 0.25);
   font-size: medium !important;
   outline: var(--color-accent) solid 5px;
