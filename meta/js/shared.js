@@ -65,7 +65,7 @@ $(document).ready(function () {
   $('.more').each(function (key, value) {
     $('#' + value.id).click(function () {
       $("<a>").prop({
-        href: "/projects/" + value.id + ".html"
+        href: "/projects.html/" + value.id + ".html"
       })[0].click();
     })
   });
