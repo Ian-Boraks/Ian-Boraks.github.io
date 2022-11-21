@@ -1,5 +1,6 @@
 @use "shared";
 @use "dropin";
+@use "mouse_scroll";
 
 $content-width: shared.$content-width;
 $mobile-width: shared.$mobile-width;
@@ -306,13 +307,7 @@ $mobile-width: shared.$mobile-width;
 	height: fit-content;
 	top: 50%;
 	transform: translateY(-50%);
-	padding-top: 32px;
-	&::after {
-		content: "⇓";
-		font-size: 10vh;
-		display: block;
-		text-align: center;
-	}
+	padding-top: 2px;
 }
 #about.main-content-section {
 	min-height: 0;
