@@ -59,6 +59,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="mouse_scroll">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="m_scroll_arrows one"></span>
+                        <span class="m_scroll_arrows two"></span>
+                        <span class="m_scroll_arrows three"></span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -141,7 +151,7 @@
                             <img class="clickable" id="contact-github" src="/meta/img/GitHub.svg" width="100px">
                             <img class="clickable" id="contact-linkedin" src="/meta/img/LinkedIn.svg" width="100px">
                             <img class="clickable" id="contact-instagram" src="/meta/img/Instagram.svg" width="100px">
-                            <img class="clickable" id="contact-resume" src="/meta/img/Resume.svg" width="100px">
+                            <!-- <img class="clickable" id="contact-resume" src="/meta/img/Resume.svg" width="100px"> -->
                         </div>
                     </div>
                 </div>
@@ -160,7 +170,7 @@
             return '<div>' + y + '</div>';
         }).join('');
     }
-    
+
     addEventListener("resize", (event) => {
         if ($(window).width() > 800 && !$("#resume-holder iframe").length && !mobileCheck()) {
             $("#resume-holder").append(

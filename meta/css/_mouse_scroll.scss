@@ -1,0 +1,95 @@
+.mouse_scroll {
+	width: 24px;
+	margin-top: 10px;
+}
+
+.m_scroll_arrows {
+	display: block;
+	width: 5px;
+	height: 5px;
+	transform: rotate(45deg);
+
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	margin: 0 0 3px 4px;
+
+	width: 16px;
+	height: 16px;
+}
+
+// SCSS Implementation of https://codepen.io/rightblog/pen/EagNMN/
+
+$arrows: "one", "two", "three";
+$delay: 0.1s;
+
+@each $arrow in $arrows {
+	.#{$arrow} {
+		animation: mouse-scroll 1s infinite;
+        
+		animation-delay: $delay;
+		animation-direction: alternate;
+
+		margin-top: -6px;
+	}
+
+	$delay: $delay + 0.1s;
+}
+
+.one {
+	margin-top: 1px;
+}
+
+.mouse {
+	height: 42px;
+	width: 24px;
+	border-radius: 14px;
+	transform: none;
+	border: 2px solid white;
+	top: 170px;
+}
+
+.wheel {
+	height: 5px;
+	width: 2px;
+	display: block;
+	margin: 5px auto;
+	background: white;
+	position: relative;
+
+	height: 4px;
+	width: 4px;
+	border: 2px solid #fff;
+	border-radius: 8px;
+
+    animation: mouse-wheel 0.6s linear infinite;
+}
+
+@keyframes mouse-wheel {
+	0% {
+		top: 1px;
+	}
+	25% {
+		top: 2px;
+	}
+	50% {
+		top: 3px;
+	}
+	75% {
+		top: 2px;
+	}
+	100% {
+		top: 1px;
+	}
+}
+
+@keyframes mouse-scroll {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
