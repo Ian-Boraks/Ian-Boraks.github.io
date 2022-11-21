@@ -1,7 +1,13 @@
 @use "index";
 
-$content-width: shared.$content-width;
-$mobile-width: shared.$mobile-width;
+$content-width: index.$content-width;
+$mobile-width: index.$mobile-width;
+
+#main-content {
+	@media (min-width: $mobile-width) {
+		padding-top: 10px;
+	}
+}
 
 .expand-mobile {
 	@media (max-width: $mobile-width) {
