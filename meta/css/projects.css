@@ -582,6 +582,11 @@ pre {
   width: 100%;
   margin: auto !important;
 }
+#main-content .lw100 > div,
+#main-content .rw100 > div {
+  width: 100%;
+  margin: auto !important;
+}
 #main-content #contact {
   min-height: 0 !important;
   overflow: hidden;
