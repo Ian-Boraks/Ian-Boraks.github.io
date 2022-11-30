@@ -223,6 +223,12 @@ $mobile-width: shared.$mobile-width;
 		margin: auto !important;
 	}
 
+	.lw100 > div,
+	.rw100 > div {
+		width: 100%;
+		margin: auto !important;
+	}
+
 	#contact {
 		min-height: 0 !important;
 		overflow: hidden;

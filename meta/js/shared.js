@@ -65,7 +65,7 @@ $(document).ready(function () {
   $('.more').each(function (key, value) {
     $('#' + value.id).click(function () {
       $("<a>").prop({
-        href: "/projects/" + value.id + ".html"
+        href: "/projects.html/" + value.id + ".html"
       })[0].click();
     })
   });
@@ -103,9 +103,3 @@ function enableClicks() {
     })[0].click();
   })
 }
-
-setInterval(() => {
-  var t = dayjs().diff(dayjs(1094443200000), 'year', true);
-  $('#age').text(t.toString().substring(0, 12));
-}, 60);
-
