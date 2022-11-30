@@ -685,4 +685,8 @@ pre {
   height: fit-content;
   top: 0;
   transform: translateY(0);
+}
+
+#about .section-text {
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
