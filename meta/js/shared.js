@@ -103,9 +103,3 @@ function enableClicks() {
     })[0].click();
   })
 }
-
-setInterval(() => {
-  var t = dayjs().diff(dayjs(1094443200000), 'year', true);
-  $('#age').text(t.toString().substring(0, 12));
-}, 60);
-

@@ -161,7 +161,7 @@
     </div>
 
 </body>
-<script> // Modified from https://stackoverflow.com/a/63781543
+<script>
     x = document.getElementsByClassName("split-word");
 
     for (i = 0; i < x.length; i++) {
@@ -170,6 +170,12 @@
             return '<div>' + y + '</div>';
         }).join('');
     }
+
+    setInterval(() => {
+        var t = dayjs().diff(dayjs(1094443200000), 'year', true);
+        $('#age').text(t.toString().substring(0, 12));
+    }, 60);
+
 
     addEventListener("resize", (event) => {
         if ($(window).width() > 800 && !$("#resume-holder iframe").length && !mobileCheck()) {
