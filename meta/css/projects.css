@@ -82,15 +82,6 @@ pre {
   cursor: pointer;
 }
 
-@-webkit-keyframes wobble {
-  25% {
-    transform: scale(1.1) rotate(15deg);
-  }
-  75% {
-    transform: scale(1.2) rotate(-15deg);
-  }
-}
-
 @keyframes wobble {
   25% {
     transform: scale(1.1) rotate(15deg);
@@ -113,124 +104,83 @@ pre {
 
 .dropin .split-word:nth-child(1) div:nth-child(1) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
 }
 
 .dropin .split-word:nth-child(1) div:nth-child(2) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
 
 .dropin .split-word:nth-child(1) div:nth-child(3) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
 
 .dropin .split-word:nth-child(2) div:nth-child(1) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
 }
 
 .dropin .split-word:nth-child(2) div:nth-child(2) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
 
 .dropin .split-word:nth-child(2) div:nth-child(3) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
 
 .dropin .split-word:nth-child(2) div:nth-child(4) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.7s;
   -webkit-animation-delay: 0.7s;
 }
 
 .dropin .split-word:nth-child(2) div:nth-child(5) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.8s;
   -webkit-animation-delay: 0.8s;
 }
 
 .dropin .split-word:nth-child(2) div:nth-child(6) {
   color: blank !important;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
   animation-delay: 0.9s;
   -webkit-animation-delay: 0.9s;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: scaleY(0.6) translateY(30px);
-  }
-  100% {
-    transform: scaleY(1) translateY(0);
-  }
 }
 
 @keyframes bounce {
@@ -247,7 +197,6 @@ pre {
   }
 }
 .dropin {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-top: -16px;
@@ -281,32 +230,23 @@ pre {
 }
 
 .one {
-  -webkit-animation: mouse-scroll 1s infinite;
-          animation: mouse-scroll 1s infinite;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation: mouse-scroll 1s infinite;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
   margin-top: -6px;
 }
 
 .two {
-  -webkit-animation: mouse-scroll 1s infinite;
-          animation: mouse-scroll 1s infinite;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation: mouse-scroll 1s infinite;
+  animation-delay: 0.2s;
+  animation-direction: alternate;
   margin-top: -6px;
 }
 
 .three {
-  -webkit-animation: mouse-scroll 1s infinite;
-          animation: mouse-scroll 1s infinite;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation: mouse-scroll 1s infinite;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
   margin-top: -6px;
 }
 
@@ -334,26 +274,7 @@ pre {
   width: 4px;
   border: 2px solid #fff;
   border-radius: 8px;
-  -webkit-animation: mouse-wheel 0.6s linear infinite;
-          animation: mouse-wheel 0.6s linear infinite;
-}
-
-@-webkit-keyframes mouse-wheel {
-  0% {
-    top: 1px;
-  }
-  25% {
-    top: 2px;
-  }
-  50% {
-    top: 3px;
-  }
-  75% {
-    top: 2px;
-  }
-  100% {
-    top: 1px;
-  }
+  animation: mouse-wheel 0.6s linear infinite;
 }
 
 @keyframes mouse-wheel {
@@ -371,17 +292,6 @@ pre {
   }
   100% {
     top: 1px;
-  }
-}
-@-webkit-keyframes mouse-scroll {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes mouse-scroll {
@@ -422,7 +332,6 @@ pre {
   padding: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   line-height: calc(30px + 0.5em);
   text-align: center;
@@ -450,7 +359,6 @@ pre {
 }
 #main-content .main-content-section {
   display: block;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -464,7 +372,6 @@ pre {
 }
 #main-content .main-content-section.spacer {
   color: var(--font-color-light);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 45px !important;
@@ -500,7 +407,6 @@ pre {
 #main-content .section-main .text-box-holder .text-box.more {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #main-content .section-main .text-box-holder .text-box.more .section-title {
@@ -513,7 +419,6 @@ pre {
   padding: 0px 5px 0px 5px;
   margin-top: 0px;
   transition: 100ms;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -521,7 +426,6 @@ pre {
   color: var(--color-accent) !important;
   background-color: var(--color-secondary);
   transition: 100ms;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -609,8 +513,7 @@ pre {
 }
 #main-content #contact .text-box img:hover,
 #main-content #contact .text-box-holder img:hover {
-  -webkit-animation: wobble 700ms;
-          animation: wobble 700ms;
+  animation: wobble 700ms;
 }
 @media (min-width: 800px) {
   #main-content .left {
@@ -632,12 +535,12 @@ pre {
 }
 @media (max-width: 800px) {
   #main-content .left,
-#main-content .right {
+  #main-content .right {
     border-radius: 40px;
     width: calc(100% - 10px) !important;
   }
   #main-content .left .text-box,
-#main-content .right .text-box {
+  #main-content .right .text-box {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: auto;
@@ -662,7 +565,6 @@ pre {
 
 #about-holder {
   position: relative;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   top: 50%;
@@ -680,11 +582,14 @@ pre {
 #about.main-content-section .section-main,
 #about.main-content-section .text-box-holder {
   min-height: 0;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   top: 0;
   transform: translateY(0);
+}
+
+#about .section-text {
+  text-align: center;
 }
 
 @media (min-width: 800px) {
