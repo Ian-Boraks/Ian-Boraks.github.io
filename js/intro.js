@@ -2,30 +2,30 @@ let nameElement = document.querySelector("#name");
 let nameHolder = document.querySelector("#name-holder");
 
 let keyFrames = [
-    {t: "  ", ms: 200},
-    {t: " •", ms: 200},
-    {t: "  ", ms: 200},
-    {t: " •", ms: 200},
-    {t: "  ", ms: 200},
-    {t: " •", ms: 200},
-    {t: "  ", ms: 200},
-    {t: " •", ms: 200},
-    {t: " I", ms: 100},
-    {t: " IA", ms: 100},
-    {t: " IAN", ms: 100},
-    {t: " IAN ", ms: 100},
-    {t: " IAN B", ms: 100},
-    {t: " IAN BO", ms: 100},
-    {t: " IAN BOR", ms: 100},
-    {t: " IAN BORA", ms: 100},
-    {t: " IAN BORAK", ms: 100},
-    {t: " IAN BORAKS", ms: 100},
-    {t: " IAN BORAKS", ms: 200},
-    {t: " IAN BORAKS", ms: 200},
-    {t: " IAN BORAKS", ms: 200},
-    {t: " IAN BORAKS", ms: 200},
-    {t: " IAN BORAKS", ms: 200},
-    {t: " IAN BORAKS", ms: 200}
+    {t: " ", ms: 200},
+    {t: "•", ms: 200},
+    {t: " ", ms: 200},
+    {t: "•", ms: 200},
+    {t: " ", ms: 200},
+    {t: "•", ms: 200},
+    {t: " ", ms: 200},
+    {t: "•", ms: 200},
+    {t: "I", ms: 100},
+    {t: "IA", ms: 100},
+    {t: "IAN", ms: 100},
+    {t: "IAN ", ms: 100},
+    {t: "IAN B", ms: 100},
+    {t: "IAN BO", ms: 100},
+    {t: "IAN BOR", ms: 100},
+    {t: "IAN BORA", ms: 100},
+    {t: "IAN BORAK", ms: 100},
+    {t: "IAN BORAKS", ms: 100},
+    {t: "IAN BORAKS", ms: 200},
+    {t: "IAN BORAKS", ms: 200},
+    {t: "IAN BORAKS", ms: 200},
+    {t: "IAN BORAKS", ms: 200},
+    {t: "IAN BORAKS", ms: 200},
+    {t: "IAN BORAKS", ms: 200}
 ];
 
 let stepDenominator = 1;
@@ -57,18 +57,22 @@ for (let i = 0; i < 200; i++) {
 let children = dotHolder.children;
 for (let i = 0; i < children.length; i++) {
     let child = children[i];
-    let x = Math.random() * 100;
-    let y = Math.random() * 100;
-    child.style.left = x + "%";
-    child.style.top = y + "%";
+    let angle = Math.random() * 2 * Math.PI;
+    let radius = Math.random() * Math.max(window.innerWidth, window.innerHeight) / 1.2;
+    let x = Math.cos(angle) * radius + window.innerWidth / 2;
+    let y = Math.sin(angle) * radius + window.innerHeight / 2;
+    child.style.left = x + "px";
+    child.style.top = y + "px";
+    child.style.width = Math.random() * 20 + 10 + "px";
+    child.style.height = child.style.width;
+    child.style.borderRadius = "50%";
+
 
     setTimeout(() => {
         child.classList.add("move-in");
     }, 1000);
 
-    if (i == 0) {
-        continue;
-    }
+    if (i == 0) continue;
 
     setTimeout(() => {
         child.classList.add("disappear");
