@@ -1,0 +1,65 @@
+body {
+  overflow: hidden;
+}
+
+.background-color-light {
+  background-color: whitesmoke;
+}
+
+.background-color-dark {
+  background-color: #85c1e9;
+}
+
+#name {
+  font-family: "Courier New", Courier, monospace;
+  color: whitesmoke;
+}
+
+.center-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease-in-out;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s ease-in-out;
+}
+
+.dot {
+  position: absolute;
+  background-color: #85c1e9;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.move-in {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  margin-top: -9px;
+  transition: 1.1s ease-in-out;
+}
+
+.disappear {
+  display: none;
+  transition: 0.2s;
+}
+
+.expand {
+  transform: scale(1000);
+  transition: 2s ease-in-out;
+}/*# sourceMappingURL=main.css.map */
