@@ -58,6 +58,12 @@
 }
 
 #main-content {
+	.super-hide {
+		opacity: 0 !important;
+		user-select: none !important;
+		z-index: -1 !important;
+	}
+
 	.hide {
 		animation: fadeOut 1s;
 		opacity: 0;

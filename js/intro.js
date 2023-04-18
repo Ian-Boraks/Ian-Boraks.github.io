@@ -1,3 +1,5 @@
+alert("This website is under development. Please check back later for updates.");
+
 let nameElement = document.querySelector("#name");
 let nameHolder = document.querySelector("#name-holder");
 let body = document.querySelector("body");

@@ -33,6 +33,7 @@ for (let i = 0; i < navButtons.length; i++) {
         for (let j = 0; j < sections.length; j++) {
             sections[j].classList.add('hide');
             sections[j].classList.remove('active');
+            sections[j].classList.remove('super-hide');
         }
 
         sections[i].classList.remove('hide');
