@@ -1,62 +1,126 @@
-body {
-	overflow: hidden;
-}
-
-.background-color-light {
-	background-color: whitesmoke;
-}
-
-.background-color-dark {
-	background-color: #85c1e9;
-}
-
-#name {
+#nav-bar {
 	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
 	color: whitesmoke;
+	position: absolute;
+
+	&.center-screen {
+		top: calc(50% + 30px);
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		transition: 0.5s ease-in-out;
+	}
+
+	&.top {
+		top: 60px;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, 0);
+		transition: 0.5s ease-in-out;
+	}
+
+	&.show-nav-bar {
+		display: inline;
+		animation: fadeIn 1s;
+	}
+
+	&.hide-nav-bar {
+		display: none;
+		opacity: 0;
+	}
 }
 
-.center-screen {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
-	width: fit-content;
-	transition: 0.5s ease-in-out;
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
-.top {
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.nav-button {
+	&:hover {
+		color: #084b83;
+		cursor: pointer;
+		transition: 0.1s ease-in-out;
+	}
+}
+
+#main-content {
+	.hide {
+		animation: fadeOut 1s;
+		opacity: 0;
+		z-index: -1;
+		user-select: none;
+	}
+
+	.active {
+		animation: fadeIn 3s;
+		opacity: 1;
+		z-index: 1;
+		user-select: auto;
+	}
+}
+
+.content-tab {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	color: #000001;
+	background-color: whitesmoke;
+	border-radius: 15px;
+
 	position: absolute;
-	top: 0;
+
+	width: 80vw;
+	max-width: 1000px;
+
+	height: calc(100vh - 120px);
+
+	margin-bottom: 20vh;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	top: 100px;
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, 0);
-	transition: 0.5s ease-in-out;
 }
 
-.dot {
-	position: absolute;
-	background-color: #85c1e9;
+.section-title,
+.title {
+	margin-left: 20px;
+	margin-right: 20px;
+
+	text-align: center;
 }
 
-.move-in {
-	position: absolute;
-	top: 50% !important;
-	left: 50% !important;
-	// transform: translate(-50%, -50%) !important;
-
-	width: 16px !important;
-	height: 16px !important;
-	margin-top: -9px;
-
-	transition: 1.1s ease-in-out;
+.centered-image {
+	display: block;
+	width: 100%;
+	img {
+		border-radius: 15px;
+		position: relative;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, 0);
+	}
 }
 
-.disappear {
-	display: none;
-}
+.section-text {
+	margin-left: 20px;
+	margin-right: 20px;
 
-.expand {
-	transform: scale(1000);
-	transition: 2s ease-in-out;
+	text-align: justify;
 }
