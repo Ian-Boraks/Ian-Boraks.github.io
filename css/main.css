@@ -71,7 +71,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 50px));
 }
 #title-block:hover {
   cursor: default;
@@ -105,7 +105,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% + 250px));
+  transform: translate(-50%, calc(-50% + 200px));
 }
 #nav-block:hover {
   cursor: default;
