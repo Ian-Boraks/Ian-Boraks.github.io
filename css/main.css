@@ -1,0 +1,133 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-color-light {
+  background-color: whitesmoke;
+}
+
+.background-color-dark {
+  background-color: #42bfdd;
+}
+
+#name {
+  font-family: "Courier New", Courier, monospace;
+  color: whitesmoke;
+}
+
+#name-holder.center-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease-in-out;
+}
+
+#name-holder.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s ease-in-out;
+}
+
+.dot {
+  position: absolute;
+  background-color: #42bfdd;
+}
+
+.dot.move-in {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-top: -9px;
+  transition: 1.1s ease-in-out;
+}
+
+.dot.disappear {
+  display: none;
+}
+
+.dot.expand {
+  transform: scale(1000);
+  transition: 2s ease-in-out;
+}
+
+#title-block {
+  display: flex;
+  font-family: "Pacifico";
+  font-size: 200px;
+  line-height: 200px;
+  padding: 30px;
+  color: whitesmoke;
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#title-block:hover {
+  cursor: default;
+}
+#title-block #title {
+  width: 800px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+#title-block #title:hover {
+  cursor: default;
+}
+#title-block #title span:nth-child(1) {
+  width: 100%;
+}
+#title-block #title span:nth-child(2) {
+  width: 100%;
+  text-align: right;
+}
+
+#nav-block {
+  display: flex;
+  font-family: "Nova Square";
+  font-size: 50px;
+  line-height: 100px;
+  color: whitesmoke;
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 250px));
+}
+#nav-block:hover {
+  cursor: default;
+}
+#nav-block #nav {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+#nav-block #nav:hover {
+  cursor: default;
+}
+#nav-block #nav .nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+#nav-block #nav .nav-item:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
