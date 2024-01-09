@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ian Boraks</title>
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 </head>
 
 <body class="background-color-light">
@@ -36,9 +41,26 @@
         </div>
     </div>
 
+    <div id="text"></div>
+
 </body>
 
 <!-- JS -->
-<script src="index.js"></script>
+<script src="/index.js"></script>
+<script>
+    showdown.setFlavor('github');
+
+    var $text = $("#text");
+    jQuery.get('/test.md', function (data) {
+        var converter = new showdown.Converter(),
+            text = data,
+            html = converter.makeHtml(text);
+
+        console.log(html);
+
+        $text.html(html);
+    }, 'text');
+
+</script>
 
 </html>
