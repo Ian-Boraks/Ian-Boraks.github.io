@@ -1,51 +1,9 @@
-// let nameElement = document.querySelector("#name");
-// let nameHolder = document.querySelector("#name-holder");
+let titleHolder = document.querySelector("#title-block");
+let navHolder = document.querySelector("#nav-block");
 let body = document.querySelector("body");
 let dotHolder = document.querySelector("#dot-holder");
 
-let keyFrames = [
-    {t: " ", ms: 200},
-    {t: "•", ms: 200},
-    {t: " ", ms: 200},
-    {t: "•", ms: 200},
-    {t: " ", ms: 200},
-    {t: "•", ms: 200},
-    {t: " ", ms: 200},
-    {t: "•", ms: 200},
-    {t: "I", ms: 100},
-    {t: "IA", ms: 100},
-    {t: "IAN", ms: 100},
-    {t: "IAN ", ms: 100},
-    {t: "IAN B", ms: 100},
-    {t: "IAN BO", ms: 100},
-    {t: "IAN BOR", ms: 100},
-    {t: "IAN BORA", ms: 100},
-    {t: "IAN BORAK", ms: 100},
-    {t: "IAN BORAKS", ms: 100},
-    {t: "IAN BORAKS", ms: 200},
-    {t: "IAN BORAKS", ms: 200},
-    {t: "IAN BORAKS", ms: 200},
-    {t: "IAN BORAKS", ms: 200},
-    {t: "IAN BORAKS", ms: 200},
-    {t: "IAN BORAKS", ms: 200}
-];
-
-let stepDenominator = 1;
-
-let j = 0;
-
-let update = () => {
-    let step = keyFrames[j];
-    nameElement.innerText = step.t;
-    j++;
-
-    if (j < keyFrames.length)
-        setTimeout(update, step.ms / stepDenominator);
-    else {
-        nameHolder.classList.add('top');
-        nameHolder.classList.remove('center-screen');
-    }
-}
+var params = new window.URLSearchParams(window.location.search);
 
 let createDots = () => {
     body.style.overflow = "hidden";
@@ -91,19 +49,57 @@ let animateDots = () => {
 
     setTimeout(() => {
         children[0].classList.add("expand");
+        navHolder.classList.remove("disappear");
+        titleHolder.classList.remove("disappear");
+        setTimeout(() => {
+            $("#dot-holder").remove();
+            $(body).removeClass("background-color-light");
+            $(body).addClass("background-color-dark");
+        }, 600)
     }, 2300);
 }
 
-let updateBackground = () => {
-    let children = dotHolder.children;
+function addState(id) {
+    let stateObj = {id: "100"};
 
-    body.classList.add("background-color-dark");
-    body.classList.remove("background-color-light");
-    body.style.overflow = "auto";
-    children[0].classList.add("disappear");
-    update();
+    window.history.pushState(stateObj,
+        id, "?project=" + id);
 }
 
-createDots();
-animateDots();
-// setTimeout(updateBackground, 3100);
+showdown.setFlavor('github');
+var $projects = $("#projects");
+
+function loadProject(project = 'default') {
+    addState(project);
+
+    jQuery.get('/markdown/' + project + '.md', function (data) {
+        var converter = new showdown.Converter(),
+            text = data,
+            html = converter.makeHtml(text);
+
+        $projects.html(html);
+    }, 'text');
+
+    titleHolder.classList.add("disappear");
+    navHolder.classList.add("show-projects");
+
+    setTimeout(() => {
+        $("#projects-block").removeClass("disappear");
+        setTimeout(() => {
+            mermaid.run();
+            hljs.highlightAll();
+        }, 100);
+    }, 400);
+}
+
+if (params.has("project")) {
+    navHolder.classList.remove("disappear");
+    $("#dot-holder").remove();
+    $(body).removeClass("background-color-light");
+    $(body).addClass("background-color-dark");
+
+    loadProject(params.get("project"));
+} else {
+    createDots();
+    animateDots();
+}

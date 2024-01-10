@@ -9,58 +9,61 @@
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
-    <link href='https://fonts.googleapis.com/css?family=Nova Square' rel='stylesheet'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nova Square'>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- GITHUB -->
+    <link rel="preconnect" href="https://github.com/Ian-Boraks/">
 </head>
 
 <body class="background-color-light">
     <div id="dot-holder"> </div>
 
-    <div id="title-block">
+    <div id="title-block" class="disappear">
         <div id="title">
             <span>Ian</span>
             <span>Boraks</span>
         </div>
     </div>
 
-    <div id="nav-block">
-        <div id="nav">
+    <div id="nav-block" class="disappear">
+        <div class="nav">
             <a class="nav-item" href="https://www.linkedin.com/in/ian-boraks/">LinkedIn</a>
             •
             <a class="nav-item" href="https://github.com/Ian-Boraks/">GitHub</a>
+            •
+            <a class="nav-item" onclick="loadProject()">Projects</a>
             •
             <a class="nav-item" href="mailto:ianbor.contact@gmail.com">Contact</a>
         </div>
     </div>
 
-    <div id="text"></div>
+    <div id="projects-block" class="disappear">
+        <div id="projects-nav-block">
+            <div class="nav">
+                <a class="nav-item" onclick="loadProject('snap')">Snap Detector</a>
+                •
+                <a class="nav-item" onclick="loadProject('golfbuddy')">Golf Buddy</a>
+                •
+                <a class="nav-item" onclick="loadProject('capsulecomp')">Capsule Companion</a>
+            </div>
+        </div>
+        <div id="projects"></div>
+    </div>
 
 </body>
 
 <!-- JS -->
 <script src="/index.js"></script>
-<script>
-    showdown.setFlavor('github');
-
-    var $text = $("#text");
-    jQuery.get('/test.md', function (data) {
-        var converter = new showdown.Converter(),
-            text = data,
-            html = converter.makeHtml(text);
-
-        console.log(html);
-
-        $text.html(html);
-    }, 'text');
-
-</script>
 
 </html>
