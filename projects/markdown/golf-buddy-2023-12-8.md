@@ -1,4 +1,4 @@
-- [Overview](#overview)
+<!-- - [Overview](#overview)
   - [Project Photos](#project-photos)
     - [Launcher](#launcher)
     - [Hole](#hole)
@@ -16,7 +16,7 @@
   - [Hole](#hole-1)
     - [Code Snippets](#code-snippets-2)
 
----
+--- -->
 
 <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/GolfDaddy.png?raw=true" width="500">
 
@@ -309,7 +309,7 @@ Motor.writeMicroseconds(1000);
 
 ### Code Snippets
 
-**Pixel Matrix**: \
+**Pixel Matrix**:
 The pixel matrix output is done via two ways.
 
 1. Manually setting each row / col.

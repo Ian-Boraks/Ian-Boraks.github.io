@@ -83,16 +83,18 @@ window.onpopstate = function (event) {
             // Simulate the loading of the previous page
             switch (event.state) {
                 case 'project':
-                case 'home':
-                    location.assign('/');
+                    location.assign('/?project=default');
                     break;
                 case 'projectLanding':
                     loadProject('default', false);
                     break;
                 default:
+                    location.assign('/');
                     break;
             }
-        };
+        } else if (!document.location.hash) {
+            location.assign('/');
+        }
     }, 200);
 };
 
@@ -136,8 +138,15 @@ async function loadDefault() {
 }
 
 function loadProjectNavButton() {
-    if (window.history.state == 'project') {
-        history.back();
+    switch (window.history.state) {
+        case 'project':
+            history.back();
+            break;
+        case null:
+            openProjects();
+            break;
+        default:
+            break;
     }
 }
 
@@ -192,6 +201,11 @@ function openProjects() {
     }, 400);
 }
 
-history.replaceState('home',
-    document.title, document.location.href);
+if (!new URLSearchParams(window.location.search).has("project")) {
+    history.replaceState('home',
+        document.title, document.location.href);
+} else {
+    openProjects();
+}
+
 
