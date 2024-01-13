@@ -13,7 +13,7 @@
 
 ## Function
 
-```asm
+```
 ; -----------------------------------------------
 ; Sound setting's variables and helper functions
 ; This block of code is required in your ASM file
@@ -94,7 +94,7 @@ sequenceDiagram
 
 ## All Variables
 
-```asm
+```
 ; -----------------------------------------------
 ; Function setup and call with all variables
 ; -----------------------------------------------
@@ -123,7 +123,7 @@ sequenceDiagram
 
 ## Only Changing the Output
 
-```asm
+```
 ; -----------------------------------------------
 ; If no "SoundVariable" is set, it will just change
 ; the output without affecting the settings.

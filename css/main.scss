@@ -164,9 +164,10 @@ body {
 	transform: translateX(-50%);
 
 	padding-bottom: 0.25em;
+	margin-bottom: 10px;
 
 	width: min(90vw, 1000px);
-	height: calc(100vh - 2.25em);
+	height: calc(100vh - 2.25em - 10px);
 
 	border-radius: 3px;
 
@@ -191,6 +192,7 @@ body {
 		box-sizing: border-box;
 	}
 
+	/*
 	#projects-nav-block {
 		top: 0;
 
@@ -212,42 +214,21 @@ body {
 
 		transition: top 300ms;
 	}
+	*/
 
 	#projects {
 		font-size: medium;
 		line-height: normal;
 
-		margin: 10px;
+		margin: 0px 10px;
 
-		padding: 16px;
+		padding: 0px 16px;
 
 		line-height: 1.5rem;
 
 		color: var(--default-text-color);
 
 		word-wrap: break-word;
-
-		/* THESE ENSURE THE WEBVIEW WILL BE OF CORRECT HEIGHT
-		  * =======================================================================
-		  */
-
-		html {
-			margin: 0px;
-			padding: 0px;
-		}
-
-		body {
-			margin: 0px;
-			padding: 0px;
-		}
-
-		body :first-child {
-			margin-top: 0px;
-		}
-
-		body :last-child {
-			margin-bottom: 0px;
-		}
 
 		/* MAIN STYLING
 		 * =======================================================================
@@ -302,6 +283,14 @@ body {
 			text-decoration-thickness: 1px;
 			text-underline-offset: 2px;
 			color: var(--link-color);
+		}
+
+		.projectLink {
+			&:hover {
+				cursor: pointer;
+				color: var(--muted-text-color);
+				transition: color 100ms;
+			}
 		}
 
 		details {

@@ -132,8 +132,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding-bottom: 0.25em;
+  margin-bottom: 10px;
   width: min(90vw, 1000px);
-  height: calc(100vh - 2.25em);
+  height: calc(100vh - 2.25em - 10px);
   border-radius: 3px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -146,52 +147,44 @@ body {
   --codeblock-background-color: #222222;
   --codeblock-text-color: #ffffff;
   background-color: var(--muted-background-color);
+  /*
+  #projects-nav-block {
+  	top: 0;
+
+  	font-size: 20px;
+
+  	width: 100%;
+
+  	color: var(--default-text-color);
+
+  	.nav {
+  		transform: translateY(1em);
+
+  		transition: transform 400ms;
+  	}
+
+  	.nav-item:hover {
+  		color: var(--muted-text-color);
+  	}
+
+  	transition: top 300ms;
+  }
+  */
 }
 #projects-block * {
   box-sizing: border-box;
 }
-#projects-block #projects-nav-block {
-  top: 0;
-  font-size: 20px;
-  width: 100%;
-  color: var(--default-text-color);
-  transition: top 300ms;
-}
-#projects-block #projects-nav-block .nav {
-  transform: translateY(1em);
-  transition: transform 400ms;
-}
-#projects-block #projects-nav-block .nav-item:hover {
-  color: var(--muted-text-color);
-}
 #projects-block #projects {
   font-size: medium;
   line-height: normal;
-  margin: 10px;
-  padding: 16px;
+  margin: 0px 10px;
+  padding: 0px 16px;
   line-height: 1.5rem;
   color: var(--default-text-color);
   word-wrap: break-word;
-  /* THESE ENSURE THE WEBVIEW WILL BE OF CORRECT HEIGHT
-    * =======================================================================
-    */
   /* MAIN STYLING
    * =======================================================================
    */
-}
-#projects-block #projects html {
-  margin: 0px;
-  padding: 0px;
-}
-#projects-block #projects body {
-  margin: 0px;
-  padding: 0px;
-}
-#projects-block #projects body :first-child {
-  margin-top: 0px;
-}
-#projects-block #projects body :last-child {
-  margin-bottom: 0px;
 }
 #projects-block #projects h1,
 #projects-block #projects h2,
@@ -233,6 +226,11 @@ body {
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
   color: var(--link-color);
+}
+#projects-block #projects .projectLink:hover {
+  cursor: pointer;
+  color: var(--muted-text-color);
+  transition: color 100ms;
 }
 #projects-block #projects details {
   border: 1px solid #aaa;
