@@ -118,8 +118,11 @@ async function loadDefault() {
 
     for (const [key, value] of Object.entries(projectsDict)) {
         defaultMD += `## ${value.name}: ${value.date}\n`;
-        defaultMD += `- [${value.url}](${value.url})\n\n`;
+        defaultMD += `${value.description} <sub>_${new Date(value.date).toDateString().split(' ').slice(1).join(' ')}_<\sub>\n\n`;
+        defaultMD += `[${value.url}](${value.url})\n\n`;
     }
+
+    console.log(defaultMD);
 
     var converter = new showdown.Converter(),
         text = defaultMD,
