@@ -193,35 +193,14 @@ body {
 	--codeblock-background-color: #222222;
 	--codeblock-text-color: #ffffff;
 
-	background-color: var(--muted-background-color);
+	background-color: whitesmoke;
+
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
 	* {
 		box-sizing: border-box;
 	}
-
-	/*
-	#projects-nav-block {
-		top: 0;
-
-		font-size: 20px;
-
-		width: 100%;
-
-		color: var(--default-text-color);
-
-		.nav {
-			transform: translateY(1em);
-
-			transition: transform 400ms;
-		}
-
-		.nav-item:hover {
-			color: var(--muted-text-color);
-		}
-
-		transition: top 300ms;
-	}
-	*/
 
 	#projects {
 		font-size: medium;
@@ -309,7 +288,8 @@ body {
 				cursor: pointer;
 			}
 
-			p {
+			p,
+			br {
 				display: none;
 			}
 		}
@@ -355,6 +335,7 @@ body {
 			background-color: var(--muted-background-color);
 			padding: 0.1rem 0.4rem;
 			border-radius: 3px;
+			color: darkblue;
 		}
 
 		blockquote {

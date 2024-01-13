@@ -152,30 +152,8 @@ body {
   --muted-background-color: #eeeeee;
   --codeblock-background-color: #222222;
   --codeblock-text-color: #ffffff;
-  background-color: var(--muted-background-color);
-  /*
-  #projects-nav-block {
-  	top: 0;
-
-  	font-size: 20px;
-
-  	width: 100%;
-
-  	color: var(--default-text-color);
-
-  	.nav {
-  		transform: translateY(1em);
-
-  		transition: transform 400ms;
-  	}
-
-  	.nav-item:hover {
-  		color: var(--muted-text-color);
-  	}
-
-  	transition: top 300ms;
-  }
-  */
+  background-color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 #projects-block * {
   box-sizing: border-box;
@@ -246,7 +224,8 @@ body {
 #projects-block #projects details:hover {
   cursor: pointer;
 }
-#projects-block #projects details p {
+#projects-block #projects details p,
+#projects-block #projects details br {
   display: none;
 }
 #projects-block #projects summary {
@@ -280,6 +259,7 @@ body {
   background-color: var(--muted-background-color);
   padding: 0.1rem 0.4rem;
   border-radius: 3px;
+  color: darkblue;
 }
 #projects-block #projects blockquote {
   margin-inline: 0px;

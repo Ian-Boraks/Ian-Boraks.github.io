@@ -1,14 +1,23 @@
 {
 	"capsule-companion-2023-3-7": {
 		"name": "Capsule Companion",
+		"description": "A combination of a therapist bot and pill dispenser, designed to be used with a hologram interface.",
 		"type": "hackathon",
 		"url": "https://github.com/Ian-Boraks/2023RoboTech-Capsule-Companion",
 		"date": "2023-3-7"
 	},
 	"golf-buddy-2023-12-8": {
 		"name": "Golf Buddy",
+		"description": "An innovative addition to the world of mini golf: a High-Speed Golf Ball Shooter.",
 		"type": "class",
 		"url": "https://github.com/Ian-Boraks/Golf-Buddy",
 		"date": "2023-12-8"
+	},
+	"goggle-buzz-2023-8-12": {
+		"name": "Goggle Buzz",
+		"description": "A custom discord bot that tracks VelociDrone leaderboards and posts them to a discord channel.",
+		"type": "personal",
+		"url": "https://github.com/RotorJackets/Goggle_Buzz",
+		"date": "2023-8-12"
 	}
 }
