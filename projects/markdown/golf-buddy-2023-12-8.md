@@ -1,4 +1,4 @@
-- [Overview](#overview)
+<!-- - [Overview](#overview)
   - [Project Photos](#project-photos)
     - [Launcher](#launcher)
     - [Hole](#hole)
@@ -16,7 +16,7 @@
   - [Hole](#hole-1)
     - [Code Snippets](#code-snippets-2)
 
----
+--- -->
 
 <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/GolfDaddy.png?raw=true" width="500">
 
@@ -37,14 +37,14 @@ Welcome to the project documentation for an innovative addition to the world of 
 
 ### Launcher
 
-<div style="display: flex">
+<div class="img-holder">
     <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000930088.jpg?raw=true" width="300" height="300">
     <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000943244.jpg?raw=true" width="300" height="300">
 </div>
 
 ### Hole
 
-<div style="display: flex">
+<div class="img-holder">
     <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000956457.jpg?raw=true" width="300" height="300">
     <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_001002481.jpg?raw=true" width="300" height="300">
 </div>
@@ -69,7 +69,7 @@ Welcome to the project documentation for an innovative addition to the world of 
 
 **Launcher**:
 
-<div style="display: flex">
+<div class="img-holder">
     <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Full%20Laucnher.png?raw=true" width="300" height="300">
     <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Feeder%20Tube.png?raw=true" width="300" height="300">
 </div>
@@ -98,7 +98,7 @@ Welcome to the project documentation for an innovative addition to the world of 
 
 The original idea was to use the RFID tags embedded into the balls to read the player's score. Initial testing with the RFID was positive, as it could read different tags with different point values and add them.
 
-<div style="display: flex">
+<div class="img-holder">
 <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2636.jpg?raw=true" width="300" height="300">
 <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2637.jpg?raw=true" width="300" height="300">
 </div>
@@ -309,7 +309,7 @@ Motor.writeMicroseconds(1000);
 
 ### Code Snippets
 
-**Pixel Matrix**: \
+**Pixel Matrix**:
 The pixel matrix output is done via two ways.
 
 1. Manually setting each row / col.

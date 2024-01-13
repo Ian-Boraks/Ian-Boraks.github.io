@@ -1,0 +1,14 @@
+{
+	"capsule-companion-2023-3-7": {
+		"name": "Capsule Companion",
+		"type": "hackathon",
+		"url": "https://github.com/Ian-Boraks/2023RoboTech-Capsule-Companion",
+		"date": "2023-3-7"
+	},
+	"golf-buddy-2023-12-8": {
+		"name": "Golf Buddy",
+		"type": "class",
+		"url": "https://github.com/Ian-Boraks/Golf-Buddy",
+		"date": "2023-12-8"
+	}
+}
