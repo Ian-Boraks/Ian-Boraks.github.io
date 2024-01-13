@@ -78,20 +78,22 @@ function loadFromURL(debug) {
 
 window.onpopstate = function (event) {
     // alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
-    if (event.state) {
-        // Simulate the loading of the previous page
-        switch (event.state) {
-            case 'project':
-            case 'home':
-                location.assign('/');
-                break;
-            case 'projectLanding':
-                loadProject('default', false);
-                break;
-            default:
-                break;
-        }
-    };
+    setTimeout(() => {
+        if (event.state) {
+            // Simulate the loading of the previous page
+            switch (event.state) {
+                case 'project':
+                case 'home':
+                    location.assign('/');
+                    break;
+                case 'projectLanding':
+                    loadProject('default', false);
+                    break;
+                default:
+                    break;
+            }
+        };
+    }, 200);
 };
 
 $(document).ready(() => {
@@ -192,3 +194,4 @@ function openProjects() {
 
 history.replaceState('home',
     document.title, document.location.href);
+
