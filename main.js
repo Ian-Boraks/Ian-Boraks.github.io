@@ -114,12 +114,12 @@ async function loadDefault() {
         console.log("An error has occurred.");
     });
 
-    defaultMD = "# Select a project to view: \n\n";
+    defaultMD = "# Click on a project to view it: \n";
 
     for (const [key, value] of Object.entries(projectsDict)) {
         defaultMD += `## ${value.name}: ${value.date}\n`;
-        defaultMD += `${value.description} <sub>_${new Date(value.date).toDateString().split(' ').slice(1).join(' ')}_<\sub>\n\n`;
-        defaultMD += `[${value.url}](${value.url})\n\n`;
+        defaultMD += `${value.description} <sub>_${new Date(value.date).toDateString().split(' ').slice(1).join(' ')} | [GitHub](${value.url})_<\sub>\n\n`;
+        // defaultMD += `<sub>[${value.url}](${value.url})\n\n`;
     }
 
     console.log(defaultMD);

@@ -272,10 +272,18 @@ body {
 		}
 
 		.projectLink {
-			&:hover {
+			&:hover,
+			&:hover span {
 				cursor: pointer;
 				color: var(--muted-text-color);
-				transition: color 100ms;
+				transition: color 250ms;
+			}
+
+			span {
+				// background-color: lightgray;
+				border-radius: 100%;
+				// box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 100);
+				color: var(--link-color);
 			}
 		}
 

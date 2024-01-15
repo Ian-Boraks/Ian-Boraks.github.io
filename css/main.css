@@ -211,10 +211,14 @@ body {
   text-underline-offset: 2px;
   color: var(--link-color);
 }
-#projects-block #projects .projectLink:hover {
+#projects-block #projects .projectLink:hover, #projects-block #projects .projectLink:hover span {
   cursor: pointer;
   color: var(--muted-text-color);
-  transition: color 100ms;
+  transition: color 250ms;
+}
+#projects-block #projects .projectLink span {
+  border-radius: 100%;
+  color: var(--link-color);
 }
 #projects-block #projects details {
   border: 1px solid #aaa;

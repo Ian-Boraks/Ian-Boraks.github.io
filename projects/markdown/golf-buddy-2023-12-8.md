@@ -38,15 +38,15 @@ Welcome to the project documentation for an innovative addition to the world of 
 ### Launcher
 
 <div class="img-holder">
-    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000930088.jpg?raw=true" width="300" height="300">
-    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000943244.jpg?raw=true" width="300" height="300">
+    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000930088.jpg?raw=true" width="300">
+    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000943244.jpg?raw=true" width="300">
 </div>
 
 ### Hole
 
 <div class="img-holder">
-    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000956457.jpg?raw=true" width="300" height="300">
-    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_001002481.jpg?raw=true" width="300" height="300">
+    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_000956457.jpg?raw=true" width="300">
+    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/product_photos/PXL_20231204_001002481.jpg?raw=true" width="300">
 </div>
 
 # Hardware
@@ -70,15 +70,15 @@ Welcome to the project documentation for an innovative addition to the world of 
 **Launcher**:
 
 <div class="img-holder">
-    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Full%20Laucnher.png?raw=true" width="300" height="300">
-    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Feeder%20Tube.png?raw=true" width="300" height="300">
+    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Full%20Laucnher.png?raw=true" width="300">
+    <img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Feeder%20Tube.png?raw=true" width="300">
 </div>
 
 ### Laser Cut Parts
 
 **Hole Plate**:
 
-<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Plate.png?raw=true" height="300">
+<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/cad/Plate.png?raw=true">
 
 ## Electronics
 
@@ -99,13 +99,13 @@ Welcome to the project documentation for an innovative addition to the world of 
 The original idea was to use the RFID tags embedded into the balls to read the player's score. Initial testing with the RFID was positive, as it could read different tags with different point values and add them.
 
 <div class="img-holder">
-<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2636.jpg?raw=true" width="300" height="300">
-<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2637.jpg?raw=true" width="300" height="300">
+<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2636.jpg?raw=true" width="300">
+<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2637.jpg?raw=true" width="300">
 </div>
 
 However, the issue arose during integration with the golf balls. The RFID was not strong enough to travel through the golf ball to get consistent readings. The issue only worsened with the launcher integration because the ball traveled too fast to be read. The RFID hardware needed to be changed with something that could be more reliable and work at faster speeds. The change to limit swithces proved to be very reliable and work on any speed we tested because of the simplicity of the tech. The lessoned learned was to not overcomplicate things sometimes instead of trying to make a golf ball smart just add a simple button.
 
-<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2627.JPG?raw=true" width="300" height="300">
+<img src="https://github.com/Ian-Boraks/Golf-Buddy/blob/main/images/IMG_2627.JPG?raw=true" width="300">
 
 ### Code Snippets
 
