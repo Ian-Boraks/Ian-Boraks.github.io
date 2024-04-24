@@ -118,11 +118,11 @@ async function loadDefault() {
 
     for (const [key, value] of Object.entries(projectsDict)) {
         defaultMD += `## ${value.name}: ${value.date}\n`;
-        defaultMD += `${value.description} <sub>_${new Date(value.date).toDateString().split(' ').slice(1).join(' ')} | [GitHub](${value.url})_<\sub>\n\n`;
+        defaultMD += `${value.description} \n <sub>_${new Date(value.date).toDateString().split(' ').slice(1).join(' ')} | [GitHub](${value.url})_<\sub>\n\n`;
         // defaultMD += `<sub>[${value.url}](${value.url})\n\n`;
     }
 
-    console.log(defaultMD);
+    // console.log(defaultMD);
 
     var converter = new showdown.Converter(),
         text = defaultMD,
