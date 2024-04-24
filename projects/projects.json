@@ -19,5 +19,12 @@
 		"type": "personal",
 		"url": "https://github.com/RotorJackets/Goggle_Buzz",
 		"date": "2023-8-12"
+	},
+	"light-printer-2024-4-23": {
+		"name": "Light Printer",
+		"description": "The Light Printer is a device that creates colorful light paintings using controlled LED movements and camera tracking.",
+		"type": "personal",
+		"url": "https://github.com/Ian-Boraks/Light-Printer",
+		"date": "2024-4-23"
 	}
 }
